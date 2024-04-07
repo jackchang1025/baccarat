@@ -25,11 +25,6 @@ class ConnectionPool extends Pool
     )
     {
         parent::__construct($container, $config);
-
-        $this->parallel = new Parallel(50);
-
-        $this->initConnections();
-        $this->checkConnectionsList();
     }
 
     /**
@@ -50,35 +45,24 @@ class ConnectionPool extends Pool
 
     /**
      * @return void
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
      */
-    protected function initConnections(): void
+    public function initConnections(): void
     {
         $count = $this->option->getMinConnections() - $this->getConnectionsInChannel();
 
         for ($i = 0; $i < $count; $i++) {
 
-            $this->parallel->add(function () use ($i){
+            if ($i > 0){
+                Coroutine::sleep($i * 540);
+            }
+            $this->output->warn("create Websocket Client Coroutine id:". Coroutine::id());
 
-                if ($i > 0){
-                    Coroutine::sleep($i * 540);
-                }
-                $this->createConnections();
-            });
+            $this->release($connection = $this->createConnection());
+
+            $connection->startRecvMessageWithCoroutine();
         }
-    }
-
-    /**
-     * @return ConnectionInterface
-     * @throws ContainerExceptionInterface
-     * @throws NotFoundExceptionInterface
-     */
-    protected function createConnections(): ConnectionInterface
-    {
-        $this->output->warn("create Websocket Client Coroutine id:". Coroutine::id());
-
-        $this->release($connection = $this->createConnection());
-        $connection->startRecvMessageWithCoroutine();
-        return $connection;
     }
 
     protected function pop(): ConnectionInterface|bool
@@ -91,15 +75,13 @@ class ConnectionPool extends Pool
         return $this->parallel->wait();
     }
 
-    protected function checkConnections(): void
+    public function checkConnections(): void
     {
         try {
 
             $this->output->warn("create Websocket Client check Coroutine id:". Coroutine::id());
 
             while (true) {
-
-//                $this->initConnections();
 
                 $num = $this->getConnectionsInChannel();
 
@@ -124,12 +106,6 @@ class ConnectionPool extends Pool
         } finally {
             $this->output->warn("Websocket Client check Coroutine Exit id:". Coroutine::id());
         }
-    }
-
-    protected function checkConnectionsList(): void
-    {
-        // 创建协程定期检查连接的有效期
-        $this->parallel->add(fn() => $this->checkConnections());
     }
 
     public function get(): ConnectionInterface

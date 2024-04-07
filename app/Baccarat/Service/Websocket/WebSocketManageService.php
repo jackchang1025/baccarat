@@ -117,6 +117,19 @@ class WebSocketManageService
         }
     }
 
+    /**
+     * @return void
+     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws \Psr\Container\NotFoundExceptionInterface
+     */
+    public function initConnectionsPool(): void
+    {
+        // 初始化连接池
+        $this->connectionPool->initConnections();
+        // 检查连接池
+        $this->connectionPool->checkConnections();
+    }
+
     public function run(): void
     {
         $parallel = new Parallel(10);
@@ -131,7 +144,7 @@ class WebSocketManageService
         });
 
         $parallel->add(function () {
-            $this->connectionPool->run();
+            $this->initConnectionsPool();
         });
 
         $parallel->wait();
