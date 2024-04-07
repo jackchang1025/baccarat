@@ -136,3 +136,47 @@ if (! function_exists('is_in_container')) {
         return strpos($mountinfo, 'kubepods') > 0 || strpos($mountinfo, 'docker') > 0;
     }
 }
+
+if (! function_exists('transform')) {
+    /**
+     * Transform the given value if it is present.
+     *
+     * @template TValue of mixed
+     * @template TReturn of mixed
+     * @template TDefault of mixed
+     *
+     * @param  TValue  $value
+     * @param  callable(TValue): TReturn  $callback
+     * @param TDefault|null $default
+     * @return ($value is empty ? ($default is null ? null : TDefault) : TReturn)
+     */
+    function transform(mixed $value,callable $callback, mixed $default = null)
+    {
+        if (filled($value)) {
+            return $callback($value);
+        }
+
+        if (is_callable($default)) {
+            return $default($value);
+        }
+
+        return $default;
+    }
+}
+
+if (! function_exists('database_path')) {
+    /**
+     * Transform the given value if it is present.
+     *
+     * @template TValue of mixed
+     * @template TReturn of mixed
+     * @template TDefault of mixed
+     *
+     * @param string $model
+     * @return string
+     */
+    function database_path(string $model): string
+    {
+        return BASE_PATH."/app/{$model}/Database/Factories/";
+    }
+}

@@ -10,6 +10,7 @@ declare(strict_types=1);
  * @license  https://github.com/mineadmin/MineAdmin/blob/master/LICENSE
  */
 use Mine\Log\Processor\UuidRequestIdProcessor;
+use Monolog\Formatter\JsonFormatter;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\RotatingFileHandler;
 use Monolog\Logger;
@@ -55,4 +56,25 @@ return [
             'class' => UuidRequestIdProcessor::class,
         ],
     ],
+
+    'baccarat' =>[
+        'handler' => [
+            'class' => RotatingFileHandler::class,
+            'constructor' => [
+                'filename' => BASE_PATH . '/runtime/logs/baccarat/lottery.log',
+                'level' => Logger::DEBUG,
+            ],
+        ],
+        'formatter' => [
+            'class' => LineFormatter::class,
+            'constructor' => [
+                'format' => null,
+                'dateFormat' => 'Y-m-d H:i:s',
+                'allowInlineLineBreaks' => true,
+            ],
+        ],
+        'processor' => [
+            'class' => UuidRequestIdProcessor::class,
+        ],
+    ]
 ];

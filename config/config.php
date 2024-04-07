@@ -14,6 +14,9 @@ use Psr\Log\LogLevel;
 
 use function Hyperf\Support\env;
 
+//date_default_timezone_set('Asia/Shanghai');
+date_default_timezone_set('America/New_York');
+
 return [
     'app_name' => env('APP_NAME', 'mineAdmin'),
     'app_env' => env('APP_ENV', 'dev'),
@@ -22,10 +25,10 @@ return [
         'log_level' => [
             LogLevel::ALERT,
             LogLevel::CRITICAL,
-            //            LogLevel::DEBUG,
+//            LogLevel::DEBUG,
             LogLevel::EMERGENCY,
             LogLevel::ERROR,
-            LogLevel::INFO,
+//            LogLevel::INFO,
             LogLevel::NOTICE,
             LogLevel::WARNING,
         ],

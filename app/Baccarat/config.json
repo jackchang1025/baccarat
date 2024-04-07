@@ -1,0 +1,9 @@
+{
+    "name": "Baccarat",
+    "label": "百家乐",
+    "description": "百家乐",
+    "installed": true,
+    "enabled": true,
+    "version": "1.0.0",
+    "order": 0
+}
