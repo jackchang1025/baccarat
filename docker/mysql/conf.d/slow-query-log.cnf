@@ -1,0 +1,27 @@
+[mysqld]
+# 启用慢查询日志
+slow_query_log = 1
+
+# 慢查询日志文件的路径和名称，使用日期格式 %Y-%m-%d 表示按天分割日志文件
+slow_query_log_file = /var/lib/mysql/logs/slow_query.log
+
+# 慢查询的阈值，单位为秒
+long_query_time = 1
+
+#记录未使用索引的查询
+log_queries_not_using_indexes = 1
+
+# 限制未使用索引的查询的记录频率
+log_throttle_queries_not_using_indexes = 5
+
+# 记录慢速管理语句
+log_slow_admin_statements = 1
+
+# 记录慢速从库语句
+log_slow_slave_statements = 1
+
+# 日志输出方式，设置为 FILE 表示输出到文件
+log_output = FILE
+
+# 日志文件的保留天数，超过该天数的日志文件将被自动删除
+expire_logs_days = 30

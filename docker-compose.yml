@@ -11,7 +11,7 @@ services:
     environment:
       - "TIMEZONE=Asia/Shanghai"
     ports:
-      - 8101:80
+      - "8101:80"
     volumes:
       - ./mine-ui/dist:/usr/share/nginx/html
       - ./docker/nginx-frontend/servers:/etc/nginx/conf.d
@@ -28,9 +28,9 @@ services:
       - "APP_SYSTEM_ENV=docker"
     working_dir: "/opt/www"
     ports:
-      - 9501:9501
-      - 9502:9502
-      - 9503:9503
+      - "9501:9501"
+      - "9502:9502"
+      - "9503:9503"
     volumes:
       - ./:/opt/www
     entrypoint: ["php", "watch", "-c"]
@@ -44,7 +44,9 @@ services:
       - MYSQL_ROOT_PASSWORD=12345678
       - "explicit_defaults_for_timestamp=true"
       - "lower_case_table_names=1"
-    image: mysql:8.0
+    build:
+      context: ./docker/mysql
+      dockerfile: Dockerfile
     restart: always
     volumes: #持久化
       - mysql-data:/var/lib/mysql
@@ -52,8 +54,7 @@ services:
       - ./docker/mysql/logs:/var/lib/mysql/logs #数据库日志
     ports:
         - "3306:3306"  # 确保端口映射允许宿主机上的应用连接到 MySQL
-    # command: "--default-authentication-plugin=mysql_native_password"
-    command: "--default-authentication-plugin=mysql_native_password --max_connections=200 --slow_query_log=1 --slow_query_log_file=/var/lib/mysql/logs/slow_query.log --long_query_time=1"
+    command: "--default-authentication-plugin=mysql_native_password --max_connections=500 --slow_query_log=1 --long_query_time=1 --innodb-buffer-pool-size=1G"
     # max_connections 最大连接数
     # slow_query_log 开始慢查询日志
     # slow_query_log_file 慢查询日志路径
