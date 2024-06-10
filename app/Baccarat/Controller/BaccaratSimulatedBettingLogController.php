@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace App\Baccarat\Controller;
 
+use App\Baccarat\Request\BaccaratWaitingSequenceRequest;
 use App\Baccarat\Service\BaccaratSimulatedBettingLogService;
 use App\Baccarat\Request\BaccaratSimulatedBettingLogRequest;
 use Hyperf\Di\Annotation\Inject;
@@ -25,6 +26,8 @@ use Mine\Annotation\RemoteState;
 use Mine\Annotation\OperationLog;
 use Mine\Annotation\Permission;
 use Mine\MineController;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 use Psr\Http\Message\ResponseInterface;
 use Mine\Middlewares\CheckModuleMiddleware;
 use Hyperf\HttpServer\Annotation\Middleware;
@@ -173,5 +176,18 @@ class BaccaratSimulatedBettingLogController extends MineController
     public function remote(): ResponseInterface
     {
         return $this->success($this->service->getRemoteList($this->request->all()));
+    }
+
+    /**
+     * chart
+     * @param BaccaratSimulatedBettingLogRequest $request
+     * @return ResponseInterface
+     * @throws ContainerExceptionInterface
+     * @throws NotFoundExceptionInterface
+     */
+    #[GetMapping("chart"), Permission("baccarat:simulatedBettingLog:chart")]
+    public function chart(BaccaratSimulatedBettingLogRequest $request): ResponseInterface
+    {
+        return $this->success($this->service->chart($request->all()));
     }
 }

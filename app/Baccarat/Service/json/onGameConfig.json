@@ -1,0 +1,136 @@
+{
+  "action": "onGameConfig",
+  "event": true,
+  "creditLimit": {
+    "3023-1": [
+      {
+        "ante": 3,
+        "minBalance": 36
+      },
+      {
+        "ante": 5,
+        "minBalance": 60
+      },
+      {
+        "ante": 10,
+        "minBalance": 120
+      },
+      {
+        "ante": 20,
+        "minBalance": 240
+      },
+      {
+        "ante": 50,
+        "minBalance": 600
+      },
+      {
+        "ante": 100,
+        "minBalance": 1200
+      }
+    ],
+    "3024-1": [
+      {
+        "ante": 3,
+        "minBalance": 15
+      },
+      {
+        "ante": 5,
+        "minBalance": 25
+      },
+      {
+        "ante": 10,
+        "minBalance": 50
+      },
+      {
+        "ante": 20,
+        "minBalance": 100
+      },
+      {
+        "ante": 50,
+        "minBalance": 250
+      },
+      {
+        "ante": 100,
+        "minBalance": 500
+      }
+    ],
+    "3041-1": [
+      {
+        "ante": 3,
+        "minBalance": 36
+      },
+      {
+        "ante": 5,
+        "minBalance": 60
+      },
+      {
+        "ante": 10,
+        "minBalance": 120
+      },
+      {
+        "ante": 20,
+        "minBalance": 240
+      },
+      {
+        "ante": 50,
+        "minBalance": 600
+      },
+      {
+        "ante": 100,
+        "minBalance": 1200
+      }
+    ],
+    "3041-2": [
+      {
+        "ante": 3,
+        "minBalance": 36
+      },
+      {
+        "ante": 5,
+        "minBalance": 60
+      },
+      {
+        "ante": 10,
+        "minBalance": 120
+      },
+      {
+        "ante": 20,
+        "minBalance": 240
+      },
+      {
+        "ante": 50,
+        "minBalance": 600
+      },
+      {
+        "ante": 100,
+        "minBalance": 1200
+      }
+    ],
+    "3041-3": [
+      {
+        "ante": 3,
+        "minBalance": 36
+      },
+      {
+        "ante": 5,
+        "minBalance": 60
+      },
+      {
+        "ante": 10,
+        "minBalance": 120
+      },
+      {
+        "ante": 20,
+        "minBalance": 240
+      },
+      {
+        "ante": 50,
+        "minBalance": 600
+      },
+      {
+        "ante": 100,
+        "minBalance": 1200
+      }
+    ]
+  }
+}

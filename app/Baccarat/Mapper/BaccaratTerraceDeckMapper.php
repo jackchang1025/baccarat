@@ -84,48 +84,66 @@ class BaccaratTerraceDeckMapper extends AbstractMapper
             $query->where('remark', 'like', '%' . $params['remark'] . '%');
         }
 
-        $query->with(['baccaratLotteryLog']);
-
         return $query;
     }
 
-    public function getLastBaccaratTerraceDeck(int $terraceId): BaccaratTerraceDeck|Builder|null
+    public function handlePageItems(array $items,array $params): array
     {
+        if (!empty($items)){
+            foreach ($items as $item){
+                if ($item instanceof BaccaratTerraceDeck) {
+                    $item->append(['lotteryLogBankerCount', 'lotteryLogTieCount', 'lotteryLogPlayerCount', 'lotteryLogCalculateCoordinates']);
+                }
+            }
+        }
+        return $items;
+    }
+
+    private function baseBaccaratTerraceDeckQuery(int $terraceId, string $deckNumber, Carbon $startDate, Carbon $endDate): Builder|Model|null {
         return $this->getModel()
+            ->where('deck_number', $deckNumber)
             ->where('terrace_id', $terraceId)
-            ->orderBy('created_at', 'desc')
+            ->whereBetween('created_at', [$startDate, $endDate])
             ->first();
     }
 
-    /**
-     * @param int $terraceId
-     * @return Builder|Model
-     */
-    public function getLastBaccaratTerraceDeckOrCreate(int $terraceId): BaccaratTerraceDeck|Builder
+    public function getLastBaccaratTerraceDeckWithSubDay(int $terraceId,string $deckNumber): BaccaratTerraceDeck|Builder|null
     {
-        return $this->getModel()
-            ->where('terrace_id', $terraceId)
-            ->orderBy('created_at', 'desc')
-            ->firstOrCreate(['terrace_id' => $terraceId]);
+        return $this->baseBaccaratTerraceDeckQuery($terraceId, $deckNumber, Carbon::yesterday()->startOfDay(), Carbon::yesterday()->endOfDay());
     }
 
     public function getBaccaratTerraceDeckWithToday(int $terraceId,string $deckNumber): BaccaratTerraceDeck|Builder|null
     {
-        return $this->getModel()
-            ->where('deck_number', $deckNumber)
-            ->where('terrace_id', $terraceId)
-            ->whereBetween('created_at', [Carbon::now()->startOfDay(), Carbon::now()->endOfDay()])
-            ->first();
+        return $this->baseBaccaratTerraceDeckQuery($terraceId, $deckNumber, Carbon::now()->startOfDay(), Carbon::now()->endOfDay());
+    }
+
+    public function getBaccaratTerraceDeckOfTodayAndYesterdayOrCreates(int $terraceId, string $deckNumber): BaccaratTerraceDeck|null
+    {
+        // 如果是 20 局及以上，且是凌晨 0 到 1 点，则取昨天的数据
+        if ($this->isYesterday((int) $deckNumber)){
+            return $this->getLastBaccaratTerraceDeckWithSubDay($terraceId,$deckNumber);
+        }
+        return $this->getBaccaratTerraceDeckWithTodayOrCreate($terraceId,$deckNumber);
+    }
+
+    /**
+     * @param int $deckNumber
+     * @return bool
+     */
+    protected function isYesterday(int $deckNumber): bool
+    {
+        $now = Carbon::now();
+
+        return $deckNumber >= 20 && $now->isBetween($now->copy()->setTime(0, 0, 0), $now->copy()->setTime(1, 0, 0));
     }
 
     public function getBaccaratTerraceDeckWithTodayOrCreate(int $terraceId,string $deckNumber): BaccaratTerraceDeck|\Hyperf\Database\Query\Builder|Model|Builder
     {
         $baccaratTerraceDeck = $this->getBaccaratTerraceDeckWithToday($terraceId,$deckNumber);
 
-        return transform($baccaratTerraceDeck,
-            fn($baccaratTerraceDeck) => $baccaratTerraceDeck,
-            fn()=>$this->getModel()->create(['terrace_id'=>$terraceId, 'deck_number'=>$deckNumber])
-        );
+        if (is_null($baccaratTerraceDeck)) {
+            return $this->getModel()->create(['terrace_id' => $terraceId, 'deck_number' => $deckNumber]);
+        }
+        return $baccaratTerraceDeck;
     }
-
 }

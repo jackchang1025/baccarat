@@ -24,7 +24,7 @@ class BaccaratLotteryLogMapperTest extends BaseTest
     public function testGetLotteryLog()
     {
         $baccaratLotteryLog = $this->factory->of(BaccaratLotteryLog::class)->create();
-        $result = $this->mapper->getLotteryLog($baccaratLotteryLog->issue);
+        $result = $this->mapper->getLotteryLogFirst($baccaratLotteryLog->issue);
 
         $this->assertNotNull($result);
         $this->assertInstanceOf(BaccaratLotteryLog::class, $result);
@@ -32,7 +32,7 @@ class BaccaratLotteryLogMapperTest extends BaseTest
 
     public function testGetLotteryLogNull()
     {
-        $result = $this->mapper->getLotteryLog($this->faker->unixTime);
+        $result = $this->mapper->getLotteryLogFirst($this->faker->unixTime);
         $this->assertNull($result);
     }
 }

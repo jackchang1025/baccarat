@@ -6,7 +6,7 @@ use Hyperf\Contract\Arrayable;
 
 class BetLog implements Arrayable
 {
-    public function __construct(protected string|int $issue, protected string $sequence = '',protected float $betAmount = 0,protected float $totalAmount = 0){}
+    public function __construct(public string|int $issue, public string $sequence = '',public float $betAmount = 0,public float $totalAmount = 0,protected string|int $lastIssue = 0){}
 
     public function getIssue(): int|string
     {
@@ -17,6 +17,12 @@ class BetLog implements Arrayable
     {
         return $this->betAmount;
     }
+
+    public function setBetAmount(float $betAmount): void
+    {
+        $this->betAmount = $betAmount;
+    }
+
 
     public function getTotalAmount(): float
     {

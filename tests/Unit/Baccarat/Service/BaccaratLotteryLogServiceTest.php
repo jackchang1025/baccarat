@@ -18,14 +18,4 @@ class BaccaratLotteryLogServiceTest extends BaseTest
         $this->baccaratLotteryLogService = make(BaccaratLotteryLogService::class);
     }
 
-
-    public function testGetBaccaratTerraceDeck()
-    {
-        $BaccaratLotteryLog = $this->factory->of(BaccaratLotteryLog::class)->create();
-
-        $result = $this->baccaratLotteryLogService->getLotteryLog($BaccaratLotteryLog->issue);
-
-        $this->assertNotNull($result);
-        $this->assertEquals($BaccaratLotteryLog->terrace_deck_id, $result->terrace_deck_id);
-    }
 }

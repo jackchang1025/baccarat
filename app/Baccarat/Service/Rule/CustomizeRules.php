@@ -2,7 +2,6 @@
 
 namespace App\Baccarat\Service\Rule;
 
-use App\Baccarat\Service\Rule\RuleInterface;
 
 class CustomizeRules extends Rule
 {

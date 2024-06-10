@@ -2,10 +2,6 @@
 
 namespace App\Baccarat\Service;
 
-use App\Baccarat\Model\BaccaratLotteryLog;
-use App\Baccarat\Model\BaccaratTerraceDeck;
-use Hyperf\Database\Model\Builder;
-use Hyperf\Database\Model\Model;
 
 class LotteryResult
 {
@@ -24,14 +20,67 @@ class LotteryResult
 
     protected static array $table = [
         //百家乐  300180 百家乐mx4
-        "30471", "30474", "30011", "30012", "30013", "30016", "30017", "300136", "300137", "300182",
-        "300183", "300184", "300185", "300186", "300187", "300157", "300158", "300159", "300160",
-        "300161", "300177", "300178", "300179", "300180", "300181", "300188", "300189", "300190",
+        "30471" => "A",
+        "30474" => "B",
+        "30011" => "百家乐A",
+        "30012" => "百家乐B",
+        "30013" => "百家乐C",
+        "30016" => "百家乐D",
+        "30017" => "百家乐E",
+        "300136" => "百家乐I",
+        "300137" => "百家乐J",
+        "300157" => "百家乐EU1",
+        "300158" => "百家乐EU2",
+        "300159" => "百家乐EU3",
+        "300160" => "百家乐EU4",
+        "300161" => "百家乐EU5",
+        "300182" => "百家乐AS1",
+        "300183" => "百家乐AS2",
+        "300184" => "百家乐AS3",
+        "300185" => "百家乐AS4",
+        "300186" => "百家乐AS5",
+        "300187" => "百家乐AS6",
+        "300177" => '百家乐MX1',
+        "300178" => '百家乐mx2',
+        "300179" => '百家乐mx3',
+        "300180" => '百家乐mx4',
+        "300181" => '百家乐mx5',
+        "300188" => '百家乐MX6',
+        "300189" => '百家乐MX7',
+        "300190" => '百家乐MX8',
         //区块链百家
-        "30431", "30432", "30433", "30434", "30435", "30436", "30251",
-        "30252", "30253", "30254", "30255", "30256", "30257", "30271", "30272", "30273",
+        "30431" => "百家乐BC1",
+        "30432" => "百家乐BC2",
+        "30433" => "百家乐BC3",
+        "30434" => "百家乐BC4",
+        "30435" => "百家乐BC5",
+        "30436" => "百家乐BC6",
+
+        //百家乐
+        "30251" => "百家乐BC1",
+        "30252" => "百家乐BC2",
+        "30253" => "百家乐BC3",
+        "30254" => "百家乐BC4",
+        "30255" => "百家乐BC5",
+        "30256" => "百家乐BC6",
+        "30257" => "百家乐BC7",
+
+        //保险百家乐
+        "30271" => "保险百家乐BC1",
+        "30272" => "保险百家乐BC2",
+        "30273" => "保险百家乐BC3",
+
         //金臂百家
-        "3001107", "3001108", "3001109", "3001110", "3001111", "3001112", "3001113", "3001114", "3001115", "3001116",
+        "3001107" => "百家乐RB1",
+        "3001108" => "百家乐RB2",
+        "3001109" => "百家乐RB3",
+        "3001110" => "百家乐RB4",
+        "3001111" => "百家乐RB5",
+        "3001112" => "百家乐RB6",
+        "3001113" => "百家乐RB7",
+        "3001114" => "百家乐RB8",
+        "3001115" => "百家乐RB9",
+        "3001116" => "百家乐RB10",
         //独家
 //        "30121", "30111", "30321", "30322", "30323", "30151", "30371", "30372", "30373", "30374", "30375", "30376",
 //        "30039", "30261", "30262", "30263", "30481", "30482", "30483", "30291", "30292", "30293", "30411", "30412",
@@ -53,6 +102,16 @@ class LotteryResult
     )
     {
 
+    }
+
+    public function getTerraceName(): ?string
+    {
+        return self::$table[str_replace('-', '', $this->terrace)] ?? null;
+    }
+
+    public function getTerrace(): string
+    {
+        return $this->terrace;
     }
 
     public function setTransformationResult(string $transformationResult): void
@@ -93,8 +152,7 @@ class LotteryResult
         }
         // 使用正则表达式将非数字字符和-替换为空字符串
         $str = preg_replace('/[^0-9-]/', '', $this->rn);
-
-        return transform($str, fn($str) => explode('-', $str)[0] ?: null);
+        return explode('-', $str)[0] ?: null;
     }
 
     /**
@@ -103,8 +161,12 @@ class LotteryResult
      */
     public function getLastDeckNumber(): ?string
     {
+        $deckNumber = $this->getDeckNumber();
+        if ($deckNumber === null) {
+            return null;
+        }
         //首先获取当前牌靴号，然后转换为数字类型 并且加1，最后转换为字符串类型
-        return transform($this->getDeckNumber(), fn($deckNumber) => (string)(((int)$deckNumber) - 1));
+        return (string)((int)$deckNumber - 1);
     }
 
     /**
@@ -118,8 +180,7 @@ class LotteryResult
         }
         // 使用正则表达式将非数字字符和-替换为空字符串
         $str = preg_replace('/[^0-9-]/', '', $this->rn);
-
-        return transform($str, fn($str) => explode('-', $str)[1] ?: null);
+        return explode('-', $str)[1] ?: null;
     }
 
     public function toArray(): array
@@ -145,7 +206,7 @@ class LotteryResult
 
     public function checkLotteryResults(string $bettingValue): string
     {
-        if ($this->getTransformationResult() === self::TIE){
+        if ($this->getTransformationResult() === self::TIE) {
             return self::BETTING_TIE;
         }
         return $bettingValue === $this->getTransformationResult() ? self::BETTING_WIN : self::BETTING_LOSE;
@@ -168,7 +229,7 @@ class LotteryResult
 
     public function isFirstLottery(): bool
     {
-        if (isset($this->data['map'])) {
+        if (isset($this->data['map']) && is_string($this->data['map'])) {
             try {
                 return count(array_filter(explode(',', $this->data['map']))) == 1;
             } catch (\Exception|\Throwable) {
@@ -225,18 +286,8 @@ class LotteryResult
         return match (true) {
             $playerPoints > $bankerPoints => self::PLAYER,
             $playerPoints < $bankerPoints => self::BANKER,
-            $playerPoints == $bankerPoints => self::TIE,
+            default => self::TIE,
         };
-    }
-
-    function getUniqueX($coordinates, $x, $y)
-    {
-        foreach ($coordinates as $coordinate) {
-            if ($coordinate['x'] === $x && $coordinate['y'] === $y) {
-                return $this->getUniqueX($coordinates, $x + 1, $y);
-            }
-        }
-        return $x;
     }
 
     /**
@@ -246,24 +297,23 @@ class LotteryResult
      */
     function calculatePoints(array $hand): int
     {
-        $points = array_reduce(
-            $hand,
-            fn($carry, $item) => is_numeric($item)
-                ? $carry + $item
-                : $carry + ['A' => 1, 'J' => 0, 'Q' => 0, 'K' => 0,][$item],
-            0
-        );
+        $points = array_reduce($hand, function (int $carry, int $item) {
+
+            $item = $item >= 10 ? 0 : $item;
+
+            return $carry + $item;
+        }, 0);
 
         return $points % 10;
     }
 
     public function isBaccarat(): bool
     {
-        return in_array(str_replace('-', '', $this->terrace), self::$table);
+        return in_array(str_replace('-', '', $this->terrace), array_keys(self::$table));
     }
 
     public function __toString(): string
     {
-        return "terrace:{$this->terrace} issue:{$this->issue} result:{$this->result} transformationResult:{$this->getTransformationResult()} status:{$this->status} rn:{$this->rn} data:" . json_encode($this->data, JSON_UNESCAPED_UNICODE);//json_encode($this->data, JSON_UNESCAPED_UNICODE) .
+        return "terrace:{$this->terrace} issue:{$this->issue} result:{$this->result} transformationResult:{$this->getTransformationResult()} status:$this->status rn:{$this->rn} data:" . json_encode($this->data, JSON_UNESCAPED_UNICODE);//json_encode($this->data, JSON_UNESCAPED_UNICODE) .
     }
 }

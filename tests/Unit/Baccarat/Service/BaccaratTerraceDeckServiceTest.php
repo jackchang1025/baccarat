@@ -50,40 +50,6 @@ class BaccaratTerraceDeckServiceTest extends BaseTest
         $this->assertFalse($result->wasRecentlyCreated);
     }
 
-    public function testUpdateLotterySequenceIsNull()
-    {
-        $baccaratTerraceDeck = $this->baccaratLotteryLogService->updateLotterySequence($this->faker->numberBetween(1,100),$this->faker->unixTime);
-        $this->assertNull($baccaratTerraceDeck);
-    }
 
-    public function testUpdateLotterySequenceTransformationResultIsNull()
-    {
-        $baccaratTerraceDeck = $this->factory->of(BaccaratTerraceDeck::class)->create([
-            'terrace_id' => $this->faker->numberBetween(1,100),
-            'deck_number' => $this->faker->unixTime,
-            'lottery_sequence' => '',
-        ]);
 
-        $result = $this->baccaratLotteryLogService->updateLotterySequence($baccaratTerraceDeck->terrace_id,$baccaratTerraceDeck->deck_number);
-        $this->assertNotNull($result);
-        $this->assertEquals($baccaratTerraceDeck->terrace_id,$result->terrace_id);
-        $this->assertEquals('',$result->lottery_sequence);
-    }
-
-    public function testUpdateLotterySequence()
-    {
-        $baccaratTerraceDeck = $this->factory->of(BaccaratTerraceDeck::class)->create([
-            'terrace_id' => $this->faker->numberBetween(1,100),
-            'deck_number' => $this->faker->unixTime,
-        ]);
-
-        $this->factory->of(BaccaratLotteryLog::class)->times(3)->create([
-            'terrace_deck_id' => $baccaratTerraceDeck->id,
-            'transformationResult' => 'B',
-        ]);
-
-        $result = $this->baccaratLotteryLogService->updateLotterySequence($baccaratTerraceDeck->terrace_id,$baccaratTerraceDeck->deck_number);
-        $this->assertNotNull($result);
-        $this->assertEquals('BBB',$result->lottery_sequence);
-    }
 }

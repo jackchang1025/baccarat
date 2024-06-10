@@ -58,6 +58,18 @@ class BaccaratRuleController extends MineController
     }
 
     /**
+     * 列表
+     * @return ResponseInterface
+     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws \Psr\Container\NotFoundExceptionInterface
+     */
+    #[GetMapping("list"), Permission("baccarat:rule, baccarat:rule:list")]
+    public function list(): ResponseInterface
+    {
+        return $this->success($this->service->getList($this->request->all()));
+    }
+
+    /**
      * 新增
      * @param BaccaratRuleRequest $request
      * @return ResponseInterface

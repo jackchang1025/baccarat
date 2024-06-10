@@ -13,9 +13,10 @@ declare(strict_types=1);
 namespace App\Baccarat\Service;
 
 use App\Baccarat\Mapper\BaccaratTerraceDeckMapper;
-use App\Baccarat\Model\BaccaratLotteryLog;
 use App\Baccarat\Model\BaccaratTerraceDeck;
 use App\Baccarat\Service\Coordinates\CalculateCoordinates;
+use Hyperf\Cache\Annotation\Cacheable;
+use Hyperf\Collection\Collection;
 use Hyperf\Database\Model\Builder;
 use Hyperf\Database\Model\Model;
 use Mine\Abstracts\AbstractService;
@@ -36,76 +37,52 @@ class BaccaratTerraceDeckService extends AbstractService
         $this->mapper = $mapper;
     }
 
-    /**
-     * 更新开奖序列到牌靴中
-     * @param int $terraceDeckId
-     * @param string $transformationResult
-     * @return MineModel|null
-     */
-    public function updateLotterySequence(int $terraceDeckId,string $transformationResult): ?MineModel
+    public function getBaccaratTerraceDeckListWithBettingLog(int $terraceDeckId): ?BaccaratTerraceDeck
     {
+        /**
+         * @var BaccaratTerraceDeck $baccaratTerraceDeck
+         */
+        $baccaratTerraceDeck = $this->mapper->getModel()
+            ->where('id',$terraceDeckId)
+            ->first();
 
-        if($transformationResult == 'T'){return null;}
-
-        $baccaratTerraceDeck = $this->mapper->read($terraceDeckId);
-        if($baccaratTerraceDeck){
-
-            $baccaratTerraceDeck->lottery_sequence.= $transformationResult;
-            $baccaratTerraceDeck->save();
+        if (!$baccaratTerraceDeck){
+            return $baccaratTerraceDeck;
         }
-        
+
+        $baccaratLotteryLog = $baccaratTerraceDeck->baccaratLotteryLog()
+            ->with([
+            'baccaratSimulatedBettingLog:id,issue,betting_id,betting_value,betting_result,terrace_deck_id,status,created_at',
+            'baccaratSimulatedBettingLog.baccaratBettingRuleLog:id,rule,baccarat_betting_log_id'
+        ])->whereNotNull('transformationResult')
+            ->get(['id', 'terrace_deck_id', 'issue', 'result', 'transformationResult', 'created_at']);
+
+        $baccaratTerraceDeck->setRelation('baccaratLotteryLog',$baccaratLotteryLog);
+        $baccaratTerraceDeck->append(['lotteryLogBankerCount','lotteryLogPlayerCount','lotteryLogTieCount','lotteryLogCalculateCoordinates']);
+
         return $baccaratTerraceDeck;
     }
 
-    public function getBaccaratTerraceDeckWithToday(int $terraceId,string $deckNumber): Model|\Hyperf\Database\Query\Builder|Builder|null
+    /**
+     * @return Collection
+     */
+    #[Cacheable(prefix: "baccaratTerraceDeckGroupDate", ttl: 9000)]
+    public function getBaccaratTerraceDeckGroupDate(): Collection
     {
-        return $this->mapper->getBaccaratTerraceDeckWithToday($terraceId,$deckNumber);
-    }
-
-    public function getBaccaratTerraceDeckWithTodayOrCreate(int $terraceId,string $deckNumber):BaccaratTerraceDeck
-    {
-        return $this->mapper->getBaccaratTerraceDeckWithTodayOrCreate($terraceId,$deckNumber);
+        return $this->mapper->getModel()::selectRaw('DATE(created_at) as date, COUNT(*) as count')
+            ->groupBy('date')
+            ->whereDate('created_at', '<', date('Y-m-d'))
+            ->get();
     }
 
     /**
-     * @param int $terraceId
-     * @return Builder|Model
+     * @param string $date
+     * @return Collection
      */
-    public function getLastBaccaratTerraceDeckOrCreate(int $terraceId): BaccaratTerraceDeck|Builder
+    #[Cacheable(prefix: "baccaratTerraceDeckByDate", ttl: 9000)]
+    public function getBaccaratTerraceDeckByDate(string $date): Collection
     {
-        return $this->mapper->getLastBaccaratTerraceDeckOrCreate($terraceId);
-    }
-
-    public function getLastBaccaratTerraceDeck(int $terraceId): BaccaratTerraceDeck|Builder|null
-    {
-        return $this->mapper->getLastBaccaratTerraceDeck($terraceId);
-    }
-
-    public function getBaccaratTerraceDeckListWithBettingLog(int $terraceDeckId): Builder|BaccaratTerraceDeck
-    {
-        $data = $this->mapper->getModel()
-            ->withCount([
-                'baccaratLotteryLog as bankerCount' => function ($query) {
-                $query->where('transformationResult', LotteryResult::BANKER);
-                },
-                'baccaratLotteryLog as playerCount' => function ($query) {
-                $query->where('transformationResult', LotteryResult::PLAYER);
-                },
-                'baccaratLotteryLog as tieCount' => function ($query) {
-                $query->where('transformationResult', LotteryResult::TIE);
-            }])->with([
-            'baccaratLotteryLog.baccaratSimulatedBettingLog:id,issue,betting_id,betting_value,betting_result,terrace_deck_id,status,created_at',
-            'baccaratLotteryLog.baccaratSimulatedBettingLog.baccaratBettingRuleLog:id,rule,baccarat_betting_log_id',
-            'baccaratLotteryLog' => function ($query) {
-            $query->whereNotNull('transformationResult')
-                ->select('id', 'terrace_deck_id', 'issue', 'result', 'transformationResult', 'created_at');
-            },
-        ])->where('id',$terraceDeckId)->first();
-
-        if ($data && $data->baccaratLotteryLog->isNotEmpty()){
-            $baccaratLotteryLog = new CalculateCoordinates();
-            $data->baccarat_lottery_log = $baccaratLotteryLog->calculateCoordinatesWithCollection($data->baccaratLotteryLog);
-        }
-        return $data;
+        return $this->mapper->getModel()::whereDate('created_at', $date)
+            ->get();
     }
 }

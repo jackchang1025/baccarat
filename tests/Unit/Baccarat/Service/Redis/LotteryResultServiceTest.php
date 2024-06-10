@@ -3,7 +3,7 @@
 namespace HyperfTests\Unit\Baccarat\Service\Redis;
 
 use App\Baccarat\Model\BaccaratTerraceDeck;
-use App\Baccarat\Service\Redis\LotteryResultService;
+use App\Baccarat\Service\Redis\Redis;
 use Hyperf\Redis\RedisFactory;
 use Hyperf\Redis\RedisProxy;
 use HyperfTests\Unit\BaseTest;
@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
 class LotteryResultServiceTest extends BaseTest
 {
 
-    protected LotteryResultService $lotteryResultService;
+    protected Redis $lotteryResultService;
     protected RedisProxy $redis;
 
     protected function setUp(): void
@@ -24,7 +24,7 @@ class LotteryResultServiceTest extends BaseTest
         $this->redis = $redisFactory->get('default');
 
         // 初始化 LotteryResultService
-        $this->lotteryResultService = make(LotteryResultService::class);
+        $this->lotteryResultService = make(Redis::class);
     }
 
 
@@ -37,7 +37,7 @@ class LotteryResultServiceTest extends BaseTest
 
     public function testGetFormat()
     {
-        $this->assertEquals('test_terrace:2023-06-10', $this->lotteryResultService->getFormat('test_terrace', '2023-06-10'));
+        $this->assertEquals('test_terrace:2023-06-10', $this->lotteryResultService->getFormatTable('test_terrace', '2023-06-10'));
     }
 
 
@@ -59,7 +59,7 @@ class LotteryResultServiceTest extends BaseTest
         $this->assertInstanceOf(BaccaratTerraceDeck::class,$savedData);
 
         //清除 redis 测试数据
-        $this->redis->del($this->lotteryResultService->getFormat($terraceId, $date));
+        $this->redis->del($this->lotteryResultService->getFormatTable($terraceId, $date));
     }
 
 
@@ -84,7 +84,7 @@ class LotteryResultServiceTest extends BaseTest
         $this->assertNull($nonExistingData);
 
         //清除 redis 测试数据
-        $this->redis->del($this->lotteryResultService->getFormat($terraceId, $date));
+        $this->redis->del($this->lotteryResultService->getFormatTable($terraceId, $date));
     }
 
 
@@ -107,7 +107,7 @@ class LotteryResultServiceTest extends BaseTest
         $this->assertFalse($notExists);
 
         //清除 redis 测试数据
-        $this->redis->del($this->lotteryResultService->getFormat($terraceId, $date));
+        $this->redis->del($this->lotteryResultService->getFormatTable($terraceId, $date));
     }
 
 
@@ -140,7 +140,7 @@ class LotteryResultServiceTest extends BaseTest
         // 验证迭代结果是否与原始数据一致
         $this->assertEquals($lotteryData, $iteratedData);
         //清除 redis 测试数据
-        $this->redis->del($this->lotteryResultService->getFormat($terraceId, $date));
+        $this->redis->del($this->lotteryResultService->getFormatTable($terraceId, $date));
     }
 
     public function testDeleteExpiredLotteryResults()

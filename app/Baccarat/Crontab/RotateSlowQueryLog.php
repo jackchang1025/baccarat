@@ -6,7 +6,7 @@ namespace App\Baccarat\Crontab;
 use Hyperf\Crontab\Annotation\Crontab;
 use Hyperf\DbConnection\Db;
 
-#[Crontab(name: "rotateSlowQueryLog", rule: "0 0 * * *", callback: "execute", memo: "每天凌晨 0 点执行 rotate:slow-query-log 命令")]
+#[Crontab(name: "rotateSlowQueryLog", rule: "0 0 * * *", callback: "execute", memo: "每天凌晨 0 点执行")]
 class RotateSlowQueryLog
 {
     /**
@@ -23,6 +23,10 @@ class RotateSlowQueryLog
 
         if (!file_exists($path)){
             throw new \Exception("No slow query log file found: $logFile");
+        }
+
+        if (file_exists($rotatedLogFile)){
+            unlink($rotatedLogFile);
         }
 
         rename($logFile, $rotatedLogFile);

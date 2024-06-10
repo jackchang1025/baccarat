@@ -13,10 +13,12 @@ declare(strict_types=1);
 namespace App\Baccarat\Mapper;
 
 use App\Baccarat\Model\BaccaratLotteryLog;
-use App\Baccarat\Model\BaccaratRule;
+use Carbon\Carbon;
 use Hyperf\Database\Model\Builder;
+use Hyperf\Database\Model\Collection;
 use Hyperf\Database\Model\Model;
 use Mine\Abstracts\AbstractMapper;
+use Mine\MineModel;
 
 /**
  * 规则Mapper类
@@ -45,22 +47,41 @@ class BaccaratLotteryLogMapper extends AbstractMapper
         return $query;
     }
 
-    public function getLotteryLog(string $issue): BaccaratLotteryLog|Builder|null
+    public function find(array $condition, array $column = ['*'], ?Carbon $date = null): BaccaratLotteryLog|Model|null
     {
-        return $this->getModel()->where('issue',$issue)->first();
+        return $this->getModel($date)->where($condition)->first($column);
     }
 
-    public function getTransformationResult(int $terraceDeckId):string
+    public function all(?\Closure $closure = null, array $column = ['*'], ?Carbon $date = null): array|Collection
     {
-        $commentsContents = $this->getModel()
-        ->where('terrace_deck_id',$terraceDeckId)
-        ->get()
-        ->pluck('transformationResult')
-        ->filter(fn($item) => !empty($item))
-        ->map(fn($item) => str_replace('T', '', $item))
-        ->toArray();
+        return $this->getModel($date)->where(function ($query) use ($closure) {
+            if ($closure instanceof \Closure) {
+                $closure($query);
+            }
+        })->get($column);
+    }
 
-    // 使用 PHP 的 implode 函数将数组中的评论内容连接成一个字符串
-    return implode('', $commentsContents);
+    public function firstOrCreate(array $attributes, $values = [], ?Carbon $date = null): BaccaratLotteryLog|Model
+    {
+        return $this->getModel($date)->firstOrCreate($attributes, $values);
+    }
+
+    public function create(array $data, ?Carbon $date = null): BaccaratLotteryLog|Model
+    {
+        return $this->getModel($date)->create($data);
+    }
+
+    public function updateOrCreate(array $attributes, array $data, ?Carbon $date = null): BaccaratLotteryLog|Model|null
+    {
+        return $this->getModel($date)->updateOrCreate($attributes, $data);
+    }
+
+    public function getModel(?Carbon $date = null): MineModel
+    {
+        $model = parent::getModel();
+
+        $model->getShardingModel($date);
+
+        return $model;
     }
 }

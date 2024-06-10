@@ -3,6 +3,7 @@
 namespace App\Baccarat\Service\BettingAmountStrategy;
 
 
+use App\Baccarat\Model\BaccaratSimulatedBettingLog;
 use App\Baccarat\Service\SimulationBettingAmount\BetLog;
 
 class FlatNote extends Strategy
@@ -13,7 +14,7 @@ class FlatNote extends Strategy
         return 'FlatNote';
     }
 
-    public function calculateCurrentBetAmount(BetLog $betLog): float|int
+    public function calculateCurrentBetAmount(BaccaratSimulatedBettingLog $betLog): float|int
     {
         return $this->currentBet;
     }

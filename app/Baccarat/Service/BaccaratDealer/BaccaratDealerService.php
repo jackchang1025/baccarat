@@ -18,10 +18,10 @@ class BaccaratDealerService
      */
     protected int|string $currentIssue = 0;
 
-    protected array $odds = [
-        'player' => 2,  // 假设玩家赢的赔率为 1:1
-        'banker' => 1.95,  // 假设庄家赢的赔率为 0.95:1，通常庄家赢会抽取5%的佣金
-        'tie' => 8,  // 假设平局的赔率为 8:1
+    protected static array $odds = [
+        'P' => 1,  // 假设玩家赢的赔率为 1:1
+        'B' => 0.95,  // 假设庄家赢的赔率为 0.95:1，通常庄家赢会抽取5%的佣金
+        'T' => 8,  // 假设平局的赔率为 8:1
     ];
 
     protected string $transformationResults = '';
@@ -48,9 +48,9 @@ class BaccaratDealerService
         $this->roundResults = new Collection();
     }
 
-    public function getOdds(string $key): float|int
+    public static function getOdds(string $key): ?float
     {
-        return $this->odds[$key] ?? 0;
+        return self::$odds[$key] ?? null;
     }
 
     public function getCurrentIssue(): int

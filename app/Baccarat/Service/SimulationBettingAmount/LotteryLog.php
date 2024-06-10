@@ -22,6 +22,4 @@ class LotteryLog
     {
         return $this->isLastIssue;
     }
-
-
 }

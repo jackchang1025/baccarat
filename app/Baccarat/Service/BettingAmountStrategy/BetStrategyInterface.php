@@ -8,7 +8,7 @@ use Hyperf\Collection\Collection;
 
 interface BetStrategyInterface
 {
-    public function handle(LotteryLog $betLog,Closure $next): mixed;
+    public function handle(Collection $collection): mixed;
 
     public function getName(): string;
 

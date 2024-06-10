@@ -36,14 +36,4 @@ class BaccaratTerraceService extends AbstractService
     {
         $this->mapper = $mapper;
     }
-
-    public function getBaccaratTerraceOrCreateByCode(string $code): BaccaratTerrace|Model
-    {
-        return $this->mapper->getBaccaratTerraceOrCreateByCode($code);
-    }
-
-    public function getBaccaratTerrace(string $code): BaccaratTerrace|Builder|null
-    {
-        return $this->mapper->getBaccaratTerrace($code);
-    }
 }

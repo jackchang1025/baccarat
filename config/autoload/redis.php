@@ -24,4 +24,19 @@ return [
             'max_idle_time' => (float) env('REDIS_MAX_IDLE_TIME', 60),
         ],
     ],
+
+    'baccarat' => [
+        'host' => env('REDIS_HOST', 'localhost'),
+        'auth' => env('REDIS_AUTH', null),
+        'port' => (int) env('REDIS_PORT', 6379),
+        'db' => (int) env('BACCARAT_REDIS_DB', 1),
+        'pool' => [
+            'min_connections' => 1,
+            'max_connections' => 100,
+            'connect_timeout' => 10.0,
+            'wait_timeout' => 3.0,
+            'heartbeat' => -1,
+            'max_idle_time' => (float) env('REDIS_MAX_IDLE_TIME', 60),
+        ],
+    ],
 ];

@@ -13,6 +13,8 @@
     "fakerphp/faker": "^1.23",
     "hyperf/signal": "^3.1",
     "hyperf/websocket-client": "^3.1",
+    "symfony/notifier": "^6.4",
+    "vinchan/message-notify": "^2.0",
     "weijiajia/hyperf-redis-lock": "^2.2",
     "xmo/app-store": "2.0.x-dev",
     "xmo/jwt-auth": "2.0.x-dev",
@@ -21,7 +23,8 @@
     "xmo/mine-helpers": "2.0.x-dev",
     "xmo/mine-office": "2.0.x-dev",
     "xmo/mine-service": "2.0.x-dev",
-    "xmo/mine-translatable": "2.0.x-dev"
+    "xmo/mine-translatable": "2.0.x-dev",
+    "ext-bcmath": "*"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.0",
@@ -72,7 +75,8 @@
     "post-autoload-dump": [
       "rm -rf runtime/container"
     ],
-    "test": "pest ",
+    "pest": "pest ",
+    "test": "co-phpunit -c phpunit.xml --colors=always",
     "coverage": "pest --coverage --coverage-clover tests/coverage.xml ",
     "cs-fix": "php-cs-fixer fix $1",
     "analyse": "phpstan analyse --memory-limit 500M -l 0 -c phpstan.neon ./app ./config ./api ./common",

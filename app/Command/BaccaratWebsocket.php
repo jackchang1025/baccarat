@@ -7,15 +7,11 @@ namespace App\Command;
 use App\Baccarat\Service\LoggerFactory;
 use App\Baccarat\Service\Output\Output;
 use App\Baccarat\Service\Websocket\ConnectionPool;
-use App\Baccarat\Service\Websocket\WebsocketClientFactory;
 use App\Baccarat\Service\Websocket\WebSocketManageService;
 use Hyperf\Command\Command as HyperfCommand;
 use Hyperf\Command\Annotation\Command;
 use Hyperf\Contract\ConfigInterface;
-use Hyperf\Engine\Channel;
 use Hyperf\Redis\RedisFactory;
-use Hyperf\Redis\RedisProxy;
-use Lysice\HyperfRedisLock\RedisLock;
 use Psr\Container\ContainerInterface;
 use Psr\EventDispatcher\EventDispatcherInterface;
 use Swoole\Runtime;
@@ -29,7 +25,7 @@ class BaccaratWebsocket extends HyperfCommand
         protected RedisFactory $redisFactory,
     )
     {
-        parent::__construct('baccarat:pool');
+        parent::__construct('baccarat:websocketPool');
     }
 
     public function configure()
@@ -50,35 +46,21 @@ class BaccaratWebsocket extends HyperfCommand
             return;
         }
 
-        $channel = new Channel(1000);
-
-        $websocketClientFactory = new websocketClientFactory(
-            channel: $channel,
-            host: $this->config->get('websocket.host'),
-            token: $this->config->get('websocket.token'),
-            connectionTimeout: $this->config->get('websocket.connectionTimeout')
-        );
-
-        $ConnectionPool = new ConnectionPool(
+        $connectionPool = new ConnectionPool(
             container: $this->container,
-            websocketClientFactory: $websocketClientFactory,
             output: make(Output::class),
+            connectionCreationIntervalTime: $this->config->get('websocket.connectionPool.connection_creation_interval_time'),
+            connectionCheckIntervalTime: $this->config->get('websocket.connectionPool.connection_check_interval_time'),
             config: $this->config->get('websocket.connectionPool'),
         );
 
         $WebSocketManageService = new WebSocketManageService(
-            websocketClientFactory: $websocketClientFactory,
-            connectionPool:$ConnectionPool,
-            channel: $channel,
+            connectionPool:$connectionPool,
             output: make(Output::class),
             dispatcher: $this->container->get(EventDispatcherInterface::class),
             loggerFactory: $this->container->get(LoggerFactory::class),
-            concurrentSize: 20,
-            websocketSize: 2
+            channel: new \App\Baccarat\Service\Websocket\Channel\Channel(10000)
         );
-
-        // 将 WebSocketManageService 实例以 Singleton 模式绑定到容器中
-        $this->container->set(WebSocketManageService::class, $WebSocketManageService);
 
         $WebSocketManageService->run();
 

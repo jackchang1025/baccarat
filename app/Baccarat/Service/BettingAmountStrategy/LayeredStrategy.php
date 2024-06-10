@@ -3,6 +3,7 @@
 namespace App\Baccarat\Service\BettingAmountStrategy;
 
 
+use App\Baccarat\Model\BaccaratSimulatedBettingLog;
 use App\Baccarat\Service\Sequence\Sequence;
 use App\Baccarat\Service\SimulationBettingAmount\BetLog;
 
@@ -30,9 +31,23 @@ class LayeredStrategy extends Strategy
     {
         parent::__construct($totalBetAmount, $defaultBetAmount);
 
+        $this->initializeLayerBets();
+    }
+
+    public function reset(): void
+    {
+        parent::reset();
+
+        $this->currentLayer = 1;
+        $this->betCountInCurrentLayer = 0;
+        $this->winCountInCurrentLayer = 0;
+    }
+
+    protected function initializeLayerBets(): void
+    {
         // 根据默认投注金额生成每层的投注金额
         for ($i = 1; $i <= 9; $i++) {
-            $this->layerBets[$i] = $defaultBetAmount * $i;
+            $this->layerBets[$i] = $this->defaultBetAmount * $i;
         }
     }
 
@@ -41,12 +56,12 @@ class LayeredStrategy extends Strategy
         return "Layered";
     }
 
-    public function calculateCurrentBetAmount(BetLog $betLog): float|int
+    public function calculateCurrentBetAmount(BaccaratSimulatedBettingLog $betLog): float|int
     {
 
         $this->betCountInCurrentLayer++;
 
-        if ($betLog->getSequence() == Sequence::WIN->value) {
+        if ($betLog->isWin()) {
             $this->winCountInCurrentLayer++;
 
             if ($this->betCountInCurrentLayer === 1) {

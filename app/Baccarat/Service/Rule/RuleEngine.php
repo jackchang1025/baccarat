@@ -10,19 +10,13 @@ use Psr\Log\LoggerInterface;
 
 class RuleEngine
 {
-
     protected Collection $rules;
-
-    protected LoggerInterface $logger;
-
 
     /**
      */
     public function __construct(protected LoggerFactory $loggerFactory)
     {
         $this->rules = new Collection();
-
-        $this->logger = $this->loggerFactory->create('match', 'baccarat');
     }
 
     public function getRules(): Collection
@@ -40,11 +34,7 @@ class RuleEngine
     {
         return $this->rules->filter(function (RuleInterface $rule) use ($string) {
 
-            $match = $rule->match($string);
-
-            $this->logger->info("string:{$string} title:{$rule->getName()} rule:{$rule->getRule()} match:{$match}");
-
-            return $match;
+            return $rule->match($string);
         });
     }
 
@@ -52,16 +42,7 @@ class RuleEngine
     {
         return $this->rules->first(function (RuleInterface $rule) use ($string) {
 
-            $match = $rule->match($string);
-
-            $this->logger->info("string:{$string} title:{$rule->getName()} rule:{$rule->getRule()} match:{$match}");
-
-            return $match;
+            return $rule->match($string);
         });
-    }
-
-    public function applyRulesConcurrent(string $transformationResults): ?RuleInterface
-    {
-
     }
 }

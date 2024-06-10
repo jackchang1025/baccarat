@@ -48,6 +48,20 @@ class BaccaratSimulatedBettingLogRequest extends MineFormRequest
         ];
     }
 
+    /**
+     * 更新数据验证规则
+     * return array
+     */
+    public function chartRules(): array
+    {
+        return [
+            'date' => 'required',
+            'betting_id' => 'required',
+            'betTotalAmount' => 'required',
+            'betDefaultAmount' => 'required',
+        ];
+    }
+
     
     /**
      * 字段映射名称
@@ -57,7 +71,10 @@ class BaccaratSimulatedBettingLogRequest extends MineFormRequest
     {
         return [
             'id' => '主键',
-
+            'date' => '日期',
+            'betting_id' => '投注单id',
+            'betTotalAmount' => '投注总金额',
+            'betDefaultAmount' => '投注默认金额',
         ];
     }
 

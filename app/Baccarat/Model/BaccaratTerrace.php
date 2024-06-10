@@ -7,6 +7,8 @@ namespace App\Baccarat\Model;
 use Hyperf\Database\Model\Collection;
 use Hyperf\Database\Model\Relations\HasMany;
 use Hyperf\Database\Model\SoftDeletes;
+use Hyperf\ModelCache\Cacheable;
+use Hyperf\ModelCache\CacheableInterface;
 use Mine\MineModel;
 
 /**
@@ -20,9 +22,9 @@ use Mine\MineModel;
  * @property Collection|BaccaratTerraceDeck[] $children 牌靴
  * @property Collection|BaccaratTerraceDeck[] $baccaratTerraceDeck 牌靴
  */
-class BaccaratTerrace extends MineModel
+class BaccaratTerrace extends MineModel implements CacheableInterface
 {
-    use SoftDeletes;
+    use Cacheable;
     /**
      * The table associated with the model.
      */

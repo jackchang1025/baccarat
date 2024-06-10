@@ -2,12 +2,13 @@
 
 namespace App\Baccarat\Event;
 
-use App\Baccarat\Service\LotteryResult;
+
+use App\Baccarat\Service\BaccaratBetting\BaccaratBettingWaitingResult;
 
 class WaitingEvent
 {
 
-    public function __construct(public LotteryResult $lotteryResult)
+    public function __construct(public readonly BaccaratBettingWaitingResult $baccaratBettingWaitingResult)
     {
 
     }

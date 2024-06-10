@@ -61,7 +61,7 @@ return [
         'handler' => [
             'class' => RotatingFileHandler::class,
             'constructor' => [
-                'filename' => BASE_PATH . '/runtime/logs/baccarat/lottery.log',
+                'filename' => BASE_PATH . '/runtime/logs/baccarat/baccarat.log',
                 'level' => Logger::DEBUG,
             ],
         ],

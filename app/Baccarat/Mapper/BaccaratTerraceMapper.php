@@ -12,16 +12,8 @@ declare(strict_types=1);
 
 namespace App\Baccarat\Mapper;
 
-use App\Baccarat\Model\BaccaratLotteryLog;
-use App\Baccarat\Model\BaccaratSimulatedBetting;
-use App\Baccarat\Model\BaccaratSimulatedBettingLog;
 use App\Baccarat\Model\BaccaratTerrace;
-use App\Baccarat\Model\BaccaratTerraceDeck;
-use App\Baccarat\Service\Coordinates\CalculateCoordinates;
-use App\Baccarat\Service\LotteryResult;
-use Carbon\Carbon;
 use Hyperf\Database\Model\Builder;
-use Hyperf\Database\Model\Model;
 use Hyperf\Database\Model\Relations\HasMany;
 use Mine\Abstracts\AbstractMapper;
 
@@ -98,81 +90,11 @@ class BaccaratTerraceMapper extends AbstractMapper
 
     public function getBaccaratTerraceOrCreateByCode(string $terraceCode): BaccaratTerrace|\Mine\MineModel
     {
-        return $this->getModel()->firstOrCreate(['code' => $terraceCode], ['code' => $terraceCode, 'title' => $terraceCode]);
-    }
-
-    public function getBaccaratTerrace(string $code): BaccaratTerrace|Builder|null
-    {
-        return $this->getModel()->where('code', $code)->first();
+        return $this->getModel()->firstOrCreate(['code' => $terraceCode], ['title' => $terraceCode]);
     }
 
     public function getList(?array $params, bool $isScope = true): array
     {
-
-//        $query = BaccaratSimulatedBettingLog::with([
-//            'baccaratTerraceDeck.baccaratTerrace',
-//        ]);
-//
-//        if (isset($params['betting_id']) && filled($params['betting_id'])) {
-//            $query->where('betting_id', $params['betting_id']);
-//        }
-//
-//        if (isset($params['terrace_deck_created_at']) && filled($params['terrace_deck_created_at']) && is_array($params['terrace_deck_created_at']) && count($params['terrace_deck_created_at']) == 2) {
-//            $query->whereBetween(
-//                'created_at',
-//                [$params['terrace_deck_created_at'][0], $params['terrace_deck_created_at'][1]]
-//            );
-//        }
-//
-//        $BaccaratSimulatedBettingLogList = $query->select('id', 'betting_id', 'terrace_deck_id', 'created_at')->get();
-//
-//        $baccaratTerraceIds = $BaccaratSimulatedBettingLogList->pluck('baccaratTerraceDeck.baccaratTerrace.id')->unique()->toArray();
-//        $baccaratTerraceDeckIds = $BaccaratSimulatedBettingLogList->pluck('baccaratTerraceDeck.id')->unique()->toArray();
-//
-//        if (!empty($baccaratTerraceIds) && !empty($baccaratTerraceDeckIds)) {
-//
-//            $s = microtime(true);
-//
-//            $baccaratTerraceList = BaccaratTerrace::with([
-//                'children' => function (HasMany $query) use ($baccaratTerraceDeckIds) {
-//                    $query->whereIn('id', $baccaratTerraceDeckIds)
-//                        ->selectRaw('id,terrace_id,terrace_id as parent_id,deck_number as title,id as `key`')
-//                        ->withCount([
-//                            'baccaratLotteryLog as bankerCount' => function ($query) {
-//                                $query->where('transformationResult', LotteryResult::BANKER);
-//                            },
-//                            'baccaratLotteryLog as playerCount' => function ($query) {
-//                                $query->where('transformationResult', LotteryResult::PLAYER);
-//                            },
-//                            'baccaratLotteryLog as tieCount' => function ($query) {
-//                                $query->where('transformationResult', LotteryResult::TIE);
-//                            }
-//                        ])->with([
-////                            'baccaratSimulatedBettingLog:id,betting_id,betting_value,betting_result,terrace_deck_id,status,created_at',
-////                            'baccaratSimulatedBettingLog.baccaratBettingRuleLog:id,rule,baccarat_betting_log_id',
-//                            'baccaratLotteryLog' => function ($query) {
-//                                $query->whereNotNull('transformationResult')
-//                                    ->select('id', 'terrace_deck_id', 'issue', 'result', 'transformationResult', 'created_at');
-//                            },
-//                            'baccaratLotteryLog.baccaratSimulatedBettingLog:id,issue,betting_value,betting_result',
-//                        ]);
-//                }
-//            ])
-//                ->select('id', 'title', 'code','id as key')
-//                ->findMany($baccaratTerraceIds)
-//                ->each(function (BaccaratTerrace $baccaratTerrace){
-//                    $baccaratTerrace->children->append(['baccaratLotterySequence'])->each(function (BaccaratTerraceDeck $baccaratTerraceDeck) {
-//                        $baccaratTerraceDeck->baccaratLotteryLog = (new CalculateCoordinates())->calculateCoordinatesWithCollection($baccaratTerraceDeck->baccaratLotteryLog);
-//                    });
-//                });
-//
-//            var_dump(number_format(microtime(true) - $s, 8));
-//            return $baccaratTerraceList->toArray();
-//        }
-//
-//        return [];
-
-
         return $this->listQuerySetting($params, $isScope)
             ->with(['children' => function (HasMany $query) use ($params){
 
@@ -192,12 +114,12 @@ class BaccaratTerraceMapper extends AbstractMapper
                     }
                 }]);
 
-                return $query->selectRaw('id,terrace_id,terrace_id as parent_id,deck_number as title,id as `key`');
+                return $query->selectRaw('id,terrace_id,terrace_id as parent_id,deck_number,id as `key`');
             }])
             ->get(['id', 'title', 'code as key'])
             ->append(['parent_id'])
             ->filter(fn(BaccaratTerrace $baccaratTerrace) => $baccaratTerrace->children->isNotEmpty())
-            ->each(fn(BaccaratTerrace $baccaratTerrace)=> $baccaratTerrace->children->append(['baccaratBettingSequence']))
+            ->each(fn(BaccaratTerrace $baccaratTerrace)=> $baccaratTerrace->children->append(['baccaratBettingSequence','title']))
             ->toArray();
 
     }

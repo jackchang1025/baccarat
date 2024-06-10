@@ -9,6 +9,7 @@ declare(strict_types=1);
  * @contact  root@imoi.cn
  * @license  https://github.com/mineadmin/MineAdmin/blob/master/LICENSE
  */
+
 use Mine\Annotation\Api\MApiRequestParamCollector;
 use Mine\Annotation\Api\MApiResponseParamCollector;
 use Mine\Annotation\DependProxyCollector;

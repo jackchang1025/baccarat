@@ -35,31 +35,4 @@ class BaccaratTerraceDeckMapperTest extends BaseTest
         $this->assertInstanceOf(BaccaratTerraceDeck::class, $this->mapper->getModel());
     }
 
-    public function testGetLastBaccaratTerraceDeck()
-    {
-        $baccaratTerrace = $this->factory->of(BaccaratTerrace::class)->create([
-            'title' => 'test_title',
-            'code' => 'test_code'
-        ]);
-
-        $this->factory->of(BaccaratTerraceDeck::class)->create([
-            'terrace_id' => $baccaratTerrace->id
-        ]);
-
-        $result = $this->mapper->getLastBaccaratTerraceDeck($baccaratTerrace->id);
-
-        $this->assertInstanceOf(BaccaratTerraceDeck::class, $result);
-        $this->assertNotNull($result);
-        $this->assertEquals($baccaratTerrace->id,$result->terrace_id);
-    }
-
-    public function testGetLastBaccaratTerraceDeckOrCreate()
-    {
-        $terraceId = $this->faker->numberBetween(1,100);
-        $result = $this->mapper->getLastBaccaratTerraceDeckOrCreate($terraceId);
-
-        $this->assertInstanceOf(BaccaratTerraceDeck::class, $result);
-        $this->assertNotNull($result);
-        $this->assertEquals($terraceId,$result->terrace_id);
-    }
 }

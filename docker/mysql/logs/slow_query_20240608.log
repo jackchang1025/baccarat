@@ -1,0 +1,562 @@
+/usr/sbin/mysqld, Version: 8.0.36 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2024-05-20T04:01:00.442493Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000282  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+use mineadmin;
+SET timestamp=1716177660;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:02:00.450525Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000134  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716177720;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:03:00.458810Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000150  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716177780;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:04:00.467272Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000349  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716177840;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:05:00.475382Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000099  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716177900;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:06:00.484118Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000109  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716177960;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:07:00.493112Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000208  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178020;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:08:00.503762Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000444  Lock_time: 0.000005 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178080;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:09:00.513524Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000168  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178140;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:10:00.520319Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000496  Lock_time: 0.000006 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178200;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:11:00.531286Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000442  Lock_time: 0.000006 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178260;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:12:00.540321Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000229  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178320;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:13:00.544687Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000136  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178380;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:14:00.551080Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000175  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178440;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:15:00.560608Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000182  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178500;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:16:00.568741Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000463  Lock_time: 0.000005 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178560;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:17:00.579029Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000191  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178620;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:18:00.586678Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000145  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178680;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:19:00.597054Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000159  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178740;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:20:00.606770Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000435  Lock_time: 0.000006 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178800;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:21:00.618456Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000146  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178860;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:22:00.625109Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000359  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178920;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:23:00.635044Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000184  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716178980;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:24:00.637897Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000155  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179040;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:25:00.650468Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.001835  Lock_time: 0.000006 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179100;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:26:00.657001Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000138  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179160;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:27:00.664005Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000173  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179220;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:28:00.670047Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000174  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179280;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:29:00.678594Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000148  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179340;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:30:00.679134Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000152  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179400;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:31:00.686041Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000166  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179460;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:32:00.692004Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000174  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179520;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:33:00.693917Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000141  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179580;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:34:00.700338Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000165  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179640;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:35:00.705247Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000168  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179700;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:36:00.712351Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000139  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179760;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:37:00.718591Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000415  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179820;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-05-20T04:38:00.719271Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000205  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1716179880;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+/usr/sbin/mysqld, Version: 8.0.36 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2024-06-08T02:58:02.186966Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.046864  Lock_time: 0.000005 Rows_sent: 0  Rows_examined: 2
+use mineadmin;
+SET timestamp=1717815482;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T02:58:51.593612Z
+# User@Host: root[root] @  [192.168.80.1]  Id:     9
+# Query_time: 0.079297  Lock_time: 0.000027 Rows_sent: 501  Rows_examined: 501
+SET timestamp=1717815531;
+/* ApplicationName=PhpStorm 2024.1 */ SELECT t.*
+FROM mineadmin.baccarat_lottery_log_202417 t
+LIMIT 501;
+# Time: 2024-06-08T02:59:00.053271Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000192  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717815540;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T02:59:02.187834Z
+# User@Host: root[root] @  [192.168.80.1]  Id:    10
+# Query_time: 0.002578  Lock_time: 0.000003 Rows_sent: 501  Rows_examined: 501
+SET timestamp=1717815542;
+/* ApplicationName=PhpStorm 2024.1 */ SELECT t.*
+FROM mineadmin.baccarat_lottery_log_202417 t
+LIMIT 501;
+# Time: 2024-06-08T03:00:00.056726Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000192  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717815600;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:01:00.066872Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000148  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717815660;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:02:00.066721Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000212  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717815720;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:03:00.066832Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000147  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717815780;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:04:00.067673Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000190  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717815840;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:05:00.068542Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000215  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717815900;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:06:00.068723Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000166  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717815960;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:07:00.067757Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000181  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816020;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:07:10.517950Z
+# User@Host: root[root] @  [192.168.80.2]  Id:    11
+# Query_time: 0.019095  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1717816030;
+select count(*) as aggregate from `system_notice` where `system_notice`.`deleted_at` is null;
+# Time: 2024-06-08T03:07:20.153662Z
+# User@Host: root[root] @  [192.168.80.2]  Id:    11
+# Query_time: 0.000269  Lock_time: 0.000002 Rows_sent: 10  Rows_examined: 10
+SET timestamp=1717816040;
+select * from `baccarat_terrace` limit 10 offset 0;
+# Time: 2024-06-08T03:07:22.793434Z
+# User@Host: root[root] @  [192.168.80.2]  Id:    11
+# Query_time: 0.025395  Lock_time: 0.000002 Rows_sent: 20  Rows_examined: 20
+SET timestamp=1717816042;
+select * from `baccarat_rule`;
+# Time: 2024-06-08T03:07:23.240332Z
+# User@Host: root[root] @  [192.168.80.2]  Id:    11
+# Query_time: 0.000187  Lock_time: 0.000002 Rows_sent: 10  Rows_examined: 10
+SET timestamp=1717816043;
+select * from `baccarat_terrace_deck` limit 10 offset 0;
+# Time: 2024-06-08T03:07:32.947526Z
+# User@Host: root[root] @  [192.168.80.2]  Id:    11
+# Query_time: 0.033728  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 119
+SET timestamp=1717816052;
+select count(*) as aggregate from `baccarat_waiting_sequence` where `baccarat_waiting_sequence`.`deleted_at` is null;
+# Time: 2024-06-08T03:07:42.402852Z
+# User@Host: root[root] @  [192.168.80.2]  Id:    13
+# Query_time: 5.137875  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1717816057;
+select count(*) as aggregate from `baccarat_betting_log`;
+# Time: 2024-06-08T03:08:19.430890Z
+# User@Host: [] @  []  Id:    14
+# Query_time: 0.316174  Lock_time: 0.000023 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1717816099;
+throttle:         11 'index not used' warning(s) suppressed.;
+# Time: 2024-06-08T03:08:44.796974Z
+# User@Host: root[root] @  [192.168.80.2]  Id:    12
+# Query_time: 0.035435  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 220
+SET timestamp=1717816124;
+select `name` from `system_menu` where `code` = 'baccarat:terraceDeck:export' and `system_menu`.`deleted_at` is null limit 1;
+# Time: 2024-06-08T03:09:00.073295Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000149  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816140;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:10:00.073968Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000180  Lock_time: 0.000017 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816200;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:11:00.074843Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000195  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816260;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:12:00.074182Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000143  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816320;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:13:00.075136Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000222  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816380;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:14:00.079148Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000180  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816440;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:15:00.078035Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000150  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816500;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:16:00.080383Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000246  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816560;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:17:00.079343Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000175  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816620;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:18:00.087922Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000194  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816680;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:19:00.093936Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000157  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816740;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:20:00.101171Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000160  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816800;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:21:00.108162Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000192  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816860;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:22:00.114499Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000166  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816920;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:23:00.121390Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000202  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717816980;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:24:00.120850Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000196  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817040;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:25:00.125321Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000156  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817100;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:26:00.131422Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000183  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817160;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:27:00.132769Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000184  Lock_time: 0.000015 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817220;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:28:00.135765Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000158  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817280;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:29:00.143001Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000189  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817340;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:30:00.150128Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000165  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817400;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:31:00.156691Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000146  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817460;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:32:00.164764Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000183  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817520;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:33:00.164986Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000157  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817580;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:34:00.170613Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000164  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817640;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:35:00.177269Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000234  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817700;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:36:00.182631Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000162  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817760;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:37:00.192645Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000182  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817820;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:38:00.202415Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000190  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817880;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:39:00.209634Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000185  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717817940;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:40:00.218718Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000169  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818000;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:41:00.223738Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000242  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818060;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:42:00.231149Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000187  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818120;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:43:00.239267Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000215  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818180;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:44:00.247183Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000291  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818240;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:45:00.254717Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000225  Lock_time: 0.000015 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818300;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:46:00.261464Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000245  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818360;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:47:00.270799Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000200  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818420;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:48:00.279263Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000156  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818480;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:49:00.288968Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000234  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818540;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:50:00.298052Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000157  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818600;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:51:00.302115Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000251  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818660;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:52:00.310226Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000186  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818720;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:53:00.319144Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000185  Lock_time: 0.000015 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818780;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:54:00.325932Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000166  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818840;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:55:00.442742Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000440  Lock_time: 0.000006 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818900;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:56:00.449627Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000290  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717818960;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:57:00.455384Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000167  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717819020;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:58:00.465948Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000166  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717819080;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T03:59:00.469145Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000240  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717819140;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-06-08T04:00:00.472604Z
+# User@Host: root[root] @  [192.168.80.2]  Id:     8
+# Query_time: 0.000262  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1717819200;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';

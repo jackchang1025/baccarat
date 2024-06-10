@@ -3,10 +3,13 @@
 declare(strict_types=1);
 
 return [
-    'host' => 'wss://fx8ec8.3l3b0um9.com/fxLive/fxLB?gameType=h5multi3',
-    'token' => 'bga6bae4ded83e29aeca77c7c7a9c5a7bad228d878',
+    'host' => 'wss://103.241.119.77/fxLive/fxLB?gameType=h5multi3',
+//    'host' => 'wss://fx8ec8.3l3b0um9.com/fxLive/fxLB?gameType=h5multi3',
+    'token' => 'bg2e5b7fb2e170c2639bded4f0d5dcb8ae81cbb2dc',
+    //连接过期时间
     'connectionTimeout' => 600,
-    'remainingTimeOut' => 10,
+    //连接剩余多少时间重试
+    'remainingTimeOut' => 30,
     'handLogin' =>
         ["dev" =>
             ["rd" => "fx",
@@ -34,13 +37,17 @@ return [
             "vtMode" => true,
             "subscription" => ["shit"],
             "action" => "login",
-            "sid" => 'bga6bae4ded83e29aeca77c7c7a9c5a7bad228d878'
+            "sid" => 'bg2e5b7fb2e170c2639bded4f0d5dcb8ae81cbb2dc'
         ],
-    'login' => ['lang' => 'cn', 'vType' => 'wss', 'site' => '1', 'sid' => 'bga6bae4ded83e29aeca77c7c7a9c5a7bad228d878', 'action' => 'hallLogin',],
+    'login' => ['lang' => 'cn', 'vType' => 'wss', 'site' => '1', 'sid' => 'bg2e5b7fb2e170c2639bded4f0d5dcb8ae81cbb2dc', 'action' => 'hallLogin',],
     'connectionPool' => [
         'min_connections' => 3,
         'max_connections' => 5,
-        'connect_timeout' => 10.0
+        'connect_timeout' => 10.0,
+        //每个连接创建间隔时间
+        'connection_creation_interval_time' => 300,
+        //检查连接间隔时间
+        'connection_check_interval_time' => 5,
     ],
     'messageChannel' => [
         'size' => 1000

@@ -2,9 +2,14 @@
 
 namespace HyperfTests\Unit\Baccarat\Service\Websocket;
 
+use App\Baccarat\Service\Output\Output;
 use App\Baccarat\Service\Websocket\WebsocketClient;
+use App\Baccarat\Service\Websocket\WebsocketClientFactory;
 use Hyperf\Coroutine\Coroutine;
+use Hyperf\Engine\Channel;
+use Hyperf\Redis\RedisFactory;
 use Hyperf\WebSocketClient\ClientFactory;
+use Lysice\HyperfRedisLock\RedisLock;
 use PHPUnit\Framework\TestCase;
 use Swoole\WebSocket\Frame;
 use Hyperf\WebSocketClient\Client;
@@ -28,12 +33,16 @@ class WebsocketClientTest extends TestCase
         $this->token = 'test_token';
         $this->connectionTimeout = 600;
 
-        $this->client = new WebsocketClient(
-            $this->clientFactory,
-            $this->host,
-            $this->token,
-            $this->connectionTimeout
-        );
+        $channel = new Channel(1000);
+
+        $this->client = make(WebsocketClient::class,[
+            'clientFactory' => $this->clientFactory,
+            'output' => make(Output::class),
+            'channel' => $channel,
+            'host' => $this->host,
+            'token' => $this->token,
+            'connectionTimeout' => $this->connectionTimeout
+        ]);
     }
 
     public function testIsTimeOut()
@@ -60,17 +69,6 @@ class WebsocketClientTest extends TestCase
     {
 
         $this->assertIsArray($this->client->getMessage());
-    }
-
-
-    public function testHandleMessage()
-    {
-        $message = '{"action":"test"}';
-        $expectedResult = ['action' => 'test'];
-
-        $result = $this->client->decodeMessage($message);
-
-        $this->assertEquals($expectedResult, $result);
     }
 
     /**

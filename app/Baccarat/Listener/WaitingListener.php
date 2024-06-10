@@ -5,23 +5,19 @@ declare(strict_types=1);
 namespace App\Baccarat\Listener;
 
 use App\Baccarat\Event\BettingEvent;
-use App\Baccarat\Event\RecvMessageEvent;
 use App\Baccarat\Event\WaitingEvent;
-use App\Baccarat\Service\BaccaratLotteryLogService;
-use App\Baccarat\Service\BaccaratService;
-use App\Baccarat\Service\BaccaratSimulatedBettingService;
-use App\Baccarat\Service\BaccaratTerraceDeckService;
-use App\Baccarat\Service\BaccaratTerraceService;
-use App\Baccarat\Service\LotteryResult;
+use App\Baccarat\Service\BaccaratWaiting\BaccaratWaiting;
+use App\Baccarat\Service\LoggerFactory;
 use Hyperf\Event\Annotation\Listener;
-use Psr\Container\ContainerInterface;
 use Hyperf\Event\Contract\ListenerInterface;
+use Psr\Container\ContainerInterface;
 
-#[Listener]
+#[Listener(priority:9999)]
 class WaitingListener implements ListenerInterface
 {
     public function __construct(
-        protected BaccaratService  $baccaratService
+        protected ContainerInterface         $container,
+        protected BaccaratWaiting  $waiting
     )
     {
     }
@@ -36,8 +32,15 @@ class WaitingListener implements ListenerInterface
     public function process(object $event): void
     {
         /**
-         * @var BettingEvent $event
+         * @var WaitingEvent $event
          */
-        $this->baccaratService->handleWaiting($event->lotteryResult);
+
+        try {
+            $this->waiting->handleWaiting($event->baccaratBettingWaitingResult);
+
+
+        } catch (\Exception $e) {
+            $this->container->get(LoggerFactory::class)->create()->error($e);
+        }
     }
 }

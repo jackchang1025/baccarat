@@ -3,16 +3,19 @@
 namespace App\Baccarat\Service\SimulationBettingAmount;
 
 
+use App\Baccarat\Model\BaccaratSimulatedBettingLog;
 use App\Baccarat\Service\BettingAmountStrategy\BetStrategyInterface;
+use App\Baccarat\Service\LotteryResult;
 use App\Baccarat\Service\Sequence\Sequence;
+use Hyperf\Database\Model\Collection;
 use Hyperf\Pipeline\Pipeline;
 use InvalidArgumentException;
 
 class Baccarat
 {
-    protected int $issue = 0;
-
-    public function __construct(protected Pipeline $pipeline,protected array $strategies = []){}
+    public function __construct(protected array $strategies = [])
+    {
+    }
 
     public function addStrategy(BetStrategyInterface $strategy): void
     {
@@ -24,41 +27,42 @@ class Baccarat
         return $this->strategies;
     }
 
-    public function getIssue(): int
+    public function transformation(string $sequence): Collection
     {
-        return $this->issue;
+        $collection = new Collection();
+        $sequence = str_split($sequence);
+        if (!empty($sequence)){
+            foreach ($sequence as $key => $item){
+                if (!in_array($item, [Sequence::WIN->value, Sequence::LOSE->value])) {
+                    throw new InvalidArgumentException("Invalid character in sequence: $item");
+                }
+
+                $collection->push(BaccaratSimulatedBettingLog::make(['betting_result' => $item, 'issue' => $key,'betting_value'=>LotteryResult::PLAYER]));
+            }
+        }
+
+        return $collection;
     }
 
-    public function getNextIssue(): int
+    public function play(string|Collection $sequence): array
     {
-        return $this->issue++;
+        $sequence = is_string($sequence) ? $this->transformation($sequence) : $sequence;
+
+        return $this->handle($sequence);
     }
-    public function play(string $sequence): array
+
+    protected function handle(Collection $collection):array
     {
-        $this->pipeline->through($this->strategies);
+        return array_reduce($this->strategies, function (array $betLogList, BetStrategyInterface $strategy) use ($collection) {
 
-        $sequenceArray = str_split($sequence);
-        $lastIssue = count($sequenceArray);
+            $data = $strategy->handle($collection)->toArray();
 
-        array_map(function ($item) use ($lastIssue){
-
-            if (!in_array($item, [Sequence::WIN->value, Sequence::LOSE->value])) {
-                throw new InvalidArgumentException("Invalid character in sequence: $item");
+            if (empty($betLogList['wanting_sequence'])) {
+                $betLogList['wanting_sequence'] = $data;
             }
 
-            $currentIssue = $this->getNextIssue();
-            $this->pipeline->send(new LotteryLog(issue: $currentIssue, sequence: $item, isLastIssue: $currentIssue === $lastIssue))->thenReturn();
+            $betLogList[$strategy->getName()] = $data;
 
-        },$sequenceArray);
-
-        return $this->getStrategyBetLogList();
-    }
-
-    public function getStrategyBetLogList(): array
-    {
-        return array_reduce($this->strategies, function (array $betLogList, BetStrategyInterface $strategy) {
-
-            $betLogList[$strategy->getName()] = $strategy->getBetLog()->toArray();
             return $betLogList;
 
         }, initial: []);

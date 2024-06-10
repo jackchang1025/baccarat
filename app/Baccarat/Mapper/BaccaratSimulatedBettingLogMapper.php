@@ -12,9 +12,15 @@ declare(strict_types=1);
 
 namespace App\Baccarat\Mapper;
 
+use App\Baccarat\Model\BaccaratLotteryLog;
 use App\Baccarat\Model\BaccaratSimulatedBettingLog;
+use App\Baccarat\Service\LotteryResult;
+use App\Baccarat\Service\Rule\RuleInterface;
 use Hyperf\Database\Model\Builder;
+use Hyperf\Database\Model\Collection;
+use Hyperf\Database\Model\Model;
 use Mine\Abstracts\AbstractMapper;
+use function Hyperf\Tappable\tap;
 
 /**
  * 投注日志表Mapper类
@@ -39,7 +45,7 @@ class BaccaratSimulatedBettingLogMapper extends AbstractMapper
      */
     public function handleSearch(Builder $query, array $params): Builder
     {
-        
+
         // 主键
         if (isset($params['id']) && filled($params['id'])) {
             $query->where('id', '=', $params['id']);
@@ -57,17 +63,17 @@ class BaccaratSimulatedBettingLogMapper extends AbstractMapper
 
         // 期号
         if (isset($params['issue']) && filled($params['issue'])) {
-            $query->where('issue', 'like', '%'.$params['issue'].'%');
+            $query->where('issue', 'like', '%' . $params['issue'] . '%');
         }
 
         // 投注值
         if (isset($params['betting_value']) && filled($params['betting_value'])) {
-            $query->where('betting_value', 'like', '%'.$params['betting_value'].'%');
+            $query->where('betting_value', 'like', '%' . $params['betting_value'] . '%');
         }
 
         // 投注结果
         if (isset($params['betting_result']) && filled($params['betting_result'])) {
-            $query->where('betting_result', 'like', '%'.$params['betting_result'].'%');
+            $query->where('betting_result', 'like', '%' . $params['betting_result'] . '%');
         }
 
         // 状态 (1正常 2停用)
@@ -77,14 +83,14 @@ class BaccaratSimulatedBettingLogMapper extends AbstractMapper
 
         // 备注
         if (isset($params['remark']) && filled($params['remark'])) {
-            $query->where('remark', 'like', '%'.$params['remark'].'%');
+            $query->where('remark', 'like', '%' . $params['remark'] . '%');
         }
 
         // 创建时间
         if (isset($params['created_at']) && filled($params['created_at']) && is_array($params['created_at']) && count($params['created_at']) == 2) {
             $query->whereBetween(
                 'created_at',
-                [ $params['created_at'][0], $params['created_at'][1] ]
+                [$params['created_at'][0], $params['created_at'][1]]
             );
         }
 
@@ -92,7 +98,7 @@ class BaccaratSimulatedBettingLogMapper extends AbstractMapper
         if (isset($params['updated_at']) && filled($params['updated_at']) && is_array($params['updated_at']) && count($params['updated_at']) == 2) {
             $query->whereBetween(
                 'updated_at',
-                [ $params['updated_at'][0], $params['updated_at'][1] ]
+                [$params['updated_at'][0], $params['updated_at'][1]]
             );
         }
 
@@ -107,6 +113,25 @@ class BaccaratSimulatedBettingLogMapper extends AbstractMapper
         return $query;
     }
 
+    public function getBaccaratSimulatedBettingLogOrCreate(RuleInterface $rule, array $attributes, array $values = []): BaccaratSimulatedBettingLog
+    {
+        return tap($this->getModel()->firstOrCreate($attributes, $values), function (BaccaratSimulatedBettingLog $baccaratSimulatedBettingLog) use ($rule) {
+            if ($baccaratSimulatedBettingLog->wasRecentlyCreated) {
+                $baccaratSimulatedBettingLog->baccaratBettingRuleLog()->create([
+                    'title'         => $rule->getName(),
+                    'rule'          => $rule->getRule(),
+                    'created_at'    => $baccaratSimulatedBettingLog->created_at,
+                    'betting_value' => $rule->getBettingValue(),
+                ]);
+            }
+        });
+    }
 
-
+    public function getBettingLogListBettingResultWhereNull(string $issue): Collection
+    {
+        return $this->getModel()
+            ->where('issue', $issue)
+            ->whereNull('betting_result')
+            ->get();
+    }
 }

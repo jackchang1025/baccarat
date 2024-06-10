@@ -13,4 +13,5 @@ use Mine\Crontab\MineCrontabProcess;
 
 return [
     MineCrontabProcess::class,
+    Hyperf\Crontab\Process\CrontabDispatcherProcess::class,
 ];

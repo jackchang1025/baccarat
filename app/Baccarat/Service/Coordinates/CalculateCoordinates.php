@@ -21,6 +21,10 @@ class CalculateCoordinates
 
         $data->each(function (BaccaratLotteryLog $record) {
 
+            if ($record->transformationResult === null){
+                throw new \InvalidArgumentException('transformationResult is null');
+            }
+
             $result = $record->transformationResult;
 
             if ($result === 'T') {

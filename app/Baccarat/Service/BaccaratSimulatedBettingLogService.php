@@ -13,16 +13,15 @@ declare(strict_types=1);
 namespace App\Baccarat\Service;
 
 use App\Baccarat\Mapper\BaccaratSimulatedBettingLogMapper;
-use App\Baccarat\Model\BaccaratRule;
 use App\Baccarat\Model\BaccaratSimulatedBettingLog;
-use App\Baccarat\Model\BaccaratSimulatedBettingRule;
+use App\Baccarat\Service\Memory\Memory;
 use App\Baccarat\Service\Rule\RuleInterface;
+use App\Baccarat\Service\SimulationBettingAmount\Baccarat;
+use App\Baccarat\Service\SimulationBettingAmount\BaccaratFactory;
 use Hyperf\Database\Model\Builder;
 use Hyperf\Database\Model\Collection;
 use Hyperf\Database\Model\Model;
-use Hyperf\DbConnection\Db;
 use Mine\Abstracts\AbstractService;
-use App\Baccarat\Model\BaccaratSimulatedBetting;
 
 class BaccaratSimulatedBettingLogService extends AbstractService
 {
@@ -31,65 +30,43 @@ class BaccaratSimulatedBettingLogService extends AbstractService
      */
     public $mapper;
 
-    public function __construct(BaccaratSimulatedBettingLogMapper $mapper)
+    protected Baccarat $baccarat;
+
+    public function __construct(BaccaratSimulatedBettingLogMapper $mapper,protected BaccaratFactory $baccaratFactory,protected Memory $memory)
     {
         $this->mapper = $mapper;
     }
 
-    public function getBaccaratSimulatedBettingLog(int $issue,?int $bettingId = null): Builder|BaccaratSimulatedBettingLog|null
+    /**
+     * @param array $params
+     * @return array
+     */
+    public function chart(array $params):array
     {
-        return $this->mapper->getModel()
-            ->with(['baccaratSimulatedBetting'])
-            ->where('issue',$issue)
-            ->when($bettingId,fn($query) => $query->where('betting_id',$bettingId))
-            ->first();
-    }
+        $baccaratSimulatedBettingLogList = $this->mapper->getModel()
+            ->where('betting_id',$params['betting_id'])
+            ->whereDate('created_at',$params['date'])
+            ->get();
 
-    public function updateBettingResult(LotteryResult $lotteryResult):Collection
-    {
-        return $this->mapper->getModel()
-            ->where('issue',$lotteryResult->issue)
-            ->get()
-            ->filter(fn(BaccaratSimulatedBettingLog $baccaratSimulatedBettingLog)=> !$baccaratSimulatedBettingLog->betting_result)
-            ->each(fn (BaccaratSimulatedBettingLog $baccaratSimulatedBettingLog) => $baccaratSimulatedBettingLog->update(['betting_result' => $lotteryResult->checkLotteryResults($baccaratSimulatedBettingLog->betting_value)]));
-    }
+        $totalBetAmount = (float) $params['betTotalAmount'];
+        $defaultBetAmount = (float) $params['betDefaultAmount'];
 
-    public function createBettingLogAndRuleLog(array $data,BaccaratSimulatedBettingRule $baccaratRule): BaccaratSimulatedBettingLog|Model
-    {
-        /**
-         * @var BaccaratSimulatedBettingLog $baccaratSimulatedBettingLog
-         */
-        $baccaratSimulatedBettingLog = $this->mapper->getModel()->create($data);
+        $betLogList = [];
 
-        $baccaratSimulatedBettingLog->baccaratBettingRuleLog()->create([
-            'title' => $baccaratRule->title,
-            'rule' => $baccaratRule->rule,
-            'betting_value' => $baccaratRule->betting_value,
-        ]);
-        return $baccaratSimulatedBettingLog;
-    }
+        if ($baccaratSimulatedBettingLogList->isNotEmpty()){
 
-    public function saveBettingLogAndRuleLog(array $data,RuleInterface $rule): BaccaratSimulatedBettingLog|Model
-    {
+            $this->memory->initMemoryUsage();
+            $s = microtime(true);
 
-        //使用事务
-//        return Db::transaction(function () use ($data,$rule){
-//
-//
-//        },3);
 
-        /**
-         * @var BaccaratSimulatedBettingLog $baccaratSimulatedBettingLog
-         */
-        $baccaratSimulatedBettingLog = $this->mapper->getModel()->create($data);
+            $betLogList = $this->baccaratFactory->create($totalBetAmount,$defaultBetAmount)->play($baccaratSimulatedBettingLogList);
 
-        $baccaratSimulatedBettingLog->baccaratBettingRuleLog()->create([
-            'title' => $rule->getName(),
-            'rule' => $rule->getRule(),
-            'created_at' => $baccaratSimulatedBettingLog->created_at,
-            'betting_value' => $rule->getBettingValue(),
-        ]);
+            var_dump("{$params['betting_id']} chart success Use s:" . number_format(microtime(true) - $s, 8)." memory: {$this->memory->format($this->memory->calculateCurrentlyUsedMemory())}");
+        }
 
-        return $baccaratSimulatedBettingLog;
+        return [
+            'betLogList'=>$betLogList,
+            'sequence'=>$baccaratSimulatedBettingLogList->pluck('betting_result')->implode(''),
+        ];
     }
 }

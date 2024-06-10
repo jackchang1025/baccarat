@@ -18,7 +18,11 @@ use App\Baccarat\Service\BettingAmountStrategy\FlatNote;
 use App\Baccarat\Service\BettingAmountStrategy\LayeredStrategy;
 use App\Baccarat\Service\BettingAmountStrategy\MartingaleStrategy;
 use App\Baccarat\Service\SimulationBettingAmount\Baccarat;
+use App\Baccarat\Service\SimulationBettingAmount\BaccaratFactory;
+use Hyperf\Di\Container;
 use Mine\Abstracts\AbstractService;
+use Psr\Container\ContainerInterface;
+use Psr\Log\LoggerInterface;
 
 /**
  * 表注释服务类
@@ -30,9 +34,13 @@ class BaccaratWaitingSequenceService extends AbstractService
      */
     public $mapper;
 
-    public function __construct(BaccaratWaitingSequenceMapper $mapper,protected Baccarat $baccarat)
+    protected LoggerInterface $logger;
+
+    public function __construct(protected ContainerInterface $container,BaccaratWaitingSequenceMapper $mapper,protected BaccaratFactory $baccaratFactory)
     {
         $this->mapper = $mapper;
+
+        $this->logger = $container->get(LoggerFactory::class)->get();
     }
 
     public function chart(int $id,array $params): array
@@ -42,19 +50,9 @@ class BaccaratWaitingSequenceService extends AbstractService
         $totalBetAmount = (float) $params['betTotalAmount'];
         $defaultBetAmount = (float) $params['betDefaultAmount'];
 
-        $BaccaratWaitingSequence->betLogList = $this->play($BaccaratWaitingSequence->sequence,$totalBetAmount,$defaultBetAmount);
+        $BaccaratWaitingSequence->betLogList = $this->baccaratFactory->create($totalBetAmount,$defaultBetAmount)
+            ->play($BaccaratWaitingSequence->sequence);
 
         return $BaccaratWaitingSequence->toArray();
-    }
-
-    public function play(string $sequence,float $totalBetAmount,float $defaultBetAmount):array
-    {
-        $baccarat = make(Baccarat::class);
-
-        $baccarat->addStrategy(new FlatNote(totalBetAmount: $totalBetAmount,defaultBetAmount: $defaultBetAmount));
-        $baccarat->addStrategy(new LayeredStrategy(totalBetAmount: $totalBetAmount,defaultBetAmount: $defaultBetAmount));
-        $baccarat->addStrategy(new MartingaleStrategy(totalBetAmount: $totalBetAmount,defaultBetAmount: $defaultBetAmount));
-
-        return $baccarat->play($sequence);
     }
 }

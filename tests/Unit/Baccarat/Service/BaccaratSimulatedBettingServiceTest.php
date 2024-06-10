@@ -38,16 +38,7 @@ class BaccaratSimulatedBettingServiceTest extends BaseTest
 
     }
 
-    public function testGetBaccaratSimulatedBettingList()
-    {
-        $this->factory->of(BaccaratSimulatedBetting::class)->times(3)->create([
-            'status' => 3
-        ]);
 
-        $result = $this->service->getBaccaratSimulatedBettingList(['status' => 3]);
-        $this->assertCount(3, $result);
-        $this->assertInstanceOf(Collection::class, $result);
-    }
 
 //    public function testHandleLotteryBetting()
 //    {

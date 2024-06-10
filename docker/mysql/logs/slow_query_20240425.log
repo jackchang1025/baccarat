@@ -1,0 +1,14 @@
+/usr/sbin/mysqld, Version: 8.0.36 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2024-04-25T04:00:02.836124Z
+# User@Host: root[root] @  [192.168.80.4]  Id:  4054
+# Query_time: 1.463282  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 0
+use mineadmin;
+SET timestamp=1714017601;
+insert into `baccarat_lottery_log_202417` (`issue`, `terrace_deck_id`, `updated_at`, `created_at`) values ('523885117', '57817', '2024-04-25 00:00:01', '2024-04-25 00:00:01');
+# Time: 2024-04-25T04:00:03.561374Z
+# User@Host: root[root] @  [192.168.80.4]  Id:  4058
+# Query_time: 1.187032  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1714017602;
+insert into `baccarat_lottery_log_202417` (`issue`, `terrace_deck_id`, `updated_at`, `created_at`) values ('523885119', '57818', '2024-04-25 00:00:02', '2024-04-25 00:00:02');

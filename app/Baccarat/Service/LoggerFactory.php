@@ -11,7 +11,7 @@ use function Hyperf\Support\make;
 class LoggerFactory extends BaseLoggerFactory
 {
 
-    public function create($name = 'hyperf', $group = 'default'):LoggerInterface
+    public function create($name = 'debug', $group = 'baccarat'):LoggerInterface
     {
         if (isset($this->loggers[$group][$name]) && $this->loggers[$group][$name] instanceof Logger) {
             return $this->loggers[$group][$name];
@@ -21,7 +21,7 @@ class LoggerFactory extends BaseLoggerFactory
 
         return $this->loggers[$group][$name] = $logger;
     }
-    public function makeLogger($name = 'hyperf', $group = 'default'): LoggerInterface
+    public function makeLogger($name = 'debug', $group = 'baccarat'): LoggerInterface
     {
         $config = $this->config->get('logger');
         if (! isset($config[$group])) {

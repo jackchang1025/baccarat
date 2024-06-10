@@ -4,13 +4,18 @@ declare(strict_types=1);
 
 namespace App\Baccarat\Model;
 
+use App\Baccarat\Service\LotteryResult;
+use App\Baccarat\Service\Sequence\Sequence;
+use Hyperf\Database\Model\RelationNotFoundException;
 use Hyperf\Database\Model\Relations\belongsTo;
 use Hyperf\Database\Model\Relations\HasOne;
+use InvalidArgumentException;
 use Mine\MineModel;
 
 /**
  * @property int $id 主键
- * @property int $baccarat_simulated_betting_id 投注id
+ * @property int $betting_id 投注id
+ * @property int $terrace_deck_id 牌靴id
  * @property string $issue 期号
  * @property string $betting_value 投注值
  * @property string $betting_result 投注结果
@@ -38,11 +43,21 @@ class BaccaratSimulatedBettingLog extends MineModel
     /**
      * The attributes that should be cast to native types.
      */
-    protected array $casts = ['id' => 'integer', 'betting_id' => 'integer','terrace_deck_id' => 'integer', 'status' => 'integer', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
+    protected array $casts = ['id' => 'integer', 'betting_id' => 'integer','issue' => 'integer','terrace_deck_id' => 'integer', 'status' => 'integer', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
 
     public function deleting():void
     {
         $this->baccaratBettingRuleLog()->delete();
+    }
+
+    public function setBettingResultAttribute($value): string
+    {
+        if (!empty($value) && !in_array($value, [LotteryResult::BETTING_WIN, LotteryResult::BETTING_LOSE,LotteryResult::BETTING_TIE])){
+            throw new InvalidArgumentException("Invalid character in sequence: $value");
+        }
+
+        $this->attributes['betting_result'] = $value;
+        return $value;
     }
 
     /**
@@ -63,9 +78,26 @@ class BaccaratSimulatedBettingLog extends MineModel
     {
         return $this->HasOne(BaccaratBettingRuleLog::class, 'baccarat_betting_log_id', 'id');
     }
-    public function baccaratLotteryLog() : belongsTo
+
+    public function baccaratLotteryLog() : HasOne
     {
-        return $this->belongsTo(BaccaratLotteryLog::class, 'issue', 'issue');
+        if (!$this->created_at){
+            throw RelationNotFoundException::make($this->getModel(), 'baccaratLotteryLog');
+        }
+
+        $instance = (new BaccaratLotteryLog)->getShardingModel($this->created_at);
+
+        return $this->newHasOne(
+            $instance->newQuery(),
+            $this,
+            sprintf("%s.%s", $instance->getTable(), 'issue'),
+            'issue',
+        );
+    }
+
+    public function isWin(): bool
+    {
+        return $this->betting_result === Sequence::WIN->value;
     }
 
 }

@@ -7,38 +7,46 @@ namespace App\Baccarat\Listener;
 use App\Baccarat\Event\BettingEvent;
 use App\Baccarat\Event\RecvMessageEvent;
 use App\Baccarat\Event\WaitingEvent;
+use App\Baccarat\Mapper\BaccaratLotteryLogMapper;
+use App\Baccarat\Mapper\BaccaratTerraceDeckMapper;
+use App\Baccarat\Mapper\BaccaratTerraceMapper;
+use App\Baccarat\Model\BaccaratTerraceDeck as BaccaratTerraceDeckModel;
+use App\Baccarat\Service\BaccaratBetting\BaccaratBettingWaitingResult;
+use App\Baccarat\Service\BaccaratLotteryLogService;
+use App\Baccarat\Service\Locker\LockerFactory;
 use App\Baccarat\Service\LoggerFactory;
 use App\Baccarat\Service\LotteryResult;
 use App\Baccarat\Service\Output\Output;
-use Carbon\Carbon;
+use Hyperf\Coroutine\Coroutine;
 use Hyperf\Event\Annotation\Listener;
-use Hyperf\Redis\RedisFactory;
-use Hyperf\Redis\RedisProxy;
-use Lysice\HyperfRedisLock\LockTimeoutException;
-use Lysice\HyperfRedisLock\RedisLock;
 use Psr\Container\ContainerInterface;
 use Hyperf\Event\Contract\ListenerInterface;
 use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Log\LoggerInterface;
 
-#[Listener]
+#[Listener(priority: 99999)]
 class RecvMessageListener implements ListenerInterface
 {
     /**
      * @var LoggerInterface
      */
     protected LoggerInterface $logger;
-    protected RedisProxy $redisProxy;
 
     protected ?EventDispatcherInterface $eventDispatcher = null;
 
+
+
     public function __construct(
         protected ContainerInterface         $container,
-        protected Output         $output,
-        protected LoggerFactory $loggerFactory
+        protected Output                     $output,
+        protected LoggerFactory              $loggerFactory,
+        protected BaccaratTerraceMapper     $baccaratTerraceMapper,
+        protected BaccaratTerraceDeckMapper $baccaratTerraceDeckMapper,
+        protected BaccaratLotteryLogService  $baccaratLotteryLogService,
+        protected BaccaratLotteryLogMapper   $lotteryLogMapper,
+        protected LockerFactory              $lockerFactory,
     )
     {
-        $this->redisProxy = make(RedisFactory::class)->get('default');
     }
 
     public function listen(): array
@@ -57,35 +65,94 @@ class RecvMessageListener implements ListenerInterface
         //$lotteryResult->terrace == '3001-80'
 
         $lotteryResult = $event->lotteryResult;
+        $this->eventDispatcher ??= $this->container->get(EventDispatcherInterface::class);
 
-        if ($lotteryResult->terrace == '3001-80') {
-            $this->output->info($lotteryResult);
+        $this->getLogger($lotteryResult->terrace)->info((string)$lotteryResult);
+
+        if (!$lotteryResult->getDeckNumber() || !$lotteryResult->issue) {
+            return;
         }
 
-        $this->eventDispatcher = $this->container->get(EventDispatcherInterface::class);
+        //根据 code 获取台号且不存在就创建
+        $baccaratTerrace = $this->baccaratTerraceMapper->getBaccaratTerraceOrCreateByCode($lotteryResult->terrace);
 
-        if ($lotteryResult->isWaiting() || $lotteryResult->isBetting()){
-
-            //使用时间戳避免锁值重复
-            $redisLock = new RedisLock($this->redisProxy, "recv_message_lock_{$lotteryResult->status}_{$lotteryResult->issue}", 1);
-
-            try {
-
-                $redisLock->block(5, fn() => $this->dispatch($lotteryResult));
-
-            } catch (LockTimeoutException $e) {
-
-                $this->output->info("recv_message_lock_{$lotteryResult->status}_{$lotteryResult->issue} lock timeout");
-            }
+        //根据台号获取今日台靴不存在则创建
+        // 如果是 20 局及以上，且是凌晨 0 到 1 点，则取昨天的数据 否则获取今天的数据
+        $baccaratTerraceDeck = $this->baccaratTerraceDeckMapper->getBaccaratTerraceDeckOfTodayAndYesterdayOrCreates($baccaratTerrace->id, $lotteryResult->getDeckNumber());
+        if (is_null($baccaratTerraceDeck)){
+            return;
         }
+
+        //使用内存锁在高并发时防止数据重复
+        $locker = $this->lockerFactory->get("recvMessage:{$lotteryResult->issue}");
+
+        if ($lotteryResult->isBetting()) {
+
+            $locker->block(5, function () use ($lotteryResult, $baccaratTerraceDeck) {
+                $baccaratBettingWaitingResult = $this->handleBetting($lotteryResult, $baccaratTerraceDeck);
+                $this->eventDispatcher->dispatch(new BettingEvent($baccaratBettingWaitingResult));
+            });
+            return;
+        }
+
+        if ($lotteryResult->isWaiting()) {
+
+            $locker->block(5, function () use ($lotteryResult, $baccaratTerraceDeck) {
+                $baccaratBettingWaitingResult = $this->handleWaiting($lotteryResult, $baccaratTerraceDeck);
+                $this->eventDispatcher->dispatch(new WaitingEvent($baccaratBettingWaitingResult));
+            });
+        }
+
     }
 
-    public function dispatch(LotteryResult $lotteryResult): void
+    protected function getLogger(string $terrace): LoggerInterface
     {
-        match (true){
-            $lotteryResult->isWaiting() => $this->eventDispatcher ->dispatch(new WaitingEvent($lotteryResult)),
-            $lotteryResult->isBetting() => $this->eventDispatcher ->dispatch(new BettingEvent($lotteryResult)),
-            default => null,
-        };
+        return $this->logger ??= $this->loggerFactory->create($terrace);
+    }
+
+    /**
+     * 处理投注
+     * @param LotteryResult $lotteryResult
+     * @param BaccaratTerraceDeckModel $baccaratTerraceDeck
+     * @return BaccaratBettingWaitingResult
+     */
+    public function handleBetting(LotteryResult $lotteryResult, BaccaratTerraceDeckModel $baccaratTerraceDeck): BaccaratBettingWaitingResult
+    {
+        //根据期号获取开奖日志不存在则创建
+        $lotteryLog = $this->lotteryLogMapper->firstOrCreate(
+            attributes: [
+                'issue'           => $lotteryResult->issue,
+                'terrace_deck_id' => $baccaratTerraceDeck->id
+            ],
+            date: $baccaratTerraceDeck->created_at
+        );
+
+        return BaccaratBettingWaitingResult::fromLotteryResult(lotteryResult: $lotteryResult, lotteryLog: $lotteryLog, deck: $baccaratTerraceDeck);
+    }
+
+    /**
+     * 处理开奖
+     * @param LotteryResult $lotteryResult
+     * @param BaccaratTerraceDeckModel $baccaratTerraceDeck
+     * @return BaccaratBettingWaitingResult
+     */
+    public function handleWaiting(LotteryResult $lotteryResult, BaccaratTerraceDeckModel $baccaratTerraceDeck): BaccaratBettingWaitingResult
+    {
+        // 睡眠 0.5 秒
+        Coroutine::sleep(0.5);
+
+        //更新开奖日志
+        $lotteryLog = $this->lotteryLogMapper->updateOrCreate(
+            attributes: [
+                'issue'           => $lotteryResult->issue,
+                'terrace_deck_id' => $baccaratTerraceDeck->id
+            ],
+            data: [
+                'result'               => $lotteryResult->result,
+                'transformationResult' => $lotteryResult->getTransformationResult(),
+                'RawData'              => $lotteryResult->data,
+            ], date: $baccaratTerraceDeck->created_at);
+
+        return BaccaratBettingWaitingResult::fromLotteryResult(lotteryResult: $lotteryResult, lotteryLog: $lotteryLog, deck: $baccaratTerraceDeck);
     }
 }
