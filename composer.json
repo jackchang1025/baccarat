@@ -14,7 +14,7 @@
     "hyperf/signal": "^3.1",
     "hyperf/websocket-client": "^3.1",
     "weijiajia/hyperf-redis-lock": "^2.2",
-    "xmo/app-store": "2.0.x-dev",
+    "xmo/app-store": "3.0",
     "xmo/jwt-auth": "2.0.x-dev",
     "xmo/mine-core": "2.0.x-dev",
     "xmo/mine-generator": "2.0.x-dev",
