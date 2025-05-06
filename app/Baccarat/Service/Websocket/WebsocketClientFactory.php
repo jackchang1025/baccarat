@@ -16,18 +16,11 @@ class WebsocketClientFactory
     {
     }
 
-    public function create(): WebsocketClientInterface
+    public function create(): WebsocketConnectionInterface
     {
-        $redis = make(RedisFactory::class)->get('default');
 
-        //使用时间戳避免锁值重复
-        $redisLock = new RedisLock($redis, 'lock', 600);
-
-        return make(WebsocketClient::class, [
+        return make(WebsocketConnection::class, [
             'clientFactory' => make(ClientFactory::class),
-            'output' => make(Output::class),
-            'redisLock' => $redisLock,
-            'channel' => $this->channel,
             'host' => $this->host,
             'token' => $this->token,
             'connectionTimeout' => $this->connectionTimeout,

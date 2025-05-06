@@ -21,7 +21,8 @@
     "xmo/mine-helpers": "2.0.x-dev",
     "xmo/mine-office": "2.0.x-dev",
     "xmo/mine-service": "2.0.x-dev",
-    "xmo/mine-translatable": "2.0.x-dev"
+    "xmo/mine-translatable": "2.0.x-dev",
+    "ext-curl": "*"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.0",

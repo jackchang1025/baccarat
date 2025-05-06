@@ -1,0 +1,22 @@
+<?php
+
+class Client
+{
+    public function __construct(AccountManager $accountManager)
+    {
+        $this->accountManager = $accountManager;
+    }
+
+    public function sendRequest()
+    {
+        $account = $this->accountManager->getCurrentAccount();
+        $cookie = $account->getCookie();
+
+        $client = new GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://example.com', [
+            'cookies' => $cookie,
+        ]);
+
+        return $response;
+    }
+} 

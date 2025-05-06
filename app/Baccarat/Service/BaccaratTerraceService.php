@@ -14,13 +14,9 @@ namespace App\Baccarat\Service;
 
 use App\Baccarat\Mapper\BaccaratTerraceMapper;
 use App\Baccarat\Model\BaccaratTerrace;
-use App\Baccarat\Model\BaccaratTerraceDeck;
 use Hyperf\Database\Model\Builder;
 use Hyperf\Database\Model\Model;
-use Hyperf\Database\Model\Relations\HasMany;
 use Mine\Abstracts\AbstractService;
-use Mine\MineModel;
-use function Hyperf\Support\with;
 
 /**
  * 台，桌服务类
@@ -45,5 +41,25 @@ class BaccaratTerraceService extends AbstractService
     public function getBaccaratTerrace(string $code): BaccaratTerrace|Builder|null
     {
         return $this->mapper->getBaccaratTerrace($code);
+    }
+
+    /**
+     * 获取牌靴日期列表
+     * @param array $params
+     * @return array
+     */
+    public function getDeckDates(array $params): array
+    {
+        return $this->mapper->getDeckDates($params);
+    }
+
+    /**
+     * 获取牌靴列表
+     * @param array $params
+     * @return array
+     */
+    public function getDeckList(array $params): array
+    {
+        return $this->mapper->getDeckList($params);
     }
 }

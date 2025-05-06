@@ -48,10 +48,11 @@ class BaccaratLotteryLogService extends AbstractService
         return null;
     }
 
-    public function getLotteryLog(string $issue): BaccaratLotteryLog|null
+    public function getLotteryLog(string|int $issue): BaccaratLotteryLog|null
     {
         return $this->mapper->getLotteryLog($issue);
     }
+
 
     public function createLotteryLog(array $data): BaccaratLotteryLog|MineModel
     {

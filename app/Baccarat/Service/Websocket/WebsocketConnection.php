@@ -10,22 +10,20 @@ use App\Baccarat\Service\Output\Output;
 use Hyperf\Contract\ConfigInterface;
 use Hyperf\Coroutine\Coroutine;
 use Hyperf\Engine\Contract\ChannelInterface;
-use Hyperf\Stringable\Str;
 use Hyperf\WebSocketClient\Client;
 use Hyperf\WebSocketClient\ClientFactory;
 use Lysice\HyperfRedisLock\RedisLock;
 
 
-class WebsocketClient implements WebSocketClientInterface
+class WebsocketConnection implements WebsocketConnectionInterface
 {
     protected ?Client $client = null;
 
     protected array $message = [];
     protected int $createdAt = 0;
 
-    protected bool $isLock = false;
+    private bool $authenticated = false;
 
-    protected bool $recvMessage = false;
 
     /**
      * @param ClientFactory $clientFactory
@@ -39,9 +37,6 @@ class WebsocketClient implements WebSocketClientInterface
      */
     public function __construct(
         protected ClientFactory $clientFactory,
-        protected Output $output,
-        protected RedisLock $redisLock,
-        protected ChannelInterface $channel,
         protected ConfigInterface $config,
         protected string        $host,
         protected string        $token,
@@ -49,107 +44,28 @@ class WebsocketClient implements WebSocketClientInterface
     )
     {
         $this->reconnect();
-
-//        $this->startRecvMessageWithCoroutine();
     }
 
-    public function startRecvMessageWithCoroutine(): void
+
+    protected function authenticated(): bool
     {
-        Coroutine::create(fn() => $this->startRecvMessage());
-    }
+        while (true) {
+            
+            $this->retryRecvMessage();
 
-    /**
-     * @return void
-     * @throws WebSocketRunException
-     * @throws WebSocketTimeOutException
-     * @throws WebSocketTokenExpiredException
-     * @throws \Throwable
-     */
-    protected function startRecvMessage(): void
-    {
-        $this->output->info("create Coroutine recv message Coroutine id:". Coroutine::id());
+            $this->handleAction();
 
-        try {
+            if($this->isOnHallLogin()){
 
-            while (true) {
-
-                if (!$this->recvMessage){
-                    Coroutine::sleep(0.5);
-                    continue;
-                }
-                if ($this->client === null) {
-                    throw new WebSocketRunException('client is null');
-                }
-
-                $this->retryRecvMessage();
-
-                $this->handleAction();
-
-//                $this->output->info("recv message: ".json_encode($this->message));
-
-                if ($this->checkLock() && $this->isOnUpdateGameInfo()) {
-                    $this->pushMessage();
-                }
+                return  $this->authenticated = true;
             }
-
-        } catch (\Exception|\Throwable $e) {
-
-            $this->output->error($e->getMessage());
-
-            throw $e;
-        }finally {
-            // 无论是否发生异常,都执行关闭连接和释放锁的操作
-            $this->close();
-            $this->output->info("Recv Message coroutine exit Coroutine id:" . Coroutine::id());
-            $this->redisLock->release();
-            $this->output->warn('releaseLock:'.(int)  $this->isLock);
+            Coroutine::sleep(0.1); // 添加间隔防止CPU空转
         }
     }
 
-    public function pushMessage(): void
+    public function isAuthenticated(): bool
     {
-        foreach ($this->message['sl'] as $terrace => $item) {
-
-            $lotteryResult = LotteryResult::fromArray($terrace,$item);
-
-            $lotteryResult->isBaccarat() && $this->channel->push($lotteryResult);
-        }
-    }
-
-    /**
-     * @return bool
-     */
-    public function checkLock(): bool
-    {
-        return $this->Lock() && $this->releaseLock();
-    }
-
-    /**
-     * 如果 isLock 为 false 且 check 为 false 则获取锁
-     * @return bool
-     */
-    public function Lock(): bool
-    {
-        if (!$this->isLock && !$this->check()){
-            if ($this->isLock = $this->redisLock->acquire()){
-                $this->output->warn("acquire():".(int)  $this->isLock);
-            }
-        }
-        return $this->isLock;
-    }
-
-    /**
-     * 如果 isLock 为 true 且 check 为 true 则释放锁
-     * @return bool
-     */
-    public function releaseLock(): bool
-    {
-        if ($this->isLock && $this->check()){
-            $this->redisLock->release();
-            $this->isLock = false;
-            $this->output->warn('releaseLock:'.(int)  $this->isLock);
-        }
-        return $this->isLock;
+        return $this->authenticated;
     }
 
     public function getMessage(): array
@@ -178,9 +94,11 @@ class WebsocketClient implements WebSocketClientInterface
      * @throws WebSocketTimeOutException
      * @throws WebSocketTokenExpiredException
      */
-    protected function recv(int $timeout = 10): array
+    public function recv(int $timeout = 10): array
     {
         try {
+
+        
             $msg = $this->client->recv($timeout);
             if (!$msg) {
                 throw new WebSocketTimeOutException('接收消息失败或超时');
@@ -202,8 +120,7 @@ class WebsocketClient implements WebSocketClientInterface
 
             return $this->message;
         } catch (\Exception $e) {
-            // 记录日志
-            $this->output->error('接收消息失败: ' . $e->getMessage());
+
             throw $e;
         }
     }
@@ -213,10 +130,9 @@ class WebsocketClient implements WebSocketClientInterface
      * @throws WebSocketTimeOutException
      * @throws WebSocketTokenExpiredException
      */
-    protected function retryRecvMessage(): array
+    public function retryRecvMessage(): array
     {
         $maxRetries = 3;
-        $retryInterval = 1;
 
         for ($attempt = 1; $attempt <= $maxRetries; $attempt++) {
             try {
@@ -226,9 +142,6 @@ class WebsocketClient implements WebSocketClientInterface
                     throw $e;
                 }
 
-                $this->reconnect();
-                $this->output->warn('重试接收消息: ' . $attempt);
-                Coroutine::sleep($retryInterval);
             }
         }
 
@@ -336,11 +249,12 @@ class WebsocketClient implements WebSocketClientInterface
 
     public function reconnect(): bool
     {
-        $this->recvMessage = false;
-        $this->output->warn("reconnect");
         $this->createdAt = time();
         $this->client = $this->clientFactory->create($this->host);
-        $this->recvMessage = true;
+        $this->authenticated = false;
+
+        $this->authenticated();
+
         return (bool) $this->client;
     }
 

@@ -50,7 +50,7 @@ class BaccaratWebsocket extends HyperfCommand
             return;
         }
 
-        $channel = new Channel(1000);
+        $channel = new Channel(5000);
 
         $websocketClientFactory = new websocketClientFactory(
             channel: $channel,
@@ -66,6 +66,13 @@ class BaccaratWebsocket extends HyperfCommand
             config: $this->config->get('websocket.connectionPool'),
         );
 
+        $redis = make(RedisFactory::class)->get('default');
+
+        //使用时间戳避免锁值重复
+        $redisLock = new RedisLock($redis, "baccarat:websocket:lock:".time(), 600);
+
+        $reconnectLock = new RedisLock($redis, "baccarat:websocket:reconnect:lock:".time(), 60);
+
         $WebSocketManageService = new WebSocketManageService(
             websocketClientFactory: $websocketClientFactory,
             connectionPool:$ConnectionPool,
@@ -73,8 +80,10 @@ class BaccaratWebsocket extends HyperfCommand
             output: make(Output::class),
             dispatcher: $this->container->get(EventDispatcherInterface::class),
             loggerFactory: $this->container->get(LoggerFactory::class),
-            concurrentSize: 20,
-            websocketSize: 2
+            redisLock: $redisLock,
+            reconnectLock: $reconnectLock,
+            concurrentSize: 10,
+            websocketSize: 3
         );
 
         // 将 WebSocketManageService 实例以 Singleton 模式绑定到容器中

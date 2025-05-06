@@ -6,7 +6,10 @@ use App\Baccarat\Model\BaccaratSimulatedBetting;
 use App\Baccarat\Model\BaccaratSimulatedBettingRule;
 use Hyperf\Database\Model\Collection;
 use Psr\Log\LoggerInterface;
-
+use App\Baccarat\Service\RoomManager\RoomManager;
+use App\Baccarat\Model\BaccaratSimulatedBettingLog;
+use App\Baccarat\Service\Output\Output;
+use App\Baccarat\Listener\BettingBaccListener;
 class BaccaratService
 {
     /**
@@ -20,7 +23,9 @@ class BaccaratService
         protected BaccaratLotteryLogService          $baccaratLotteryLogService,
         protected BaccaratSimulatedBettingLogService $baccaratSimulatedBettingLogService,
         protected BaccaratSimulatedBettingService    $baccaratSimulatedBettingService,
-        protected LoggerFactory                      $loggerFactory
+        protected LoggerFactory                      $loggerFactory,
+        protected RoomManager                        $roomManager,
+        protected Output                             $output
     )
     {
 
@@ -53,6 +58,8 @@ class BaccaratService
         if (!$transformationResult = $baccaratTerraceDeck->baccaratLotterySequence) {
             return null;
         }
+
+        var_dump($transformationResult);
 
         //获取所有投注信息
         $baccaratSimulatedBettingList = $this->baccaratSimulatedBettingService->getBaccaratSimulatedBettingList();
@@ -100,16 +107,50 @@ class BaccaratService
      * 处理开奖
      * @param LotteryResult $lotteryResult
      * @return Collection|null
+     * @throws \JsonException
      */
     public function handleWaiting(LotteryResult $lotteryResult): ?Collection
     {
-        if ($lotteryResult->isWaiting() && $lotteryResult->issue && $lotteryResult->getTransformationResult()) {
+        if ($lotteryResult->issue && ($lotteryResult->isWaiting() || !$lotteryResult->needDrawCard()) && $lotteryResult->getTransformationResult()) {
 
             //更新开奖日志
-            $this->baccaratLotteryLogService->updateLotteryLog($lotteryResult);
+            $lotteryLog = $this->baccaratLotteryLogService->updateLotteryLog($lotteryResult);
 
+            //更新投注日志
+            $baccaratSimulatedBettingLogList = $this->baccaratSimulatedBettingLogService->updateBettingResult($lotteryResult);
+
+
+            if ($lotteryLog) {
+
+                $validateRoom = $this->roomManager->checkRoom($lotteryLog->baccaratTerraceDeck->terrace_id,$lotteryLog->terrace_deck_id);
+
+
+                //判断这一次开奖是否投注
+                $baccaratSimulatedBettingLog = BaccaratSimulatedBettingLog::query()
+                ->where('issue',$lotteryResult->issue)
+                ->where('betting_id',BettingBaccListener::BETTING_ID)
+                ->first();
+
+                $room = json_encode(
+                    $this->roomManager->getCurrentRoom() ?? [],
+                    JSON_THROW_ON_ERROR | JSON_UNESCAPED_UNICODE
+                );
+
+                $this->output->info("handleWaiting deck:{$lotteryResult->getTerrainTableName()} deck_id:{$lotteryLog->baccaratTerraceDeck->terrace_id} deck_id:{$lotteryLog->terrace_deck_id} issue:{$lotteryResult->issue} isRoom:{$validateRoom} room:{$room} br:{$baccaratSimulatedBettingLog?->betting_result}");
+
+                //判断是否在当前房间
+                if ($validateRoom) {
+
+                    //判断上一次是否投注或者投注结果是否赢了
+                    if (!$baccaratSimulatedBettingLog || $baccaratSimulatedBettingLog->betting_result === LotteryResult::BETTING_WIN) {
+                        $this->roomManager->exitRoom();
+                        $this->output->error("exit room terrace_deck:{$lotteryResult->getTerrainTableName()} issue:{$lotteryResult->issue}");
+                    }
+
+                }
+            }
             //更新投注日志列表
-            return $this->baccaratSimulatedBettingLogService->updateBettingResult($lotteryResult);
+            return $baccaratSimulatedBettingLogList;
 
         }
         return null;

@@ -39,6 +39,8 @@ class RecvMessageListener implements ListenerInterface
     )
     {
         $this->redisProxy = make(RedisFactory::class)->get('default');
+
+        
     }
 
     public function listen(): array
@@ -58,20 +60,29 @@ class RecvMessageListener implements ListenerInterface
 
         $lotteryResult = $event->lotteryResult;
 
-        if ($lotteryResult->terrace == '3001-80') {
+        // if ($lotteryResult->terrace === '3001-80') {
+        //     $this->output->info($lotteryResult);
+        // }
+
+        $this->logger = $this->loggerFactory->create($lotteryResult->terrace, 'baccarat');
+
+        $this->logger->debug($lotteryResult);
+
+        if ($lotteryResult->needDrawCard() && $lotteryResult->isWaiting()) {
             $this->output->info($lotteryResult);
         }
 
+
         $this->eventDispatcher = $this->container->get(EventDispatcherInterface::class);
 
-        if ($lotteryResult->isWaiting() || $lotteryResult->isBetting()){
+        if ($lotteryResult->isWaiting() || $lotteryResult->isBetting() || !$lotteryResult->needDrawCard()){
 
             //使用时间戳避免锁值重复
             $redisLock = new RedisLock($this->redisProxy, "recv_message_lock_{$lotteryResult->status}_{$lotteryResult->issue}", 1);
 
             try {
 
-                $redisLock->block(5, fn() => $this->dispatch($lotteryResult));
+                $redisLock->block(10, fn() => $this->dispatch($lotteryResult));
 
             } catch (LockTimeoutException $e) {
 
@@ -83,8 +94,8 @@ class RecvMessageListener implements ListenerInterface
     public function dispatch(LotteryResult $lotteryResult): void
     {
         match (true){
-            $lotteryResult->isWaiting() => $this->eventDispatcher ->dispatch(new WaitingEvent($lotteryResult)),
-            $lotteryResult->isBetting() => $this->eventDispatcher ->dispatch(new BettingEvent($lotteryResult)),
+            $lotteryResult->isWaiting() || !$lotteryResult->needDrawCard()=> $this->eventDispatcher->dispatch(new WaitingEvent($lotteryResult)),
+            $lotteryResult->isBetting() => $this->eventDispatcher->dispatch(new BettingEvent($lotteryResult)),
             default => null,
         };
     }

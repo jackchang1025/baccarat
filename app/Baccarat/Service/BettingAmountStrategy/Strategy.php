@@ -2,7 +2,6 @@
 
 namespace App\Baccarat\Service\BettingAmountStrategy;
 
-
 use App\Baccarat\Service\Sequence\Sequence;
 use App\Baccarat\Service\SimulationBettingAmount\BetLog;
 use App\Baccarat\Service\SimulationBettingAmount\LotteryLog;
@@ -10,11 +9,12 @@ use Hyperf\Collection\Collection;
 
 abstract class Strategy implements BetStrategyInterface
 {
-
-    static array $strategy = [
+    public static array $strategy = [
         'MartingaleStrategy'=>'倍投',
         'LayeredStrategy'=>'平注分层补偿缆',
         'FlatNote'=>'平注',
+        'FixedRatioStrategy' => '固定比例',
+        'OneThreeTwoSixStrategy' => '1-3-2-6',
     ];
 
     /**
@@ -74,7 +74,10 @@ abstract class Strategy implements BetStrategyInterface
         $this->updateTotalBetAmount($lastBetLog);
 
         if (!$betLog->isLastIssue()) {
-            $currentBet = $this->calculateCurrentBetAmount($lastBetLog);
+
+            //当前投注金额不能超过总投注金额
+            $currentBet = min($this->calculateCurrentBetAmount($lastBetLog),$this->totalBetAmount);
+
             $this->pushBet($betLog->issue + 1, $currentBet);
         }
 

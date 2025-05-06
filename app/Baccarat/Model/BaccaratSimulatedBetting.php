@@ -5,44 +5,54 @@ declare(strict_types=1);
 namespace App\Baccarat\Model;
 
 use App\Baccarat\Service\Rule\RuleEngine;
-use Hyperf\Database\Model\Collection;
 use Hyperf\Database\Model\Relations\BelongsToMany;
 use Hyperf\Database\Model\Relations\HasMany;
-use Hyperf\Testing\Concerns\InteractsWithModelFactory;
 use Mine\MineModel;
 use function PHPUnit\Framework\isNull;
 
 /**
  * @property int $id 主键
- * @property \Carbon\Carbon $created_at 创建时间
- * @property \Carbon\Carbon $updated_at 更新时间
  * @property string $title 名称
- * @property string $betting_sequence 投递序列
- * @property int $status 状态 (1正常 2停用)
+ * @property string $betting_sequence 投注序列
+ * @property float $initial_amount 初始金额
+ * @property float $default_bet 默认投注金额
+ * @property float $stop_win 止盈金额
+ * @property float $stop_loss 止损金额
+ * @property array $strategy_types 策略类型集合
+ * @property int $status 状态
  * @property int $sort 排序
  * @property string $remark 备注
- * @property Collection|BaccaratSimulatedBettingRule[] $baccaratSimulatedBettingRule
- * @property Collection|BaccaratSimulatedBettingLog[] $baccaratSimulatedBettingLog
+ * @property \Carbon\Carbon $created_at 创建时间
+ * @property \Carbon\Carbon $updated_at 更新时间
  */
 class BaccaratSimulatedBetting extends MineModel
 {
-
-    protected ?RuleEngine $ruleEngine = null;
-//    public array $appends = ['baccaratSimulatedBettingRule'];
-    /**
-     * The table associated with the model.
-     */
     protected ?string $table = 'baccarat_simulated_betting';
-
-    /**
-     * The attributes that are mass assignable.
-     */
-    protected array $fillable = ['id', 'created_at', 'updated_at', 'title', 'betting_sequence', 'status', 'sort', 'remark'];
-
-    /**
-     * The attributes that should be cast to native types.
-     */
-    protected array $casts = ['id' => 'integer', 'created_at' => 'datetime', 'updated_at' => 'datetime', 'status' => 'integer', 'sort' => 'integer'];
+    
+    protected array $fillable = [
+        'title',
+        'betting_sequence',
+        'initial_amount',
+        'default_bet',
+        'stop_win',
+        'stop_loss',
+        'strategy_types',
+        'status',
+        'sort',
+        'remark'
+    ];
+    
+    protected array $casts = [
+        'initial_amount' => 'float',
+        'default_bet' => 'float',
+        'stop_win' => 'float',
+        'stop_loss' => 'float',
+        'strategy_types' => 'array',
+        'status' => 'integer',
+        'sort' => 'integer',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime'
+    ];
 
     public function baccaratSimulatedBettingRule(): BelongsToMany
     {
@@ -54,13 +64,4 @@ class BaccaratSimulatedBetting extends MineModel
         return $this->hasMany(BaccaratSimulatedBettingLog::class, 'betting_id', 'id');
     }
 
-    public function getRuleEngine():RuleEngine
-    {
-        if (isNull($this->ruleEngine)){
-            $this->ruleEngine = make(RuleEngine::class);
-            $this->baccaratSimulatedBettingRule->each(fn (BaccaratSimulatedBettingRule $bettingRule) => $this->ruleEngine->addRule($bettingRule->getRule()));
-        }
-
-        return $this->ruleEngine;
-    }
 }

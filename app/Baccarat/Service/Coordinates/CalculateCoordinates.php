@@ -7,8 +7,8 @@ use Hyperf\Database\Model\Collection;
 
 class CalculateCoordinates
 {
-    protected string $lastResult = '';
-    protected array $startXCoordinates = ['B' => 1, 'P' => 1]; // 记录每个结果序列起始的X坐标
+    protected ?string $lastResult = null;
+    protected array $startXCoordinates = ['B' => 1, 'P' => 1];
     protected int $x = 1;
     protected int $y = 6;
     protected int $minY = 1;
@@ -16,11 +16,10 @@ class CalculateCoordinates
 
     public function calculateCoordinatesWithCollection(Collection $data): Collection
     {
-
         $this->data = $data;
+        $this->lastResult = null;
 
         $data->each(function (BaccaratLotteryLog $record) {
-
             $result = $record->transformationResult;
 
             if ($result === 'T') {
@@ -38,7 +37,7 @@ class CalculateCoordinates
                 }
                 list($this->x, $this->y) = $this->checkAndSetCoordinate($this->x, $this->y);
             } else {
-                if ($this->lastResult !== '') {
+                if ($this->lastResult !== null) {
                     $this->x = $this->startXCoordinates[$this->lastResult] + 1;
                     $this->y = 6;
                 }

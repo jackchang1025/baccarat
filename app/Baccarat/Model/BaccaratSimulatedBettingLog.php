@@ -16,6 +16,8 @@ use Mine\MineModel;
  * @property string $betting_result 投注结果
  * @property int $status 状态 (1正常 2停用)
  * @property string $remark 备注
+ * @property string $credibility 信誉值
+ * @property string $confidence 信心值
  * @property \Carbon\Carbon $created_at 创建时间
  * @property \Carbon\Carbon $updated_at 更新时间
  * @property baccaratSimulatedBetting $baccaratSimulatedBetting 投注单
@@ -33,7 +35,7 @@ class BaccaratSimulatedBettingLog extends MineModel
     /**
      * The attributes that are mass assignable.
      */
-    protected array $fillable = ['id', 'betting_id','terrace_deck_id','issue', 'betting_value', 'betting_result', 'status', 'remark', 'created_at', 'updated_at'];
+    protected array $fillable = ['id', 'betting_id','terrace_deck_id','issue', 'betting_value', 'betting_result', 'status', 'remark', 'created_at', 'updated_at','credibility','confidence'];
 
     /**
      * The attributes that should be cast to native types.

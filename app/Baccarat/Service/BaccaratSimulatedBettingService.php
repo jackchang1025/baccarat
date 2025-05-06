@@ -24,12 +24,10 @@ use App\Baccarat\Service\Rule\RuleInterface;
 use Hyperf\Coroutine\Coroutine;
 use Hyperf\Coroutine\Parallel;
 use Hyperf\Database\Model\Collection;
-use Hyperf\Database\Model\Relations\HasMany;
 use Hyperf\Logger\LoggerFactory;
 use Mine\Abstracts\AbstractService;
 use Psr\Log\LoggerInterface;
 use Hyperf\Coroutine\Locker;
-use function Hyperf\Support\value;
 
 /**
  * 投注服务类

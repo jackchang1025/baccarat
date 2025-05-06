@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
     'host' => 'wss://fx8ec8.3l3b0um9.com/fxLive/fxLB?gameType=h5multi3',
-    'token' => 'bga6bae4ded83e29aeca77c7c7a9c5a7bad228d878',
+    'token' => 'bgbd48213e2acfc31ab74869390e08e724e089ce80',
     'connectionTimeout' => 600,
     'remainingTimeOut' => 10,
     'handLogin' =>
@@ -34,16 +34,17 @@ return [
             "vtMode" => true,
             "subscription" => ["shit"],
             "action" => "login",
-            "sid" => 'bga6bae4ded83e29aeca77c7c7a9c5a7bad228d878'
+            "sid" => 'bgbd48213e2acfc31ab74869390e08e724e089ce80'
         ],
-    'login' => ['lang' => 'cn', 'vType' => 'wss', 'site' => '1', 'sid' => 'bga6bae4ded83e29aeca77c7c7a9c5a7bad228d878', 'action' => 'hallLogin',],
+    'login' => ['lang' => 'cn', 'vType' => 'wss', 'site' => '1', 'sid' => 'bgbd48213e2acfc31ab74869390e08e724e089ce80', 'action' => 'hallLogin',],
     'connectionPool' => [
-        'min_connections' => 3,
-        'max_connections' => 5,
+        'min_connections' => 10,
+        'max_connections' => 100,
         'connect_timeout' => 10.0
     ],
-    'messageChannel' => [
-        'size' => 1000
-    ]
+    'pool' => [
+        'auth_timeout' => 5, // 认证超时时间（秒）
+        'retry_interval' => 0.5 // 认证检查间隔
+    ],
 ];
 

@@ -169,4 +169,28 @@ class BaccaratTerraceController extends MineController
     {
         return $this->success($this->service->getRemoteList($this->request->all()));
     }
+
+    /**
+     * 获取牌靴日期列表
+     * @return ResponseInterface
+     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws \Psr\Container\NotFoundExceptionInterface
+     */
+    #[GetMapping("deck-dates"), Permission("baccarat:terrace:list")]
+    public function getDeckDates(): ResponseInterface
+    {
+        return $this->success($this->service->getDeckDates($this->request->all()));
+    }
+
+    /**
+     * 获取牌靴列表
+     * @return ResponseInterface
+     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws \Psr\Container\NotFoundExceptionInterface
+     */
+    #[GetMapping("deck-list"), Permission("baccarat:terrace:list")]
+    public function getDeckList(): ResponseInterface
+    {
+        return $this->success($this->service->getDeckList($this->request->all()));
+    }
 }

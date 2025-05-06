@@ -21,9 +21,12 @@ use App\Baccarat\Service\Coordinates\CalculateCoordinates;
 use App\Baccarat\Service\LotteryResult;
 use Carbon\Carbon;
 use Hyperf\Database\Model\Builder;
+use Hyperf\Database\Model\Collection;
 use Hyperf\Database\Model\Model;
 use Hyperf\Database\Model\Relations\HasMany;
 use Mine\Abstracts\AbstractMapper;
+use Hyperf\DbConnection\Db;
+use App\Baccarat\Service\Statistics\DeckStatisticsService;
 
 /**
  * 台，桌Mapper类
@@ -34,6 +37,12 @@ class BaccaratTerraceMapper extends AbstractMapper
      * @var BaccaratTerrace
      */
     public $model;
+
+    public function __construct(
+        private readonly DeckStatisticsService $statisticsService
+    ) {
+        parent::__construct();
+    }
 
     public function assignModel()
     {
@@ -200,5 +209,51 @@ class BaccaratTerraceMapper extends AbstractMapper
             ->each(fn(BaccaratTerrace $baccaratTerrace)=> $baccaratTerrace->children->append(['baccaratBettingSequence']))
             ->toArray();
 
+    }
+
+    /**
+     * 获取牌靴日期列表
+     * @param array $params
+     * @return array
+     */
+    public function getDeckDates(array $params): array
+    {
+        $query = BaccaratTerraceDeck::query()
+            ->where('terrace_id', $params['terrace_id'])
+            ->select(Db::raw('DATE(created_at) as date'))
+            ->distinct()
+            ->orderBy('date', 'desc');
+
+        return $query->pluck('date')->toArray();
+    }
+
+    /**
+     * 获取牌靴列表
+     * @param array $params
+     * @return array
+     */
+    public function getDeckList(array $params): array
+    {
+        $query = BaccaratTerraceDeck::query()
+            ->with(['baccaratLotteryLog' => function($query) {
+                $query->orderBy('issue', 'asc')
+                    ->with('bettingLog');
+            }])
+            ->where('terrace_id', $params['terrace_id'])
+            ->whereDate('created_at', $params['date']);
+
+        $decks = $query->orderBy('deck_number', 'asc')->get();
+        
+        // 计算每个牌靴的统计数据
+        $decks->each(function (BaccaratTerraceDeck $deck) {
+            // 计算坐标
+            $deck->baccaratLotteryLog = (new CalculateCoordinates())
+                ->calculateCoordinatesWithCollection($deck->baccaratLotteryLog);
+            
+            // 添加统计数据
+            $deck->statistics = $this->statisticsService->getStatistics($deck->baccaratLotteryLog);
+        });
+        
+        return $decks->toArray();
     }
 }

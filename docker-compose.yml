@@ -1,4 +1,3 @@
-version: '3'
 services:
   # 首先下载前端，https://gitee.com/mineadmin/mineadmin-vue
   # 在后端根目录建立mine-ui目录，把前端文件复制过来。
@@ -52,8 +51,7 @@ services:
       - ./docker/mysql/logs:/var/lib/mysql/logs #数据库日志
     ports:
         - "3306:3306"  # 确保端口映射允许宿主机上的应用连接到 MySQL
-    # command: "--default-authentication-plugin=mysql_native_password"
-    command: "--default-authentication-plugin=mysql_native_password --max_connections=200 --slow_query_log=1 --slow_query_log_file=/var/lib/mysql/logs/slow_query.log --long_query_time=1"
+    command: "--default-authentication-plugin=caching_sha2_password --max_connections=200 --slow_query_log=1 --slow_query_log_file=/var/lib/mysql/logs/slow_query.log --long_query_time=1"
     # max_connections 最大连接数
     # slow_query_log 开始慢查询日志
     # slow_query_log_file 慢查询日志路径

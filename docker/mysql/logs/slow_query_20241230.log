@@ -1,0 +1,2638 @@
+/usr/sbin/mysqld, Version: 8.0.40 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2024-12-29T05:00:00.357698Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000106  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+use mineadmin;
+SET timestamp=1735448400;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:00:56.990444Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000107  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448456;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:01:00.994945Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000123  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448460;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:01:57.631382Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000142  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448517;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:02:00.638348Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000129  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448520;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:02:57.276334Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000118  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448577;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:03:00.280994Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000129  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448580;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:03:56.057092Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000163  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448636;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:04:00.062672Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000111  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448640;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:04:57.574930Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000120  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448697;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:05:00.579097Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000117  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448700;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:05:57.141939Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000106  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448757;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:06:00.152209Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000104  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448760;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:06:56.858481Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448816;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:06:59.089700Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000101  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448819;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:07:00.092802Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448820;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:07:56.698348Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000107  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448876;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:08:00.704259Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000115  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448880;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:08:57.258275Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000108  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448937;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:09:00.260495Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000111  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448940;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:09:56.821394Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000139  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735448996;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:10:00.824470Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000106  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449000;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:10:57.412524Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000107  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449057;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:11:00.417156Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000136  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449060;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:11:57.056636Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   263
+# Query_time: 0.000116  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449117;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:12:09.031383Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   269
+# Query_time: 0.000092  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 22
+SET timestamp=1735449129;
+select * from `baccarat_terrace` where (`code` = '3043-4') limit 1;
+# Time: 2024-12-29T05:12:09.031477Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   270
+# Query_time: 0.000112  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 33
+SET timestamp=1735449129;
+select * from `baccarat_terrace` where (`code` = '3001-57') limit 1;
+# Time: 2024-12-29T05:12:09.031388Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   268
+# Query_time: 0.000066  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 30
+SET timestamp=1735449129;
+select * from `baccarat_terrace` where (`code` = '3043-1') limit 1;
+# Time: 2024-12-29T05:12:09.031383Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   267
+# Query_time: 0.000127  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 45
+SET timestamp=1735449129;
+select * from `baccarat_terrace` where (`code` = '3001-88') limit 1;
+# Time: 2024-12-29T05:12:57.064996Z
+# User@Host: [] @  []  Id:   318
+# Query_time: 0.003661  Lock_time: 0.000058 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735449177;
+throttle:         56 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T05:13:00.334699Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   327
+# Query_time: 0.000091  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449180;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:14:00.966474Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   328
+# Query_time: 0.000109  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449240;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:14:41.648606Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   337
+# Query_time: 0.000099  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 45
+SET timestamp=1735449281;
+select * from `baccarat_terrace` where (`code` = '3001-88') limit 1;
+# Time: 2024-12-29T05:14:41.648864Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   331
+# Query_time: 0.000061  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 35
+SET timestamp=1735449281;
+select * from `baccarat_terrace` where (`code` = '3001-80') limit 1;
+# Time: 2024-12-29T05:14:41.648914Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   332
+# Query_time: 0.000060  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 24
+SET timestamp=1735449281;
+select * from `baccarat_terrace` where (`code` = '3001-84') limit 1;
+# Time: 2024-12-29T05:14:41.648882Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   329
+# Query_time: 0.000052  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 36
+SET timestamp=1735449281;
+select * from `baccarat_terrace` where (`code` = '3001-90') limit 1;
+# Time: 2024-12-29T05:15:57.377565Z
+# User@Host: [] @  []  Id:   349
+# Query_time: 0.001311  Lock_time: 0.000020 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735449357;
+throttle:         19 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T05:15:57.377722Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   349
+# Query_time: 0.000106  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449357;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:16:00.383141Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   349
+# Query_time: 0.000186  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449360;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:16:04.190928Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   351
+# Query_time: 0.000098  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 15
+SET timestamp=1735449364;
+select * from `baccarat_terrace` where (`code` = '3001-113') limit 1;
+# Time: 2024-12-29T05:16:04.190943Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   352
+# Query_time: 0.000074  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 11
+SET timestamp=1735449364;
+select * from `baccarat_terrace` where (`code` = '3001-87') limit 1;
+# Time: 2024-12-29T05:16:04.191020Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   350
+# Query_time: 0.000061  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 12
+SET timestamp=1735449364;
+select * from `baccarat_terrace` where (`code` = '3001-82') limit 1;
+# Time: 2024-12-29T05:17:00.021013Z
+# User@Host: [] @  []  Id:   370
+# Query_time: 0.000866  Lock_time: 0.000010 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735449420;
+throttle:         17 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T05:17:00.021585Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   370
+# Query_time: 0.000113  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449420;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:17:56.526537Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   370
+# Query_time: 0.000115  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449476;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:18:00.532887Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   370
+# Query_time: 0.000107  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449480;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:18:57.085917Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   370
+# Query_time: 0.000114  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449537;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:19:00.091355Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   370
+# Query_time: 0.000111  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449540;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:19:20.599767Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   372
+# Query_time: 0.000094  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 33
+SET timestamp=1735449560;
+select * from `baccarat_terrace` where (`code` = '3001-57') limit 1;
+# Time: 2024-12-29T05:19:20.599817Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   374
+# Query_time: 0.000036  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 13
+SET timestamp=1735449560;
+select * from `baccarat_terrace` where (`code` = '3001-86') limit 1;
+# Time: 2024-12-29T05:19:20.599868Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   375
+# Query_time: 0.000067  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 34
+SET timestamp=1735449560;
+select * from `baccarat_terrace` where (`code` = '3001-89') limit 1;
+# Time: 2024-12-29T05:19:20.599786Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   373
+# Query_time: 0.000057  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 42
+SET timestamp=1735449560;
+select * from `baccarat_terrace` where (`code` = '3001-58') limit 1;
+# Time: 2024-12-29T05:19:20.599768Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   371
+# Query_time: 0.000065  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 28
+SET timestamp=1735449560;
+select * from `baccarat_terrace` where (`code` = '3027-3') limit 1;
+# Time: 2024-12-29T05:20:32.111710Z
+# User@Host: [] @  []  Id:   413
+# Query_time: 0.001881  Lock_time: 0.000032 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735449632;
+throttle:         37 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T05:20:32.113576Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   413
+# Query_time: 0.000093  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 41
+SET timestamp=1735449632;
+select * from `baccarat_terrace` where (`code` = '3001-85') limit 1;
+# Time: 2024-12-29T05:20:32.113621Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   416
+# Query_time: 0.000049  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 5
+SET timestamp=1735449632;
+select * from `baccarat_terrace` where (`code` = '3001-107') limit 1;
+# Time: 2024-12-29T05:20:32.113599Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   412
+# Query_time: 0.000053  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 20
+SET timestamp=1735449632;
+select * from `baccarat_terrace` where (`code` = '3001-116') limit 1;
+# Time: 2024-12-29T05:20:32.113590Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   415
+# Query_time: 0.000076  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 31
+SET timestamp=1735449632;
+select * from `baccarat_terrace` where (`code` = '3001-61') limit 1;
+# Time: 2024-12-29T05:20:32.113677Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   418
+# Query_time: 0.000073  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 45
+SET timestamp=1735449632;
+select * from `baccarat_terrace` where (`code` = '3001-88') limit 1;
+# Time: 2024-12-29T05:22:00.673342Z
+# User@Host: [] @  []  Id:   453
+# Query_time: 0.002003  Lock_time: 0.000027 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735449720;
+throttle:         36 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T05:22:00.673944Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   453
+# Query_time: 0.000096  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449720;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:23:00.280760Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   454
+# Query_time: 0.000111  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449780;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:23:36.461978Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   456
+# Query_time: 0.000095  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 37
+SET timestamp=1735449816;
+select * from `baccarat_terrace` where (`code` = '3025-4') limit 1;
+# Time: 2024-12-29T05:23:36.462182Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   458
+# Query_time: 0.000062  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 12
+SET timestamp=1735449816;
+select * from `baccarat_terrace` where (`code` = '3001-82') limit 1;
+# Time: 2024-12-29T05:23:36.462227Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   461
+# Query_time: 0.000055  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 33
+SET timestamp=1735449816;
+select * from `baccarat_terrace` where (`code` = '3001-57') limit 1;
+# Time: 2024-12-29T05:23:36.462244Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   463
+# Query_time: 0.000037  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 30
+SET timestamp=1735449816;
+select * from `baccarat_terrace` where (`code` = '3043-1') limit 1;
+# Time: 2024-12-29T05:23:36.462194Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   457
+# Query_time: 0.000050  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 37
+SET timestamp=1735449816;
+select * from `baccarat_terrace` where (`code` = '3025-4') limit 1;
+# Time: 2024-12-29T05:24:57.487405Z
+# User@Host: [] @  []  Id:   475
+# Query_time: 0.000990  Lock_time: 0.000014 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735449897;
+throttle:         17 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T05:24:57.487741Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   475
+# Query_time: 0.000113  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449897;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:25:00.490026Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   475
+# Query_time: 0.000110  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449900;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:25:07.406888Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   477
+# Query_time: 0.000084  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 43
+SET timestamp=1735449907;
+select * from `baccarat_terrace` where (`code` = '3043-3') limit 1;
+# Time: 2024-12-29T05:25:07.406888Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   479
+# Query_time: 0.000057  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 46
+SET timestamp=1735449907;
+select * from `baccarat_terrace` where (`code` = '3001-108') limit 1;
+# Time: 2024-12-29T05:25:07.406888Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   476
+# Query_time: 0.000115  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 34
+SET timestamp=1735449907;
+select * from `baccarat_terrace` where (`code` = '3001-89') limit 1;
+# Time: 2024-12-29T05:26:00.111078Z
+# User@Host: [] @  []  Id:   486
+# Query_time: 0.000440  Lock_time: 0.000009 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735449960;
+throttle:          7 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T05:26:00.112598Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000108  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735449960;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:26:56.583775Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000109  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450016;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:27:00.585952Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450020;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:27:57.121887Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000113  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450077;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:28:00.127266Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000144  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450080;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:28:56.748544Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000112  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450136;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:29:00.755875Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000106  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450140;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:29:57.324138Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000130  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450197;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:30:00.327218Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000107  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450200;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:30:56.895196Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000116  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450256;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:31:00.901860Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000113  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450260;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:31:10.544829Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   487
+# Query_time: 0.000092  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 42
+SET timestamp=1735450270;
+select * from `baccarat_terrace` where (`code` = '3001-58') limit 1;
+# Time: 2024-12-29T05:31:10.544869Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   488
+# Query_time: 0.000101  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 15
+SET timestamp=1735450270;
+select * from `baccarat_terrace` where (`code` = '3001-113') limit 1;
+# Time: 2024-12-29T05:31:10.544901Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   490
+# Query_time: 0.000050  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 25
+SET timestamp=1735450270;
+select * from `baccarat_terrace` where (`code` = '3001-81') limit 1;
+# Time: 2024-12-29T05:31:10.544862Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   489
+# Query_time: 0.000044  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 24
+SET timestamp=1735450270;
+select * from `baccarat_terrace` where (`code` = '3001-84') limit 1;
+# Time: 2024-12-29T05:32:57.282215Z
+# User@Host: [] @  []  Id:   486
+# Query_time: 0.001229  Lock_time: 0.000019 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735450377;
+throttle:         14 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T05:32:57.282394Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000117  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450377;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:33:00.287113Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000125  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450380;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:33:56.829869Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000107  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450436;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:34:00.836026Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000134  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450440;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:34:58.387798Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000108  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450498;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:35:00.388976Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000106  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450500;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:35:55.993229Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000109  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450555;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:36:01.003904Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000112  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450561;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:36:56.594132Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000116  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450616;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:37:00.600884Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000108  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450620;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:37:57.037013Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000108  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450677;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:38:00.043271Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000108  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450680;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:38:56.550786Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000107  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450736;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:39:00.558148Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000115  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450740;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:39:56.197344Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000111  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450796;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:40:00.382216Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000108  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450800;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:40:55.904675Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000120  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450855;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:41:00.909647Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000121  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450860;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:41:57.417412Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000109  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450917;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:42:00.420766Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000148  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450920;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:42:56.929490Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000111  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450976;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:43:00.934340Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000114  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735450980;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:43:57.511749Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451037;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:44:00.520540Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000153  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451040;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:44:57.016298Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000107  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451097;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:45:00.020454Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   486
+# Query_time: 0.000112  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451100;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:45:09.501988Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   506
+# Query_time: 0.000047  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 1
+SET timestamp=1735451109;
+select * from `baccarat_terrace` where (`code` = '3043-6') limit 1;
+# Time: 2024-12-29T05:45:09.501988Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   504
+# Query_time: 0.000074  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 3
+SET timestamp=1735451109;
+select * from `baccarat_terrace` where (`code` = '3025-3') limit 1;
+# Time: 2024-12-29T05:45:09.501988Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   502
+# Query_time: 0.000100  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 14
+SET timestamp=1735451109;
+select * from `baccarat_terrace` where (`code` = '3001-59') limit 1;
+# Time: 2024-12-29T05:46:00.181464Z
+# User@Host: [] @  []  Id:   522
+# Query_time: 0.001054  Lock_time: 0.000019 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735451160;
+throttle:         17 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T05:46:00.182133Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   522
+# Query_time: 0.000099  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451160;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:46:56.750521Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   522
+# Query_time: 0.000138  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451216;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:47:00.755314Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   522
+# Query_time: 0.000152  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451220;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:47:57.209974Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   522
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451277;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:47:58.487540Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   522
+# Query_time: 0.000109  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451278;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:48:00.509492Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   522
+# Query_time: 0.000116  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451280;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:48:57.089714Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   522
+# Query_time: 0.000105  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451337;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:49:00.094448Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   522
+# Query_time: 0.000115  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451340;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:49:57.656452Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   522
+# Query_time: 0.000117  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451397;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:50:00.660924Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   522
+# Query_time: 0.000112  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451400;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:50:19.883305Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   524
+# Query_time: 0.000077  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 17
+SET timestamp=1735451419;
+select * from `baccarat_terrace` where (`code` = '3001-111') limit 1;
+# Time: 2024-12-29T05:50:19.883318Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   523
+# Query_time: 0.000122  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 40
+SET timestamp=1735451419;
+select * from `baccarat_terrace` where (`code` = '3001-79') limit 1;
+# Time: 2024-12-29T05:50:19.883329Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   525
+# Query_time: 0.000040  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 36
+SET timestamp=1735451419;
+select * from `baccarat_terrace` where (`code` = '3001-90') limit 1;
+# Time: 2024-12-29T05:51:00.188037Z
+# User@Host: [] @  []  Id:   522
+# Query_time: 0.000222  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735451460;
+throttle:          3 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T05:51:00.188219Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   522
+# Query_time: 0.000121  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451460;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:51:57.827786Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   529
+# Query_time: 0.000098  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 12
+SET timestamp=1735451517;
+select * from `baccarat_terrace` where (`code` = '3001-82') limit 1;
+# Time: 2024-12-29T05:51:57.827796Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   528
+# Query_time: 0.000067  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 21
+SET timestamp=1735451517;
+select * from `baccarat_terrace` where (`code` = '3043-2') limit 1;
+# Time: 2024-12-29T05:51:57.827819Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   530
+# Query_time: 0.000064  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 38
+SET timestamp=1735451517;
+select * from `baccarat_terrace` where (`code` = '3025-2') limit 1;
+# Time: 2024-12-29T05:51:57.827831Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   532
+# Query_time: 0.000054  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 31
+SET timestamp=1735451517;
+select * from `baccarat_terrace` where (`code` = '3001-61') limit 1;
+# Time: 2024-12-29T05:52:00.762911Z
+# User@Host: [] @  []  Id:   533
+# Query_time: 0.000035  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735451520;
+throttle:          1 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T05:52:00.764259Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   533
+# Query_time: 0.000141  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451520;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:52:57.292188Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   533
+# Query_time: 0.000122  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451577;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:53:00.297059Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   533
+# Query_time: 0.000150  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451580;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:54:00.787775Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   534
+# Query_time: 0.000108  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451640;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:54:57.387929Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   534
+# Query_time: 0.000153  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451697;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:55:00.394417Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   534
+# Query_time: 0.000127  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451700;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:55:28.212695Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   535
+# Query_time: 0.000071  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 13
+SET timestamp=1735451728;
+select * from `baccarat_terrace` where (`code` = '3001-86') limit 1;
+# Time: 2024-12-29T05:55:28.212698Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   537
+# Query_time: 0.000105  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 29
+SET timestamp=1735451728;
+select * from `baccarat_terrace` where (`code` = '3025-7') limit 1;
+# Time: 2024-12-29T05:55:28.212772Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   538
+# Query_time: 0.000061  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 16
+SET timestamp=1735451728;
+select * from `baccarat_terrace` where (`code` = '3001-77') limit 1;
+# Time: 2024-12-29T05:55:28.212724Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   539
+# Query_time: 0.000049  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 20
+SET timestamp=1735451728;
+select * from `baccarat_terrace` where (`code` = '3001-116') limit 1;
+# Time: 2024-12-29T05:55:28.212704Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   536
+# Query_time: 0.000054  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 40
+SET timestamp=1735451728;
+select * from `baccarat_terrace` where (`code` = '3001-79') limit 1;
+# Time: 2024-12-29T05:56:56.694729Z
+# User@Host: [] @  []  Id:   540
+# Query_time: 0.000198  Lock_time: 0.000005 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735451816;
+throttle:          2 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T05:56:56.694961Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   540
+# Query_time: 0.000122  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451816;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:57:00.699833Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   540
+# Query_time: 0.000116  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451820;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:57:04.660697Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   545
+# Query_time: 0.000105  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 33
+SET timestamp=1735451824;
+select * from `baccarat_terrace` where (`code` = '3001-57') limit 1;
+# Time: 2024-12-29T05:57:04.661922Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   543
+# Query_time: 0.000060  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 26
+SET timestamp=1735451824;
+select * from `baccarat_terrace` where (`code` = '3047-4') limit 1;
+# Time: 2024-12-29T05:57:04.661926Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   542
+# Query_time: 0.000127  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 38
+SET timestamp=1735451824;
+select * from `baccarat_terrace` where (`code` = '3025-2') limit 1;
+# Time: 2024-12-29T05:57:59.085735Z
+# User@Host: [] @  []  Id:   546
+# Query_time: 0.000259  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735451879;
+throttle:          2 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T05:57:59.086327Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   546
+# Query_time: 0.000099  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451879;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:58:00.094457Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   546
+# Query_time: 0.000105  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451880;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:58:56.623252Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   546
+# Query_time: 0.000107  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451936;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:59:00.629069Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   546
+# Query_time: 0.000118  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451940;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T05:59:57.118223Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   546
+# Query_time: 0.000112  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735451997;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:00:00.121400Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   546
+# Query_time: 0.000142  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452000;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:00:56.630023Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   546
+# Query_time: 0.000127  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452056;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:01:00.632443Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   546
+# Query_time: 0.000111  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452060;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:01:57.110474Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   546
+# Query_time: 0.000117  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452117;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:02:00.119205Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   546
+# Query_time: 0.000105  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452120;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:02:27.426483Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   551
+# Query_time: 0.000114  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 36
+SET timestamp=1735452147;
+select * from `baccarat_terrace` where (`code` = '3001-90') limit 1;
+# Time: 2024-12-29T06:02:27.426483Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   548
+# Query_time: 0.000079  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 11
+SET timestamp=1735452147;
+select * from `baccarat_terrace` where (`code` = '3001-87') limit 1;
+# Time: 2024-12-29T06:02:27.426507Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   547
+# Query_time: 0.000069  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 31
+SET timestamp=1735452147;
+select * from `baccarat_terrace` where (`code` = '3001-61') limit 1;
+# Time: 2024-12-29T06:02:58.476708Z
+# User@Host: [] @  []  Id:   557
+# Query_time: 0.000497  Lock_time: 0.000008 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735452178;
+throttle:          7 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:02:58.477471Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000133  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452178;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:03:00.489209Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000107  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452180;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:03:57.052941Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000108  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452237;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:03:59.254496Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000125  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452239;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:03:59.211614Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000133  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452239;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:04:00.214356Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000111  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452240;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:04:56.705313Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000100  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452296;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:05:00.711937Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000122  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452300;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:05:57.277239Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000129  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452357;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:06:00.279559Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000114  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452360;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:06:57.733542Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000106  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452417;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:07:00.738504Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000128  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452420;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:07:56.226189Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000103  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452476;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:08:00.228763Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000151  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452480;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:08:56.753327Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000128  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452536;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:09:00.755301Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000131  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452540;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:09:57.189266Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000110  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452597;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:10:00.193309Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000135  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452600;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:10:56.729517Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452656;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:11:00.735467Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000109  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452660;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:11:57.196652Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000131  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452717;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:11:59.499518Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000118  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452719;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:11:59.538346Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452719;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:12:00.542271Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   557
+# Query_time: 0.000134  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452720;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:12:58.953761Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   558
+# Query_time: 0.000091  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452778;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:13:00.966805Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   558
+# Query_time: 0.000116  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452780;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:13:58.369430Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   559
+# Query_time: 0.000091  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452838;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:13:58.541168Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   561
+# Query_time: 0.000066  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 33
+SET timestamp=1735452838;
+select * from `baccarat_terrace` where (`code` = '3001-57') limit 1;
+# Time: 2024-12-29T06:13:58.541170Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   560
+# Query_time: 0.000096  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 29
+SET timestamp=1735452838;
+select * from `baccarat_terrace` where (`code` = '3025-7') limit 1;
+# Time: 2024-12-29T06:13:59.059761Z
+# User@Host: [] @  []  Id:   562
+# Query_time: 0.001003  Lock_time: 0.000014 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735452839;
+throttle:         11 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:14:00.393748Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   559
+# Query_time: 0.000150  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735452840;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:14:56.139904Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   565
+# Query_time: 0.000108  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 26
+SET timestamp=1735452896;
+select * from `baccarat_terrace` where (`code` = '3047-4') limit 1;
+# Time: 2024-12-29T06:14:56.139921Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   567
+# Query_time: 0.000084  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 32
+SET timestamp=1735452896;
+select * from `baccarat_terrace` where (`code` = '3001-112') limit 1;
+# Time: 2024-12-29T06:14:56.139979Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   566
+# Query_time: 0.000066  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 27
+SET timestamp=1735452896;
+select * from `baccarat_terrace` where (`code` = '3001-60') limit 1;
+# Time: 2024-12-29T06:14:56.140084Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   569
+# Query_time: 0.000088  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 8
+SET timestamp=1735452896;
+select * from `baccarat_terrace` where (`code` = '3025-1') limit 1;
+# Time: 2024-12-29T06:15:00.422472Z
+# User@Host: [] @  []  Id:   565
+# Query_time: 0.007581  Lock_time: 0.000095 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735452900;
+throttle:         77 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:15:00.436006Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   565
+# Query_time: 0.000071  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 29
+SET timestamp=1735452900;
+select * from `baccarat_terrace` where (`code` = '3025-7') limit 1;
+# Time: 2024-12-29T06:15:00.450954Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   565
+# Query_time: 0.000086  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 5
+SET timestamp=1735452900;
+select * from `baccarat_terrace` where (`code` = '3001-107') limit 1;
+# Time: 2024-12-29T06:15:00.468297Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   565
+# Query_time: 0.000116  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 27
+SET timestamp=1735452900;
+select * from `baccarat_terrace` where (`code` = '3001-60') limit 1;
+# Time: 2024-12-29T06:15:00.481510Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   566
+# Query_time: 0.000087  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 39
+SET timestamp=1735452900;
+select * from `baccarat_terrace` where (`code` = '3027-1') limit 1;
+# Time: 2024-12-29T06:15:00.484658Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   565
+# Query_time: 0.000111  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 28
+SET timestamp=1735452900;
+select * from `baccarat_terrace` where (`code` = '3027-3') limit 1;
+# Time: 2024-12-29T06:16:56.781239Z
+# User@Host: [] @  []  Id:   570
+# Query_time: 0.021722  Lock_time: 0.000309 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735453016;
+throttle:        210 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:16:56.781405Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   570
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453016;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:17:00.788996Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   570
+# Query_time: 0.000114  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453020;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:17:03.814134Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   573
+# Query_time: 0.000100  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 26
+SET timestamp=1735453023;
+select * from `baccarat_terrace` where (`code` = '3047-4') limit 1;
+# Time: 2024-12-29T06:17:03.814133Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   572
+# Query_time: 0.000070  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 34
+SET timestamp=1735453023;
+select * from `baccarat_terrace` where (`code` = '3001-89') limit 1;
+# Time: 2024-12-29T06:17:03.814166Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   571
+# Query_time: 0.000072  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 2
+SET timestamp=1735453023;
+select * from `baccarat_terrace` where (`code` = '3001-78') limit 1;
+# Time: 2024-12-29T06:17:57.005695Z
+# User@Host: [] @  []  Id:   571
+# Query_time: 0.072290  Lock_time: 0.001061 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735453077;
+throttle:        901 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:17:57.019786Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   571
+# Query_time: 0.000083  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 27
+SET timestamp=1735453077;
+select * from `baccarat_terrace` where (`code` = '3001-60') limit 1;
+# Time: 2024-12-29T06:17:57.155469Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   576
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453077;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:17:57.539200Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   571
+# Query_time: 0.000087  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 26
+SET timestamp=1735453077;
+select * from `baccarat_terrace` where (`code` = '3047-4') limit 1;
+# Time: 2024-12-29T06:17:58.061899Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   571
+# Query_time: 0.000083  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 22
+SET timestamp=1735453078;
+select * from `baccarat_terrace` where (`code` = '3043-4') limit 1;
+# Time: 2024-12-29T06:17:58.076144Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   571
+# Query_time: 0.000072  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 8
+SET timestamp=1735453078;
+select * from `baccarat_terrace` where (`code` = '3025-1') limit 1;
+# Time: 2024-12-29T06:18:58.923635Z
+# User@Host: [] @  []  Id:   574
+# Query_time: 0.009063  Lock_time: 0.000132 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735453138;
+throttle:         99 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:18:58.923918Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   574
+# Query_time: 0.000142  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 24
+SET timestamp=1735453138;
+select * from `baccarat_terrace` where (`code` = '3001-84') limit 1;
+# Time: 2024-12-29T06:18:59.448426Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   574
+# Query_time: 0.000088  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 29
+SET timestamp=1735453139;
+select * from `baccarat_terrace` where (`code` = '3025-7') limit 1;
+# Time: 2024-12-29T06:18:59.463603Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   574
+# Query_time: 0.000113  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 34
+SET timestamp=1735453139;
+select * from `baccarat_terrace` where (`code` = '3001-89') limit 1;
+# Time: 2024-12-29T06:18:59.477478Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   574
+# Query_time: 0.000147  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 7
+SET timestamp=1735453139;
+select * from `baccarat_terrace` where (`code` = '3001-115') limit 1;
+# Time: 2024-12-29T06:18:59.998025Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   572
+# Query_time: 0.000119  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 48
+SET timestamp=1735453139;
+select * from `baccarat_terrace` where (`code` = '3001-110') limit 1;
+# Time: 2024-12-29T06:20:00.130195Z
+# User@Host: [] @  []  Id:   576
+# Query_time: 0.001797  Lock_time: 0.000025 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735453200;
+throttle:         20 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:20:00.130427Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   576
+# Query_time: 0.000138  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453200;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:20:55.746458Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   576
+# Query_time: 0.000108  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453255;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:20:59.693665Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   576
+# Query_time: 0.000115  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453259;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:21:00.696483Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   576
+# Query_time: 0.000117  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453260;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:21:57.100870Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   576
+# Query_time: 0.000116  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453317;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:22:00.103583Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   576
+# Query_time: 0.000115  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453320;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:22:56.607537Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   576
+# Query_time: 0.000131  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453376;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:22:58.515613Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   577
+# Query_time: 0.000150  Lock_time: 0.000003 Rows_sent: 45  Rows_examined: 90
+SET timestamp=1735453378;
+select `migration` from `migrations` order by `batch` asc, `migration` asc;
+# Time: 2024-12-29T06:22:58.516703Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   577
+# Query_time: 0.000171  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 45
+SET timestamp=1735453378;
+select max(`batch`) as aggregate from `migrations`;
+# Time: 2024-12-29T06:22:58.545686Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   577
+# Query_time: 0.001349  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 56
+SET timestamp=1735453378;
+SELECT DISTINCT            k.CONSTRAINT_NAME,
+            k.COLUMN_NAME,
+            k.REFERENCED_TABLE_NAME,
+            k.REFERENCED_COLUMN_NAME,
+            k.ORDINAL_POSITION /*!50116,
+            c.UPDATE_RULE,
+            c.DELETE_RULE */
+FROM information_schema.key_column_usage k /*!50116
+INNER JOIN information_schema.referential_constraints c
+ON c.CONSTRAINT_NAME = k.CONSTRAINT_NAME
+AND c.TABLE_NAME = k.TABLE_NAME */ WHERE k.TABLE_SCHEMA = 'mineadmin' AND k.TABLE_NAME = 'baccarat_betting_log' AND k.REFERENCED_COLUMN_NAME IS NOT NULL /*!50116 AND c.CONSTRAINT_SCHEMA = 'mineadmin' */ ORDER BY k.ORDINAL_POSITION;
+# Time: 2024-12-29T06:22:58.584999Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   577
+# Query_time: 0.000112  Lock_time: 0.000002 Rows_sent: 45  Rows_examined: 90
+SET timestamp=1735453378;
+select `migration` from `migrations` order by `batch` asc, `migration` asc;
+# Time: 2024-12-29T06:23:58.856702Z
+# User@Host: [] @  []  Id:   580
+# Query_time: 0.001868  Lock_time: 0.000022 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735453438;
+throttle:         13 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:23:58.857295Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000091  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453438;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:24:00.868571Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000130  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453440;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:24:57.369335Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000144  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453497;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:25:00.374570Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000139  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453500;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:25:57.061110Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000120  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453557;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:26:00.063078Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000120  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453560;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:26:56.541294Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000110  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453616;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:27:00.548813Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000108  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453620;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:27:56.972187Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000128  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453676;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:27:59.315224Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000114  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453679;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:28:00.317261Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000134  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453680;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:28:57.824022Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000107  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453737;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:29:00.828482Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000131  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453740;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:29:56.262992Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000114  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453796;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:30:00.268936Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000158  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453800;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:30:56.744742Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000107  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453856;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:31:00.751214Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000115  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453860;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:31:57.291894Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000138  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453917;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:32:00.295353Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000143  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453920;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:32:56.757050Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000112  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453976;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:33:00.764620Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000112  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735453980;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:33:57.186857Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454037;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:34:00.188449Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000142  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454040;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:34:56.735045Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000143  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454096;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:35:00.744332Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000131  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454100;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:35:57.204179Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000115  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454157;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:36:00.207438Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000112  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454160;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:36:56.749289Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000140  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454216;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:36:58.841813Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000107  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454218;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:37:00.845524Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000108  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454220;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:37:58.354499Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000115  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454278;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:38:00.357928Z
+# User@Host: root[root] @  [172.25.0.7]  Id:   580
+# Query_time: 0.000117  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454280;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+/usr/sbin/mysqld, Version: 8.0.40 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2024-12-29T06:41:58.592789Z
+# User@Host: root[root] @  [172.25.0.6]  Id:     8
+# Query_time: 0.000997  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+use mineadmin;
+SET timestamp=1735454518;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:42:00.614594Z
+# User@Host: root[root] @  [172.25.0.6]  Id:     8
+# Query_time: 0.000111  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454520;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:42:56.958462Z
+# User@Host: root[root] @  [172.25.0.6]  Id:     8
+# Query_time: 0.000114  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454576;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:43:00.963934Z
+# User@Host: root[root] @  [172.25.0.6]  Id:     8
+# Query_time: 0.000102  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454580;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:43:59.385377Z
+# User@Host: root[root] @  [172.25.0.6]  Id:     9
+# Query_time: 0.000091  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454639;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:43:59.414199Z
+# User@Host: root[root] @  [172.25.0.6]  Id:     9
+# Query_time: 0.000196  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454639;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:44:00.416064Z
+# User@Host: root[root] @  [172.25.0.6]  Id:     9
+# Query_time: 0.000114  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454640;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:44:56.760205Z
+# User@Host: root[root] @  [172.25.0.6]  Id:     9
+# Query_time: 0.000114  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454696;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:45:00.766381Z
+# User@Host: root[root] @  [172.25.0.6]  Id:     9
+# Query_time: 0.000106  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454700;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:45:57.141853Z
+# User@Host: root[root] @  [172.25.0.6]  Id:     9
+# Query_time: 0.000108  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454757;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:46:00.143791Z
+# User@Host: root[root] @  [172.25.0.6]  Id:     9
+# Query_time: 0.000111  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454760;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:46:56.582337Z
+# User@Host: root[root] @  [172.25.0.6]  Id:     9
+# Query_time: 0.000114  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454816;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:47:00.584261Z
+# User@Host: root[root] @  [172.25.0.6]  Id:     9
+# Query_time: 0.000105  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454820;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:47:16.791908Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    13
+# Query_time: 0.001019  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 4
+SET timestamp=1735454836;
+select * from `baccarat_terrace` where (`code` = '3001-83') limit 1;
+# Time: 2024-12-29T06:47:16.791912Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    11
+# Query_time: 0.000961  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 27
+SET timestamp=1735454836;
+select * from `baccarat_terrace` where (`code` = '3001-60') limit 1;
+# Time: 2024-12-29T06:47:16.791920Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    14
+# Query_time: 0.000918  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 33
+SET timestamp=1735454836;
+select * from `baccarat_terrace` where (`code` = '3001-57') limit 1;
+# Time: 2024-12-29T06:47:16.791928Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    10
+# Query_time: 0.000949  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 41
+SET timestamp=1735454836;
+select * from `baccarat_terrace` where (`code` = '3001-85') limit 1;
+# Time: 2024-12-29T06:48:00.768464Z
+# User@Host: [] @  []  Id:    13
+# Query_time: 0.014873  Lock_time: 0.000210 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735454880;
+throttle:        117 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:48:00.913301Z
+# User@Host: root[root] @  [172.25.0.6]  Id:     9
+# Query_time: 0.000128  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735454880;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:48:01.267390Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    10
+# Query_time: 0.000126  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 23
+SET timestamp=1735454881;
+select * from `baccarat_terrace` where (`code` = '3043-5') limit 1;
+# Time: 2024-12-29T06:48:01.267444Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    14
+# Query_time: 0.000105  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 36
+SET timestamp=1735454881;
+select * from `baccarat_terrace` where (`code` = '3001-90') limit 1;
+# Time: 2024-12-29T06:48:02.287186Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    12
+# Query_time: 0.000158  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 11
+SET timestamp=1735454882;
+select * from `baccarat_terrace` where (`code` = '3001-87') limit 1;
+# Time: 2024-12-29T06:48:02.287190Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    10
+# Query_time: 0.000106  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 1
+SET timestamp=1735454882;
+select * from `baccarat_terrace` where (`code` = '3043-6') limit 1;
+# Time: 2024-12-29T06:49:00.984451Z
+# User@Host: [] @  []  Id:    14
+# Query_time: 0.016499  Lock_time: 0.000295 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735454940;
+throttle:        140 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:49:01.484764Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    12
+# Query_time: 0.000130  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 41
+SET timestamp=1735454941;
+select * from `baccarat_terrace` where (`code` = '3001-85') limit 1;
+# Time: 2024-12-29T06:49:01.493565Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    10
+# Query_time: 0.000115  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 18
+SET timestamp=1735454941;
+select * from `baccarat_terrace` where (`code` = '3027-2') limit 1;
+# Time: 2024-12-29T06:49:01.493587Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    11
+# Query_time: 0.000099  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 45
+SET timestamp=1735454941;
+select * from `baccarat_terrace` where (`code` = '3001-88') limit 1;
+# Time: 2024-12-29T06:49:02.496257Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    13
+# Query_time: 0.000169  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 31
+SET timestamp=1735454942;
+select * from `baccarat_terrace` where (`code` = '3001-61') limit 1;
+# Time: 2024-12-29T06:49:02.500709Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    12
+# Query_time: 0.000113  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 10
+SET timestamp=1735454942;
+select * from `baccarat_terrace` where (`code` = '3025-6') limit 1;
+# Time: 2024-12-29T06:50:01.667404Z
+# User@Host: [] @  []  Id:    11
+# Query_time: 0.018261  Lock_time: 0.000335 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735455001;
+throttle:        147 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:50:01.667627Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    11
+# Query_time: 0.000146  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 42
+SET timestamp=1735455001;
+select * from `baccarat_terrace` where (`code` = '3001-58') limit 1;
+# Time: 2024-12-29T06:50:01.730252Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    14
+# Query_time: 0.000161  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 35
+SET timestamp=1735455001;
+select * from `baccarat_terrace` where (`code` = '3001-80') limit 1;
+# Time: 2024-12-29T06:50:02.754478Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    13
+# Query_time: 0.000121  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 11
+SET timestamp=1735455002;
+select * from `baccarat_terrace` where (`code` = '3001-87') limit 1;
+# Time: 2024-12-29T06:50:02.756298Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    10
+# Query_time: 0.000082  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 17
+SET timestamp=1735455002;
+select * from `baccarat_terrace` where (`code` = '3001-111') limit 1;
+# Time: 2024-12-29T06:50:04.758524Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    12
+# Query_time: 0.000126  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 14
+SET timestamp=1735455004;
+select * from `baccarat_terrace` where (`code` = '3001-59') limit 1;
+# Time: 2024-12-29T06:51:02.046595Z
+# User@Host: [] @  []  Id:    11
+# Query_time: 0.018163  Lock_time: 0.000304 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735455062;
+throttle:        147 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:51:02.046854Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    11
+# Query_time: 0.000153  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 13
+SET timestamp=1735455062;
+select * from `baccarat_terrace` where (`code` = '3001-86') limit 1;
+# Time: 2024-12-29T06:51:02.952820Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    11
+# Query_time: 0.000151  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 14
+SET timestamp=1735455062;
+select * from `baccarat_terrace` where (`code` = '3001-59') limit 1;
+# Time: 2024-12-29T06:51:03.052333Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    14
+# Query_time: 0.000128  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 24
+SET timestamp=1735455063;
+select * from `baccarat_terrace` where (`code` = '3001-84') limit 1;
+# Time: 2024-12-29T06:51:03.052616Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    10
+# Query_time: 0.000077  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 18
+SET timestamp=1735455063;
+select * from `baccarat_terrace` where (`code` = '3027-2') limit 1;
+# Time: 2024-12-29T06:51:02.106424Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    11
+# Query_time: 0.000119  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 4
+SET timestamp=1735455062;
+select * from `baccarat_terrace` where (`code` = '3001-83') limit 1;
+# Time: 2024-12-29T06:52:02.333421Z
+# User@Host: [] @  []  Id:    12
+# Query_time: 0.017453  Lock_time: 0.000302 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735455122;
+throttle:        144 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:52:02.333576Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    12
+# Query_time: 0.000113  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 21
+SET timestamp=1735455122;
+select * from `baccarat_terrace` where (`code` = '3043-2') limit 1;
+# Time: 2024-12-29T06:52:02.335642Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    14
+# Query_time: 0.000100  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 45
+SET timestamp=1735455122;
+select * from `baccarat_terrace` where (`code` = '3001-88') limit 1;
+# Time: 2024-12-29T06:52:03.435590Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    12
+# Query_time: 0.000132  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 46
+SET timestamp=1735455123;
+select * from `baccarat_terrace` where (`code` = '3001-108') limit 1;
+# Time: 2024-12-29T06:52:04.524927Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    12
+# Query_time: 0.000119  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 16
+SET timestamp=1735455124;
+select * from `baccarat_terrace` where (`code` = '3001-77') limit 1;
+# Time: 2024-12-29T06:52:05.713713Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    13
+# Query_time: 0.000122  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 4
+SET timestamp=1735455125;
+select * from `baccarat_terrace` where (`code` = '3001-83') limit 1;
+# Time: 2024-12-29T06:53:02.693625Z
+# User@Host: [] @  []  Id:    14
+# Query_time: 0.017066  Lock_time: 0.000305 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735455182;
+throttle:        139 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:53:02.693809Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    14
+# Query_time: 0.000132  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 33
+SET timestamp=1735455182;
+select * from `baccarat_terrace` where (`code` = '3001-57') limit 1;
+# Time: 2024-12-29T06:53:02.714106Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    10
+# Query_time: 0.000116  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 13
+SET timestamp=1735455182;
+select * from `baccarat_terrace` where (`code` = '3001-86') limit 1;
+# Time: 2024-12-29T06:53:02.715317Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    11
+# Query_time: 0.000058  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 1
+SET timestamp=1735455182;
+select * from `baccarat_terrace` where (`code` = '3043-6') limit 1;
+# Time: 2024-12-29T06:53:02.811537Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    13
+# Query_time: 0.000134  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 48
+SET timestamp=1735455182;
+select * from `baccarat_terrace` where (`code` = '3001-110') limit 1;
+# Time: 2024-12-29T06:53:02.847954Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    14
+# Query_time: 0.000087  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 7
+SET timestamp=1735455182;
+select * from `baccarat_terrace` where (`code` = '3001-115') limit 1;
+# Time: 2024-12-29T06:54:03.030467Z
+# User@Host: [] @  []  Id:    11
+# Query_time: 0.017230  Lock_time: 0.000319 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735455243;
+throttle:        136 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:54:03.030722Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    11
+# Query_time: 0.000157  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 11
+SET timestamp=1735455243;
+select * from `baccarat_terrace` where (`code` = '3001-87') limit 1;
+# Time: 2024-12-29T06:54:03.039238Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    12
+# Query_time: 0.000101  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 32
+SET timestamp=1735455243;
+select * from `baccarat_terrace` where (`code` = '3001-112') limit 1;
+# Time: 2024-12-29T06:54:04.042494Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    10
+# Query_time: 0.000154  Lock_time: 0.000004 Rows_sent: 1  Rows_examined: 33
+SET timestamp=1735455244;
+select * from `baccarat_terrace` where (`code` = '3001-57') limit 1;
+# Time: 2024-12-29T06:54:04.048250Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    11
+# Query_time: 0.000159  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 29
+SET timestamp=1735455244;
+select * from `baccarat_terrace` where (`code` = '3025-7') limit 1;
+# Time: 2024-12-29T06:54:04.053775Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    14
+# Query_time: 0.000164  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 25
+SET timestamp=1735455244;
+select * from `baccarat_terrace` where (`code` = '3001-81') limit 1;
+# Time: 2024-12-29T06:55:03.324357Z
+# User@Host: [] @  []  Id:    12
+# Query_time: 0.017113  Lock_time: 0.000298 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735455303;
+throttle:        137 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:55:03.324528Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    12
+# Query_time: 0.000126  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 23
+SET timestamp=1735455303;
+select * from `baccarat_terrace` where (`code` = '3043-5') limit 1;
+# Time: 2024-12-29T06:55:03.327177Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    13
+# Query_time: 0.000092  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 17
+SET timestamp=1735455303;
+select * from `baccarat_terrace` where (`code` = '3001-111') limit 1;
+# Time: 2024-12-29T06:55:03.371492Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    14
+# Query_time: 0.000156  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 43
+SET timestamp=1735455303;
+select * from `baccarat_terrace` where (`code` = '3043-3') limit 1;
+# Time: 2024-12-29T06:55:04.346986Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    13
+# Query_time: 0.000154  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 19
+SET timestamp=1735455304;
+select * from `baccarat_terrace` where (`code` = '3025-5') limit 1;
+# Time: 2024-12-29T06:55:05.392053Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    12
+# Query_time: 0.000128  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 31
+SET timestamp=1735455305;
+select * from `baccarat_terrace` where (`code` = '3001-61') limit 1;
+# Time: 2024-12-29T06:56:56.938309Z
+# User@Host: [] @  []  Id:    16
+# Query_time: 0.009719  Lock_time: 0.000172 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735455416;
+throttle:         81 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T06:56:56.938514Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    16
+# Query_time: 0.000131  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455416;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:57:00.944366Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    16
+# Query_time: 0.000128  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455420;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:57:57.337551Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    16
+# Query_time: 0.000111  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455477;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:58:00.342107Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    16
+# Query_time: 0.000136  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455480;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:58:56.833542Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    16
+# Query_time: 0.000122  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455536;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:59:00.836921Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    16
+# Query_time: 0.000107  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455540;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:59:57.205022Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    16
+# Query_time: 0.000135  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455597;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T06:59:58.394511Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    16
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455598;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:00:00.398349Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    16
+# Query_time: 0.000134  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455600;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:00:56.802233Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    16
+# Query_time: 0.000154  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455656;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:01:00.806178Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    16
+# Query_time: 0.000111  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455660;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:01:57.191068Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    16
+# Query_time: 0.000108  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455717;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:02:00.194354Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    16
+# Query_time: 0.000114  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455720;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:02:58.576142Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    17
+# Query_time: 0.000108  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455778;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:03:00.588805Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    17
+# Query_time: 0.000107  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455780;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:03:57.049645Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    17
+# Query_time: 0.000125  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455837;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:04:00.051809Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    17
+# Query_time: 0.000116  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455840;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:04:56.427752Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    17
+# Query_time: 0.000128  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455896;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:05:00.431720Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    17
+# Query_time: 0.000118  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455900;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:05:56.706725Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    17
+# Query_time: 0.000134  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455956;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:06:00.714669Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    17
+# Query_time: 0.000112  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735455960;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:07:00.922942Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    18
+# Query_time: 0.000184  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456020;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:07:57.325216Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    18
+# Query_time: 0.000106  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456077;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:07:58.406119Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    18
+# Query_time: 0.000117  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456078;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:08:00.409728Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    18
+# Query_time: 0.000138  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456080;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:08:56.768044Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    18
+# Query_time: 0.000166  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456136;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:09:00.772389Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    18
+# Query_time: 0.000121  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456140;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:09:57.153933Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    19
+# Query_time: 0.000143  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456197;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:10:56.070287Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    20
+# Query_time: 0.000090  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456256;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:11:00.083831Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    20
+# Query_time: 0.000116  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456260;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:11:57.129504Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    20
+# Query_time: 0.000111  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456317;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:12:00.131242Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    20
+# Query_time: 0.000124  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456320;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:12:56.424381Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    20
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456376;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:13:00.429125Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    20
+# Query_time: 0.000117  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456380;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:13:56.944145Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    20
+# Query_time: 0.000131  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456436;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:14:00.949873Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    20
+# Query_time: 0.000116  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456440;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:14:57.281650Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    20
+# Query_time: 0.000170  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456497;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:15:00.288413Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    20
+# Query_time: 0.000124  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456500;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:16:00.927506Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    21
+# Query_time: 0.000135  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456560;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:16:56.314565Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    21
+# Query_time: 0.000148  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456616;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:17:00.320694Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    21
+# Query_time: 0.000108  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456620;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:18:57.850267Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    22
+# Query_time: 0.000182  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456737;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:19:00.863764Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    22
+# Query_time: 0.000141  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456740;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:19:37.524107Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    26
+# Query_time: 0.000108  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 39
+SET timestamp=1735456777;
+select * from `baccarat_terrace` where (`code` = '3027-1') limit 1;
+# Time: 2024-12-29T07:19:37.524108Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    23
+# Query_time: 0.000076  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 37
+SET timestamp=1735456777;
+select * from `baccarat_terrace` where (`code` = '3025-4') limit 1;
+# Time: 2024-12-29T07:19:37.524115Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    25
+# Query_time: 0.000057  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 23
+SET timestamp=1735456777;
+select * from `baccarat_terrace` where (`code` = '3043-5') limit 1;
+# Time: 2024-12-29T07:19:58.266796Z
+# User@Host: [] @  []  Id:    28
+# Query_time: 0.009101  Lock_time: 0.000127 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735456798;
+throttle:         90 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T07:19:58.267611Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    28
+# Query_time: 0.000189  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456798;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:20:00.280021Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    28
+# Query_time: 0.000115  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456800;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:20:30.238586Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    30
+# Query_time: 0.000110  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 27
+SET timestamp=1735456830;
+select * from `baccarat_terrace` where (`code` = '3001-60') limit 1;
+# Time: 2024-12-29T07:20:30.238588Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    29
+# Query_time: 0.000079  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 18
+SET timestamp=1735456830;
+select * from `baccarat_terrace` where (`code` = '3027-2') limit 1;
+# Time: 2024-12-29T07:20:30.238616Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    33
+# Query_time: 0.000074  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 28
+SET timestamp=1735456830;
+select * from `baccarat_terrace` where (`code` = '3027-3') limit 1;
+# Time: 2024-12-29T07:20:58.267651Z
+# User@Host: [] @  []  Id:    29
+# Query_time: 0.026254  Lock_time: 0.000421 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735456858;
+throttle:        273 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T07:20:58.280636Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    29
+# Query_time: 0.000092  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 10
+SET timestamp=1735456858;
+select * from `baccarat_terrace` where (`code` = '3025-6') limit 1;
+# Time: 2024-12-29T07:20:58.347295Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    30
+# Query_time: 0.000104  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 29
+SET timestamp=1735456858;
+select * from `baccarat_terrace` where (`code` = '3025-7') limit 1;
+# Time: 2024-12-29T07:20:58.358871Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    30
+# Query_time: 0.000074  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 22
+SET timestamp=1735456858;
+select * from `baccarat_terrace` where (`code` = '3043-4') limit 1;
+# Time: 2024-12-29T07:20:58.740186Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    33
+# Query_time: 0.000067  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 32
+SET timestamp=1735456858;
+select * from `baccarat_terrace` where (`code` = '3001-112') limit 1;
+# Time: 2024-12-29T07:20:58.876754Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    30
+# Query_time: 0.000062  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 6
+SET timestamp=1735456858;
+select * from `baccarat_terrace` where (`code` = '3001-114') limit 1;
+# Time: 2024-12-29T07:22:00.947078Z
+# User@Host: [] @  []  Id:    34
+# Query_time: 0.025623  Lock_time: 0.000368 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735456920;
+throttle:        253 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T07:22:00.947258Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000119  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456920;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:22:57.298744Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000114  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456977;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:23:00.300790Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000116  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735456980;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:23:56.641744Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000148  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457036;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:23:58.819347Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000106  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457038;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:24:00.823143Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000108  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457040;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:24:57.134897Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000112  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457097;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:25:00.139905Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000142  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457100;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:25:56.427381Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000105  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457156;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:26:00.435319Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000114  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457160;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:26:56.854934Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000154  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457216;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:27:00.857945Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000154  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457220;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:27:57.157025Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000135  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457277;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:28:00.161777Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000110  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457280;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:28:55.615317Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000140  Lock_time: 0.000010 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457335;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:29:00.617114Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000143  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457340;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:29:56.890211Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    35
+# Query_time: 0.000283  Lock_time: 0.000001 Rows_sent: 195  Rows_examined: 390
+SET timestamp=1735457396;
+select `id`, `parent_id`, `name`, `code`, `icon`, `route`, `is_hidden`, `component`, `redirect`, `type` from `system_menu` where `status` = '1' and `system_menu`.`deleted_at` is null order by `sort` desc;
+# Time: 2024-12-29T07:29:57.238360Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    35
+# Query_time: 0.000185  Lock_time: 0.000022 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1735457397;
+select count(*) as aggregate from `system_notice` where `system_notice`.`deleted_at` is null;
+# Time: 2024-12-29T07:29:57.896946Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000117  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457397;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:30:00.900927Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000142  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457400;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:30:03.843047Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    35
+# Query_time: 0.000100  Lock_time: 0.000001 Rows_sent: 2  Rows_examined: 2
+SET timestamp=1735457403;
+select * from `setting_config_group`;
+# Time: 2024-12-29T07:30:57.242376Z
+# User@Host: [] @  []  Id:    34
+# Query_time: 0.000100  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735457457;
+throttle:          1 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T07:30:57.242549Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000118  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457457;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:30:58.486482Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000108  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457458;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:31:00.490230Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000111  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457460;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:31:55.942755Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    39
+# Query_time: 0.000254  Lock_time: 0.000003 Rows_sent: 32  Rows_examined: 227
+SET timestamp=1735457515;
+select `id`, `parent_id`, `id` as `value`, `name` as `label` from `system_menu` where `status` = '1' and `type` = 'M' and `system_menu`.`deleted_at` is null order by `sort` desc;
+# Time: 2024-12-29T07:31:55.944476Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    38
+# Query_time: 0.000222  Lock_time: 0.000002 Rows_sent: 2  Rows_examined: 50
+SET timestamp=1735457515;
+select `id`, `label` as `title`, `value` as `key` from `system_dict_data` where `code` = 'data_status' and `status` = '1' and `system_dict_data`.`deleted_at` is null order by `sort` desc;
+# Time: 2024-12-29T07:32:00.781662Z
+# User@Host: [] @  []  Id:    34
+# Query_time: 0.000498  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735457520;
+throttle:          2 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T07:32:00.781888Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000163  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457520;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:32:35.407184Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    38
+# Query_time: 0.000298  Lock_time: 0.000005 Rows_sent: 32  Rows_examined: 227
+SET timestamp=1735457555;
+select `id`, `parent_id`, `id` as `value`, `name` as `label` from `system_menu` where `status` = '1' and `type` = 'M' and `system_menu`.`deleted_at` is null order by `sort` desc;
+# Time: 2024-12-29T07:32:57.131703Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000113  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457577;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:33:00.134018Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000112  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457580;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:33:03.707606Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    38
+# Query_time: 0.000179  Lock_time: 0.000002 Rows_sent: 5  Rows_examined: 53
+SET timestamp=1735457583;
+select `id`, `label` as `title`, `value` as `key` from `system_dict_data` where `code` = 'attachment_type' and `status` = '1' and `system_dict_data`.`deleted_at` is null order by `sort` desc;
+# Time: 2024-12-29T07:33:03.710035Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    40
+# Query_time: 0.000210  Lock_time: 0.000002 Rows_sent: 4  Rows_examined: 52
+SET timestamp=1735457583;
+select `id`, `label` as `title`, `value` as `key` from `system_dict_data` where `code` = 'upload_mode' and `status` = '1' and `system_dict_data`.`deleted_at` is null order by `sort` desc;
+# Time: 2024-12-29T07:33:03.720546Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    40
+# Query_time: 0.000102  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1735457583;
+select count(*) as aggregate from `system_uploadfile` where `system_uploadfile`.`deleted_at` is null;
+# Time: 2024-12-29T07:33:05.425548Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    40
+# Query_time: 0.000247  Lock_time: 0.000003 Rows_sent: 1  Rows_examined: 12
+SET timestamp=1735457585;
+select count(*) as aggregate from `system_dict_type` where `system_dict_type`.`deleted_at` is null;
+# Time: 2024-12-29T07:33:05.426811Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    40
+# Query_time: 0.000229  Lock_time: 0.000003 Rows_sent: 10  Rows_examined: 10
+SET timestamp=1735457585;
+select * from `system_dict_type` where `system_dict_type`.`deleted_at` is null limit 10 offset 0;
+# Time: 2024-12-29T07:34:06.940549Z
+# User@Host: [] @  []  Id:    37
+# Query_time: 0.003088  Lock_time: 0.000021 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735457646;
+throttle:         10 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T07:34:07.721713Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    40
+# Query_time: 0.000086  Lock_time: 0.000002 Rows_sent: 9  Rows_examined: 9
+SET timestamp=1735457647;
+select `id` from `setting_generate_columns` where `table_id` = '1';
+# Time: 2024-12-29T07:34:07.884500Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    40
+# Query_time: 0.000172  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 177
+SET timestamp=1735457647;
+select `name` from `system_menu` where `code` = 'setting:code:sync' and `system_menu`.`deleted_at` is null limit 1;
+# Time: 2024-12-29T07:34:15.271582Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    40
+# Query_time: 0.000178  Lock_time: 0.000002 Rows_sent: 9  Rows_examined: 9
+SET timestamp=1735457655;
+select * from `setting_generate_columns` where `table_id` = '1';
+# Time: 2024-12-29T07:34:15.320053Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    40
+# Query_time: 0.000103  Lock_time: 0.000001 Rows_sent: 1  Rows_examined: 1
+SET timestamp=1735457655;
+select * from `setting_generate_columns` where (`is_pk` = '2' and `table_id` = '1') limit 1;
+# Time: 2024-12-29T07:34:15.320672Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    40
+# Query_time: 0.000078  Lock_time: 0.000001 Rows_sent: 9  Rows_examined: 9
+SET timestamp=1735457655;
+select * from `setting_generate_columns` where `table_id` = '1';
+# Time: 2024-12-29T07:35:16.246475Z
+# User@Host: [] @  []  Id:    37
+# Query_time: 0.000222  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735457716;
+throttle:          2 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T07:35:57.215817Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000139  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457757;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:36:00.229552Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457760;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:36:56.579525Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000125  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457816;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:37:00.584078Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000155  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457820;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:37:56.967976Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000133  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457876;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:38:00.970676Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000115  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457880;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:38:57.354409Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000109  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457937;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:38:59.603496Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000103  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457939;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:39:00.606876Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000105  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457940;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:39:55.919390Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000138  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735457995;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:40:00.921587Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000120  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458000;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:40:29.636456Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    44
+# Query_time: 0.000317  Lock_time: 0.000003 Rows_sent: 32  Rows_examined: 227
+SET timestamp=1735458029;
+select `id`, `parent_id`, `id` as `value`, `name` as `label` from `system_menu` where `status` = '1' and `type` = 'M' and `system_menu`.`deleted_at` is null order by `sort` desc;
+# Time: 2024-12-29T07:40:42.747839Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    44
+# Query_time: 0.000137  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 20
+SET timestamp=1735458042;
+select `name` from `system_menu` where `code` = 'system:menu:save' and `system_menu`.`deleted_at` is null limit 1;
+# Time: 2024-12-29T07:40:42.792044Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    44
+# Query_time: 0.000416  Lock_time: 0.000002 Rows_sent: 196  Rows_examined: 392
+SET timestamp=1735458042;
+select * from `system_menu` where `system_menu`.`deleted_at` is null order by `parent_id` asc, `sort` desc;
+# Time: 2024-12-29T07:40:56.103607Z
+# User@Host: [] @  []  Id:    43
+# Query_time: 0.000449  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735458056;
+throttle:          1 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T07:40:57.442244Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000134  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458057;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:41:00.446893Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000106  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458060;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:41:56.724064Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000123  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458116;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:42:00.730250Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000123  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458120;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:42:57.077410Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000168  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458177;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:43:00.080178Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000132  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458180;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:43:56.436516Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000249  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458236;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:44:00.442530Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000114  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458240;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:44:56.857838Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000133  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458296;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:45:00.864800Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000113  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458300;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:45:57.139942Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000113  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458357;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:46:00.143886Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000126  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458360;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:46:56.467888Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000131  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458416;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:46:59.697238Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000133  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458419;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:47:00.703136Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000121  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458420;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:47:56.021751Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000116  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458476;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:47:59.542830Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    52
+# Query_time: 0.000126  Lock_time: 0.000001 Rows_sent: 2  Rows_examined: 50
+SET timestamp=1735458479;
+select `id`, `label` as `title`, `value` as `key` from `system_dict_data` where `code` = 'data_status' and `status` = '1' and `system_dict_data`.`deleted_at` is null order by `sort` desc;
+# Time: 2024-12-29T07:47:59.542844Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    51
+# Query_time: 0.000231  Lock_time: 0.000001 Rows_sent: 33  Rows_examined: 229
+SET timestamp=1735458479;
+select `id`, `parent_id`, `id` as `value`, `name` as `label` from `system_menu` where `status` = '1' and `type` = 'M' and `system_menu`.`deleted_at` is null order by `sort` desc;
+# Time: 2024-12-29T07:48:00.023907Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000111  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458480;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:48:56.438782Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000144  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458536;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:49:00.444755Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000103  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458540;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:49:56.894045Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000109  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458596;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:50:00.899481Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000109  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458600;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:50:57.143625Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000109  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458657;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:51:00.145070Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000119  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458660;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:51:56.517997Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000108  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458716;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:52:00.523461Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000108  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458720;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:52:56.777640Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000105  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458776;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:53:00.779979Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000111  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458780;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:53:57.112454Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458837;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:53:59.377490Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458839;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:53:59.281721Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000108  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458839;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:54:00.288413Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000117  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458840;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:54:56.586547Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000153  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458896;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:55:00.592986Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000145  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458900;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:55:56.875488Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000108  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458956;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:56:00.880041Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000151  Lock_time: 0.000004 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735458960;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:56:57.272453Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000106  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459017;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:57:00.276993Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000112  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459020;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:57:25.072148Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    59
+# Query_time: 0.000151  Lock_time: 0.000002 Rows_sent: 1  Rows_examined: 20
+SET timestamp=1735459045;
+select `name` from `system_menu` where `code` = 'system:menu:save' and `system_menu`.`deleted_at` is null limit 1;
+# Time: 2024-12-29T07:57:25.123156Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    59
+# Query_time: 0.000440  Lock_time: 0.000002 Rows_sent: 197  Rows_examined: 394
+SET timestamp=1735459045;
+select * from `system_menu` where `system_menu`.`deleted_at` is null order by `parent_id` asc, `sort` desc;
+# Time: 2024-12-29T07:57:34.062416Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    59
+# Query_time: 0.000462  Lock_time: 0.000002 Rows_sent: 197  Rows_examined: 394
+SET timestamp=1735459054;
+select `id`, `parent_id`, `name`, `code`, `icon`, `route`, `is_hidden`, `component`, `redirect`, `type` from `system_menu` where `status` = '1' and `system_menu`.`deleted_at` is null order by `sort` desc;
+# Time: 2024-12-29T07:57:34.367497Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    59
+# Query_time: 0.000301  Lock_time: 0.000004 Rows_sent: 34  Rows_examined: 231
+SET timestamp=1735459054;
+select `id`, `parent_id`, `id` as `value`, `name` as `label` from `system_menu` where `status` = '1' and `type` = 'M' and `system_menu`.`deleted_at` is null order by `sort` desc;
+# Time: 2024-12-29T07:57:34.386597Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    59
+# Query_time: 0.000619  Lock_time: 0.000004 Rows_sent: 197  Rows_examined: 394
+SET timestamp=1735459054;
+select * from `system_menu` where `system_menu`.`deleted_at` is null order by `parent_id` asc, `sort` desc;
+# Time: 2024-12-29T07:58:28.703640Z
+# User@Host: [] @  []  Id:    60
+# Query_time: 0.000875  Lock_time: 0.000012 Rows_sent: 0  Rows_examined: 0
+SET timestamp=1735459108;
+throttle:          6 'index not used' warning(s) suppressed.;
+# Time: 2024-12-29T07:58:55.978065Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000111  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459135;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:59:00.982664Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459140;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T07:59:57.301604Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000110  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459197;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:00:00.306191Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000112  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459200;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:00:55.722273Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000104  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459255;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:01:00.724984Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000130  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459260;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:01:57.116692Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000116  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459317;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:01:59.356341Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000122  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459319;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:02:00.359538Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000119  Lock_time: 0.000001 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459320;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:02:56.543910Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000113  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459376;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:03:00.550929Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000107  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459380;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:03:56.896256Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000115  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459436;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:04:00.900561Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000115  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459440;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:04:57.194051Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000157  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459497;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:05:00.198581Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000114  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459500;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:05:56.601741Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000115  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459556;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:06:00.604786Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000111  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459560;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:06:56.844132Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000111  Lock_time: 0.000002 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459616;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';
+# Time: 2024-12-29T08:07:00.849406Z
+# User@Host: root[root] @  [172.25.0.6]  Id:    34
+# Query_time: 0.000120  Lock_time: 0.000003 Rows_sent: 0  Rows_examined: 2
+SET timestamp=1735459620;
+select `id`, `name`, `type`, `target`, `rule`, `parameter` from `setting_crontab` where `status` = '1';

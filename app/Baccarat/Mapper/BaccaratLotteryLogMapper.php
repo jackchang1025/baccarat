@@ -45,7 +45,7 @@ class BaccaratLotteryLogMapper extends AbstractMapper
         return $query;
     }
 
-    public function getLotteryLog(string $issue): BaccaratLotteryLog|Builder|null
+    public function getLotteryLog(string|int $issue): BaccaratLotteryLog|Builder|null
     {
         return $this->getModel()->where('issue',$issue)->first();
     }
